@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.HrHolidays" table="hr_holidays">
+        <comment>Leave</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>User</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrEmployeeByEmployeeId" class="com.kye.table.HrEmployee" fetch="select">
+            <column name="employee_id">
+                <comment>Employee</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrEmployeeByManagerId2" class="com.kye.table.HrEmployee" fetch="select">
+            <column name="manager_id2">
+                <comment>Second Approval</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrHolidaysStatus" class="com.kye.table.HrHolidaysStatus" fetch="select">
+            <column name="holiday_status_id" not-null="true">
+                <comment>Leave Type</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrEmployeeByManagerId" class="com.kye.table.HrEmployee" fetch="select">
+            <column name="manager_id">
+                <comment>First Approval</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="calendarEvent" class="com.kye.table.CalendarEvent" fetch="select">
+            <column name="meeting_id">
+                <comment>Meeting</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrHolidays" class="com.kye.table.HrHolidays" fetch="select">
+            <column name="parent_id">
+                <comment>Parent</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrDepartment" class="com.kye.table.HrDepartment" fetch="select">
+            <column name="department_id">
+                <comment>Department</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrEmployeeCategory" class="com.kye.table.HrEmployeeCategory" fetch="select">
+            <column name="category_id">
+                <comment>Employee Tag</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="payslipStatus" type="java.lang.Boolean">
+            <column name="payslip_status">
+                <comment>Reported in last payslips</comment>
+            </column>
+        </property>
+        <property name="reportNote" type="string">
+            <column name="report_note">
+                <comment>HR Comments</comment>
+            </column>
+        </property>
+        <property name="dateFrom" type="timestamp">
+            <column name="date_from" length="29">
+                <comment>Start Date</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="holidayType" type="string">
+            <column name="holiday_type" not-null="true">
+                <comment>Allocation Mode</comment>
+            </column>
+        </property>
+        <property name="numberOfDaysTemp" type="java.lang.Double">
+            <column name="number_of_days_temp" precision="17" scale="17">
+                <comment>Allocation</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true">
+                <comment>Request Type</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="dateTo" type="timestamp">
+            <column name="date_to" length="29">
+                <comment>End Date</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="notes">
+                <comment>Reasons</comment>
+            </column>
+        </property>
+        <property name="numberOfDays" type="java.lang.Double">
+            <column name="number_of_days" precision="17" scale="17">
+                <comment>Number of Days</comment>
+            </column>
+        </property>
+        <set name="resourceCalendarLeaveses" table="resource_calendar_leaves" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="holiday_id">
+                    <comment>Leave Request</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ResourceCalendarLeaves" />
+        </set>
+        <set name="hrHolidayses" table="hr_holidays" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent_id">
+                    <comment>Parent</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrHolidays" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountAnalyticAccount" table="account_analytic_account">
+        <comment>Analytic Account</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id" not-null="true">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Customer</comment>
+            </column>
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="code">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Analytic Account</comment>
+            </column>
+        </property>
+        <property name="useTasks" type="java.lang.Boolean">
+            <column name="use_tasks">
+                <comment>Use Tasks</comment>
+            </column>
+        </property>
+        <property name="useIssues" type="java.lang.Boolean">
+            <column name="use_issues">
+                <comment>Use Issues</comment>
+            </column>
+        </property>
+        <set name="accountMoveLineReconcileWriteoffs" table="account_move_line_reconcile_writeoff" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="analytic_id">
+                    <comment>Analytic Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveLineReconcileWriteoff" />
+        </set>
+        <set name="accountInvoiceTaxes" table="account_invoice_tax" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_analytic_id">
+                    <comment>Analytic account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoiceTax" />
+        </set>
+        <set name="accountMoveLines" table="account_move_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="analytic_account_id">
+                    <comment>Analytic Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveLine" />
+        </set>
+        <set name="purchaseOrderLines" table="purchase_order_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_analytic_id">
+                    <comment>Analytic Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PurchaseOrderLine" />
+        </set>
+        <set name="hrExpenses" table="hr_expense" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="analytic_account_id">
+                    <comment>Analytic Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrExpense" />
+        </set>
+        <set name="accountAnalyticAccountTagRels" table="account_analytic_account_tag_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAnalyticAccountTagRel" />
+        </set>
+        <set name="accountInvoiceLines" table="account_invoice_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_analytic_id">
+                    <comment>Analytic Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoiceLine" />
+        </set>
+        <set name="saleOrders" table="sale_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="project_id">
+                    <comment>Analytic Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.SaleOrder" />
+        </set>
+        <set name="accountReconcileModelsForSecondAnalyticAccountId" table="account_reconcile_model" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="second_analytic_account_id">
+                    <comment>Second Analytic Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountReconcileModel" />
+        </set>
+        <set name="accountAssetCategories" table="account_asset_category" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_analytic_id">
+                    <comment>Analytic Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAssetCategory" />
+        </set>
+        <set name="projectProjects" table="project_project" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="analytic_account_id" not-null="true">
+                    <comment>Contract/Analytic</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ProjectProject" />
+        </set>
+        <set name="accountReconcileModelsForAnalyticAccountId" table="account_reconcile_model" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="analytic_account_id">
+                    <comment>Analytic Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountReconcileModel" />
+        </set>
+        <set name="accountAnalyticLines" table="account_analytic_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id" not-null="true">
+                    <comment>Analytic Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAnalyticLine" />
+        </set>
+    </class>
+</hibernate-mapping>

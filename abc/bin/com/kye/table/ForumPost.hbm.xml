@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.ForumPost" table="forum_post">
+        <comment>Forum Post</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="forumPost" class="com.kye.table.ForumPost" fetch="select">
+            <column name="parent_id">
+                <comment>Question</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="forumPostReason" class="com.kye.table.ForumPostReason" fetch="select">
+            <column name="closed_reason_id">
+                <comment>Reason</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByClosedUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="closed_uid">
+                <comment>Closed by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="forumForum" class="com.kye.table.ForumForum" fetch="select">
+            <column name="forum_id" not-null="true">
+                <comment>Forum</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByModeratorId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="moderator_id">
+                <comment>Reviewed by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByFlagUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="flag_user_id">
+                <comment>Flagged by</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Asked on</comment>
+            </column>
+        </property>
+        <property name="websiteMetaTitle" type="string">
+            <column name="website_meta_title">
+                <comment>Website meta title</comment>
+            </column>
+        </property>
+        <property name="plainContent" type="string">
+            <column name="plain_content">
+                <comment>Plain Content</comment>
+            </column>
+        </property>
+        <property name="isCorrect" type="java.lang.Boolean">
+            <column name="is_correct">
+                <comment>Correct</comment>
+            </column>
+        </property>
+        <property name="postType" type="string">
+            <column name="post_type" not-null="true">
+                <comment>Type</comment>
+            </column>
+        </property>
+        <property name="selfReply" type="java.lang.Boolean">
+            <column name="self_reply">
+                <comment>Reply to own question</comment>
+            </column>
+        </property>
+        <property name="closedDate" type="timestamp">
+            <column name="closed_date" length="29">
+                <comment>Closed on</comment>
+            </column>
+        </property>
+        <property name="relevancy" type="java.lang.Double">
+            <column name="relevancy" precision="17" scale="17">
+                <comment>Relevance</comment>
+            </column>
+        </property>
+        <property name="bumpDate" type="timestamp">
+            <column name="bump_date" length="29">
+                <comment>Bumped on</comment>
+            </column>
+        </property>
+        <property name="views" type="java.lang.Integer">
+            <column name="views">
+                <comment>Number of Views</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="content" type="string">
+            <column name="content">
+                <comment>Content</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="hasValidatedAnswer" type="java.lang.Boolean">
+            <column name="has_validated_answer">
+                <comment>Is answered</comment>
+            </column>
+        </property>
+        <property name="childCount" type="java.lang.Integer">
+            <column name="child_count">
+                <comment>Number of answers</comment>
+            </column>
+        </property>
+        <property name="favouriteCount" type="java.lang.Integer">
+            <column name="favourite_count">
+                <comment>Favorite Count</comment>
+            </column>
+        </property>
+        <property name="contentLink" type="string">
+            <column name="content_link">
+                <comment>URL</comment>
+            </column>
+        </property>
+        <property name="websiteMetaDescription" type="string">
+            <column name="website_meta_description">
+                <comment>Website meta description</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Update on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name">
+                <comment>Title</comment>
+            </column>
+        </property>
+        <property name="voteCount" type="java.lang.Integer">
+            <column name="vote_count">
+                <comment>Total Votes</comment>
+            </column>
+        </property>
+        <property name="websiteMetaKeywords" type="string">
+            <column name="website_meta_keywords">
+                <comment>Website meta keywords</comment>
+            </column>
+        </property>
+        <set name="forumPosts" table="forum_post" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent_id">
+                    <comment>Question</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ForumPost" />
+        </set>
+        <set name="forumPostVotes" table="forum_post_vote" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="post_id" not-null="true">
+                    <comment>Post</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ForumPostVote" />
+        </set>
+        <set name="forumTagRels" table="forum_tag_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="forum_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.ForumTagRel" />
+        </set>
+        <set name="forumPostResUsersRels" table="forum_post_res_users_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="forum_post_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.ForumPostResUsersRel" />
+        </set>
+    </class>
+</hibernate-mapping>

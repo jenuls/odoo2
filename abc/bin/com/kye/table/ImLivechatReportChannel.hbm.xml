@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.ImLivechatReportChannel" table="im_livechat_report_channel">
+        <composite-id name="id" class="com.kye.table.ImLivechatReportChannelId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="uuid" type="string">
+                <column name="uuid" length="50" />
+            </key-property>
+            <key-property name="channelId" type="java.lang.Integer">
+                <column name="channel_id" />
+            </key-property>
+            <key-property name="channelName" type="string">
+                <column name="channel_name" />
+            </key-property>
+            <key-property name="technicalName" type="string">
+                <column name="technical_name" />
+            </key-property>
+            <key-property name="livechatChannelId" type="java.lang.Integer">
+                <column name="livechat_channel_id" />
+            </key-property>
+            <key-property name="startDate" type="timestamp">
+                <column name="start_date" length="29" />
+            </key-property>
+            <key-property name="startDateHour" type="string">
+                <column name="start_date_hour" />
+            </key-property>
+            <key-property name="duration" type="java.lang.Double">
+                <column name="duration" precision="17" scale="17" />
+            </key-property>
+            <key-property name="nbrSpeaker" type="java.lang.Long">
+                <column name="nbr_speaker" />
+            </key-property>
+            <key-property name="nbrMessage" type="java.lang.Long">
+                <column name="nbr_message" />
+            </key-property>
+            <key-property name="partnerId" type="java.lang.Integer">
+                <column name="partner_id" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

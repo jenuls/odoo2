@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrCron" table="ir_cron">
+        <comment>ir.cron</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id" not-null="true">
+                <comment>User</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="function" type="string">
+            <column name="function">
+                <comment>Method</comment>
+            </column>
+        </property>
+        <property name="intervalType" type="string">
+            <column name="interval_type">
+                <comment>Interval Unit</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Name</comment>
+            </column>
+        </property>
+        <property name="args" type="string">
+            <column name="args">
+                <comment>Arguments</comment>
+            </column>
+        </property>
+        <property name="numbercall" type="java.lang.Integer">
+            <column name="numbercall">
+                <comment>Number of Calls</comment>
+            </column>
+        </property>
+        <property name="nextcall" type="timestamp">
+            <column name="nextcall" length="29" not-null="true">
+                <comment>Next Execution Date</comment>
+            </column>
+        </property>
+        <property name="priority" type="java.lang.Integer">
+            <column name="priority">
+                <comment>Priority</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="doall" type="java.lang.Boolean">
+            <column name="doall">
+                <comment>Repeat Missed</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="intervalNumber" type="java.lang.Integer">
+            <column name="interval_number">
+                <comment>Interval number</comment>
+            </column>
+        </property>
+        <property name="model" type="string">
+            <column name="model">
+                <comment>Object</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

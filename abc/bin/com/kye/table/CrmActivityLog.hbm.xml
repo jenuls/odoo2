@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmActivityLog" table="crm_activity_log">
+        <comment>Log an Activity</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="crmTeam" class="com.kye.table.CrmTeam" fetch="select">
+            <column name="team_id">
+                <comment>Sales Team</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="crmActivityByLastActivityId" class="com.kye.table.CrmActivity" fetch="select">
+            <column name="last_activity_id">
+                <comment>Previous Activity</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="crmLead" class="com.kye.table.CrmLead" fetch="select">
+            <column name="lead_id" not-null="true">
+                <comment>Lead</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="crmActivityByRecommendedActivityId" class="com.kye.table.CrmActivity" fetch="select">
+            <column name="recommended_activity_id">
+                <comment>Recommended Activities</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="crmActivityByNextActivityId" class="com.kye.table.CrmActivity" fetch="select">
+            <column name="next_activity_id">
+                <comment>Activity</comment>
+            </column>
+        </many-to-one>
+        <property name="dateDeadline" type="date">
+            <column name="date_deadline" length="13">
+                <comment>Expected Closing</comment>
+            </column>
+        </property>
+        <property name="titleAction" type="string">
+            <column name="title_action">
+                <comment>Summary</comment>
+            </column>
+        </property>
+        <property name="note" type="string">
+            <column name="note">
+                <comment>Note</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="dateAction" type="date">
+            <column name="date_action" length="13">
+                <comment>Next Activity Date</comment>
+            </column>
+        </property>
+        <property name="plannedRevenue" type="java.lang.Double">
+            <column name="planned_revenue" precision="17" scale="17">
+                <comment>Expected Revenue</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

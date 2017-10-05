@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.BaseConfigSettings" table="base_config_settings">
+        <comment>base.config.settings</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByAuthSignupTemplateUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="auth_signup_template_user_id">
+                <comment>Template user for new users created through signup</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id" not-null="true">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="moduleGoogleCalendar" type="java.lang.Boolean">
+            <column name="module_google_calendar">
+                <comment>Allow the users to synchronize their calendar with Google Calendar</comment>
+            </column>
+        </property>
+        <property name="moduleAuthOauth" type="java.lang.Boolean">
+            <column name="module_auth_oauth">
+                <comment>Use external authentication providers (OAuth)</comment>
+            </column>
+        </property>
+        <property name="companySharePartner" type="java.lang.Boolean">
+            <column name="company_share_partner">
+                <comment>Share partners to all companies</comment>
+            </column>
+        </property>
+        <property name="moduleBaseImport" type="java.lang.Boolean">
+            <column name="module_base_import">
+                <comment>Allow users to import data from CSV/XLS/XLSX/ODS files</comment>
+            </column>
+        </property>
+        <property name="modulePortal" type="java.lang.Boolean">
+            <column name="module_portal">
+                <comment>Activate the customer portal</comment>
+            </column>
+        </property>
+        <property name="groupMultiCurrency" type="java.lang.Boolean">
+            <column name="group_multi_currency">
+                <comment>Allow multi currencies</comment>
+            </column>
+        </property>
+        <property name="moduleGoogleDrive" type="java.lang.Boolean">
+            <column name="module_google_drive">
+                <comment>Attach Google documents to any record</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="moduleInterCompanyRules" type="java.lang.Boolean">
+            <column name="module_inter_company_rules">
+                <comment>Manage Inter Company</comment>
+            </column>
+        </property>
+        <property name="groupMultiCompany" type="java.lang.Boolean">
+            <column name="group_multi_company">
+                <comment>Manage multiple companies</comment>
+            </column>
+        </property>
+        <property name="moduleShare" type="java.lang.Boolean">
+            <column name="module_share">
+                <comment>Allow documents sharing</comment>
+            </column>
+        </property>
+        <property name="aliasDomain" type="string">
+            <column name="alias_domain">
+                <comment>Alias Domain</comment>
+            </column>
+        </property>
+        <property name="failCounter" type="java.lang.Integer">
+            <column name="fail_counter">
+                <comment>Fail Mail</comment>
+            </column>
+        </property>
+        <property name="authSignupUninvited" type="java.lang.Boolean">
+            <column name="auth_signup_uninvited">
+                <comment>Allow external users to sign up</comment>
+            </column>
+        </property>
+        <property name="authSignupResetPassword" type="java.lang.Boolean">
+            <column name="auth_signup_reset_password">
+                <comment>Enable password reset from Login page</comment>
+            </column>
+        </property>
+        <property name="companyShareProduct" type="java.lang.Boolean">
+            <column name="company_share_product">
+                <comment>Share product to all companies</comment>
+            </column>
+        </property>
+        <property name="groupProductVariant" type="java.lang.Integer">
+            <column name="group_product_variant">
+                <comment>Product Variants</comment>
+            </column>
+        </property>
+        <property name="groupAttendanceUsePin" type="java.lang.Integer">
+            <column name="group_attendance_use_pin">
+                <comment>Employee PIN</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

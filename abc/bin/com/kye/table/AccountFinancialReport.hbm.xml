@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountFinancialReport" table="account_financial_report">
+        <comment>Account Report</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountFinancialReportByParentId" class="com.kye.table.AccountFinancialReport" fetch="select">
+            <column name="parent_id">
+                <comment>Parent</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountFinancialReportByAccountReportId" class="com.kye.table.AccountFinancialReport" fetch="select">
+            <column name="account_report_id">
+                <comment>Report Value</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Report Name</comment>
+            </column>
+        </property>
+        <property name="level" type="java.lang.Integer">
+            <column name="level">
+                <comment>Level</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="styleOverwrite" type="java.lang.Integer">
+            <column name="style_overwrite">
+                <comment>Financial Report Style</comment>
+            </column>
+        </property>
+        <property name="sign" type="int">
+            <column name="sign" not-null="true">
+                <comment>Sign on Reports</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="displayDetail" type="string">
+            <column name="display_detail">
+                <comment>Display details</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type">
+                <comment>Type</comment>
+            </column>
+        </property>
+        <set name="accountFinancialReportsForParentId" table="account_financial_report" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent_id">
+                    <comment>Parent</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFinancialReport" />
+        </set>
+        <set name="accountAccountFinancialReports" table="account_account_financial_report" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="report_line_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountFinancialReport" />
+        </set>
+        <set name="accountFinancialReportsForAccountReportId" table="account_financial_report" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_report_id">
+                    <comment>Report Value</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFinancialReport" />
+        </set>
+        <set name="accountingReports" table="accounting_report" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_report_id" not-null="true">
+                    <comment>Account Reports</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountingReport" />
+        </set>
+        <set name="accountAccountFinancialReportTypes" table="account_account_financial_report_type" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="report_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountFinancialReportType" />
+        </set>
+    </class>
+</hibernate-mapping>

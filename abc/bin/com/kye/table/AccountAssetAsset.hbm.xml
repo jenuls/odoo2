@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountAssetAsset" table="account_asset_asset">
+        <comment>Asset/Revenue Recognition</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id" not-null="true">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id" not-null="true">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Partner</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountInvoice" class="com.kye.table.AccountInvoice" fetch="select">
+            <column name="invoice_id">
+                <comment>Invoice</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAssetCategory" class="com.kye.table.AccountAssetCategory" fetch="select">
+            <column name="category_id" not-null="true">
+                <comment>Category</comment>
+            </column>
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="code" length="32">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="methodEnd" type="date">
+            <column name="method_end" length="13">
+                <comment>Ending Date</comment>
+            </column>
+        </property>
+        <property name="salvageValue" type="big_decimal">
+            <column name="salvage_value" precision="131089" scale="0">
+                <comment>Salvage Value</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="methodProgressFactor" type="java.lang.Double">
+            <column name="method_progress_factor" precision="17" scale="17">
+                <comment>Degressive Factor</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="note" type="string">
+            <column name="note">
+                <comment>Note</comment>
+            </column>
+        </property>
+        <property name="prorata" type="java.lang.Boolean">
+            <column name="prorata">
+                <comment>Prorata Temporis</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state" not-null="true">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="methodPeriod" type="int">
+            <column name="method_period" not-null="true">
+                <comment>Number of Months in a Period</comment>
+            </column>
+        </property>
+        <property name="method" type="string">
+            <column name="method" not-null="true">
+                <comment>Computation Method</comment>
+            </column>
+        </property>
+        <property name="methodNumber" type="java.lang.Integer">
+            <column name="method_number">
+                <comment>Number of Depreciations</comment>
+            </column>
+        </property>
+        <property name="methodTime" type="string">
+            <column name="method_time" not-null="true">
+                <comment>Time Method</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="13" not-null="true">
+                <comment>Date</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Asset Name</comment>
+            </column>
+        </property>
+        <property name="value" type="big_decimal">
+            <column name="value" precision="131089" scale="0" not-null="true">
+                <comment>Gross Value</comment>
+            </column>
+        </property>
+        <set name="accountAssetDepreciationLines" table="account_asset_depreciation_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="asset_id" not-null="true">
+                    <comment>Asset</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAssetDepreciationLine" />
+        </set>
+    </class>
+</hibernate-mapping>

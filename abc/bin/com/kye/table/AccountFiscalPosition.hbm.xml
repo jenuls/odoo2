@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountFiscalPosition" table="account_fiscal_position">
+        <comment>Fiscal Position</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCountryGroup" class="com.kye.table.ResCountryGroup" fetch="select">
+            <column name="country_group_id">
+                <comment>Country Group</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCountry" class="com.kye.table.ResCountry" fetch="select">
+            <column name="country_id">
+                <comment>Country</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="zipTo" type="java.lang.Integer">
+            <column name="zip_to">
+                <comment>Zip Range To</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="autoApply" type="java.lang.Boolean">
+            <column name="auto_apply">
+                <comment>Detect Automatically</comment>
+            </column>
+        </property>
+        <property name="vatRequired" type="java.lang.Boolean">
+            <column name="vat_required">
+                <comment>VAT required</comment>
+            </column>
+        </property>
+        <property name="note" type="string">
+            <column name="note">
+                <comment>Notes</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Fiscal Position</comment>
+            </column>
+        </property>
+        <property name="zipFrom" type="java.lang.Integer">
+            <column name="zip_from">
+                <comment>Zip Range From</comment>
+            </column>
+        </property>
+        <set name="accountInvoices" table="account_invoice" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fiscal_position_id">
+                    <comment>Fiscal Position</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoice" />
+        </set>
+        <set name="posConfigs" table="pos_config" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="default_fiscal_position_id">
+                    <comment>Default Fiscal Position</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PosConfig" />
+        </set>
+        <set name="accountFiscalPositionTaxes" table="account_fiscal_position_tax" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="position_id" not-null="true">
+                    <comment>Fiscal Position</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFiscalPositionTax" />
+        </set>
+        <set name="accountFiscalPositionResCountryStateRels" table="account_fiscal_position_res_country_state_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_fiscal_position_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountFiscalPositionResCountryStateRel" />
+        </set>
+        <set name="purchaseOrders" table="purchase_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fiscal_position_id">
+                    <comment>Fiscal Position</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PurchaseOrder" />
+        </set>
+        <set name="saleOrders" table="sale_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fiscal_position_id">
+                    <comment>Fiscal Position</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.SaleOrder" />
+        </set>
+        <set name="accountFiscalPositionAccounts" table="account_fiscal_position_account" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="position_id" not-null="true">
+                    <comment>Fiscal Position</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFiscalPositionAccount" />
+        </set>
+        <set name="posOrders" table="pos_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fiscal_position_id">
+                    <comment>Fiscal Position</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PosOrder" />
+        </set>
+        <set name="accountFiscalPositionPosConfigRels" table="account_fiscal_position_pos_config_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_fiscal_position_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountFiscalPositionPosConfigRel" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountBankStatement" table="account_bank_statement">
+        <comment>Bank Statement</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>Responsible</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountBankStatementCashboxByCashboxStartId" class="com.kye.table.AccountBankStatementCashbox" fetch="select">
+            <column name="cashbox_start_id">
+                <comment>Starting Cashbox</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountJournal" class="com.kye.table.AccountJournal" fetch="select">
+            <column name="journal_id" not-null="true">
+                <comment>Journal</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountBankStatementCashboxByCashboxEndId" class="com.kye.table.AccountBankStatementCashbox" fetch="select">
+            <column name="cashbox_end_id">
+                <comment>Ending Cashbox</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="posSession" class="com.kye.table.PosSession" fetch="select">
+            <column name="pos_session_id">
+                <comment>Session</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="dateDone" type="timestamp">
+            <column name="date_done" length="29">
+                <comment>Closed On</comment>
+            </column>
+        </property>
+        <property name="balanceStart" type="big_decimal">
+            <column name="balance_start" precision="131089" scale="0">
+                <comment>Starting Balance</comment>
+            </column>
+        </property>
+        <property name="reference" type="string">
+            <column name="reference">
+                <comment>External Reference</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state" not-null="true">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="totalEntryEncoding" type="big_decimal">
+            <column name="total_entry_encoding" precision="131089" scale="0">
+                <comment>Transactions Subtotal</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="13" not-null="true">
+                <comment>Date</comment>
+            </column>
+        </property>
+        <property name="difference" type="big_decimal">
+            <column name="difference" precision="131089" scale="0">
+                <comment>Difference</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="balanceEnd" type="big_decimal">
+            <column name="balance_end" precision="131089" scale="0">
+                <comment>Computed Balance</comment>
+            </column>
+        </property>
+        <property name="balanceEndReal" type="big_decimal">
+            <column name="balance_end_real" precision="131089" scale="0">
+                <comment>Ending Balance</comment>
+            </column>
+        </property>
+        <set name="accountMoveLines" table="account_move_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="statement_id">
+                    <comment>Statement</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveLine" />
+        </set>
+        <set name="posSessions" table="pos_session" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cash_register_id">
+                    <comment>Cash Register</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PosSession" />
+        </set>
+        <set name="accountBankStatementLines" table="account_bank_statement_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="statement_id" not-null="true">
+                    <comment>Statement</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountBankStatementLine" />
+        </set>
+    </class>
+</hibernate-mapping>

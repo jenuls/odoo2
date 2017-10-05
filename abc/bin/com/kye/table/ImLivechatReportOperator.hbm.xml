@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.ImLivechatReportOperator" table="im_livechat_report_operator">
+        <composite-id name="id" class="com.kye.table.ImLivechatReportOperatorId">
+            <key-property name="id" type="java.lang.Long">
+                <column name="id" />
+            </key-property>
+            <key-property name="partnerId" type="java.lang.Integer">
+                <column name="partner_id" />
+            </key-property>
+            <key-property name="livechatChannelId" type="java.lang.Integer">
+                <column name="livechat_channel_id" />
+            </key-property>
+            <key-property name="nbrChannel" type="java.lang.Long">
+                <column name="nbr_channel" />
+            </key-property>
+            <key-property name="channelId" type="java.lang.Integer">
+                <column name="channel_id" />
+            </key-property>
+            <key-property name="startDate" type="timestamp">
+                <column name="start_date" length="29" />
+            </key-property>
+            <key-property name="duration" type="java.lang.Double">
+                <column name="duration" precision="17" scale="17" />
+            </key-property>
+            <key-property name="timeToAnswer" type="java.lang.Double">
+                <column name="time_to_answer" precision="17" scale="17" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

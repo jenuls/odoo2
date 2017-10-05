@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountAccount" table="account_account">
+        <comment>Account</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id">
+                <comment>Account Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id" not-null="true">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountType" class="com.kye.table.AccountAccountType" fetch="select">
+            <column name="user_type_id" not-null="true">
+                <comment>Type</comment>
+            </column>
+        </many-to-one>
+        <property name="note" type="string">
+            <column name="note">
+                <comment>Internal Notes</comment>
+            </column>
+        </property>
+        <property name="internalType" type="string">
+            <column name="internal_type">
+                <comment>Internal Type</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Name</comment>
+            </column>
+        </property>
+        <property name="deprecated" type="java.lang.Boolean">
+            <column name="deprecated">
+                <comment>Deprecated</comment>
+            </column>
+        </property>
+        <property name="code" type="string">
+            <column name="code" length="64" not-null="true">
+                <comment>Code</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="lastTimeEntriesChecked" type="timestamp">
+            <column name="last_time_entries_checked" length="29">
+                <comment>Latest Invoices &amp; Payments Matching Date</comment>
+            </column>
+        </property>
+        <property name="reconcile" type="java.lang.Boolean">
+            <column name="reconcile">
+                <comment>Allow Reconciliation</comment>
+            </column>
+        </property>
+        <set name="stockLocationsForValuationOutAccountId" table="stock_location" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="valuation_out_account_id">
+                    <comment>Stock Valuation Account (Outgoing)</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.StockLocation" />
+        </set>
+        <set name="hrExpenses" table="hr_expense" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id">
+                    <comment>Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrExpense" />
+        </set>
+        <set name="accountInvoiceLines" table="account_invoice_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id" not-null="true">
+                    <comment>Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoiceLine" />
+        </set>
+        <set name="accountJournalsForLossAccountId" table="account_journal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="loss_account_id">
+                    <comment>Loss Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountJournal" />
+        </set>
+        <set name="accountAccountTaxDefaultRels" table="account_account_tax_default_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountTaxDefaultRel" />
+        </set>
+        <set name="accountJournalsForProfitAccountId" table="account_journal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="profit_account_id">
+                    <comment>Profit Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountJournal" />
+        </set>
+        <set name="taxAdjustmentsWizardsForDebitAccountId" table="tax_adjustments_wizard" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="debit_account_id" not-null="true">
+                    <comment>Debit account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.TaxAdjustmentsWizard" />
+        </set>
+        <set name="resCompaniesForPropertyStockValuationAccountId" table="res_company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="property_stock_valuation_account_id">
+                    <comment>Account Template for Stock Valuation</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ResCompany" />
+        </set>
+        <set name="accountReconcileModelsForAccountId" table="account_reconcile_model" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id">
+                    <comment>Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountReconcileModel" />
+        </set>
+        <set name="taxAdjustmentsWizardsForCreditAccountId" table="tax_adjustments_wizard" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="credit_account_id" not-null="true">
+                    <comment>Credit account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.TaxAdjustmentsWizard" />
+        </set>
+        <set name="saleAdvancePaymentInvs" table="sale_advance_payment_inv" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="deposit_account_id">
+                    <comment>Income Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.SaleAdvancePaymentInv" />
+        </set>
+        <set name="accountAccountTypeRels" table="account_account_type_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountTypeRel" />
+        </set>
+        <set name="accountTaxesForCashBasisAccount" table="account_tax" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cash_basis_account">
+                    <comment>Tax Received Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountTax" />
+        </set>
+        <set name="accountAccountFinancialReports" table="account_account_financial_report" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountFinancialReport" />
+        </set>
+        <set name="accountTaxesForAccountId" table="account_tax" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id">
+                    <comment>Tax Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountTax" />
+        </set>
+        <set name="stockLocationsForValuationInAccountId" table="stock_location" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="valuation_in_account_id">
+                    <comment>Stock Valuation Account (Incoming)</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.StockLocation" />
+        </set>
+        <set name="resCompaniesForPropertyStockAccountOutputCategId" table="res_company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="property_stock_account_output_categ_id">
+                    <comment>Output Account for Stock Valuation</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ResCompany" />
+        </set>
+        <set name="accountInvoiceTaxes" table="account_invoice_tax" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id" not-null="true">
+                    <comment>Tax Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoiceTax" />
+        </set>
+        <set name="resCompaniesForPropertyStockAccountInputCategId" table="res_company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="property_stock_account_input_categ_id">
+                    <comment>Input Account for Stock Valuation</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ResCompany" />
+        </set>
+        <set name="accountJournalsForDefaultCreditAccountId" table="account_journal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="default_credit_account_id">
+                    <comment>Default Credit Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountJournal" />
+        </set>
+        <set name="accountFiscalPositionAccountsForAccountSrcId" table="account_fiscal_position_account" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_src_id" not-null="true">
+                    <comment>Account on Product</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFiscalPositionAccount" />
+        </set>
+        <set name="accountAnalyticLines" table="account_analytic_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="general_account_id">
+                    <comment>Financial Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAnalyticLine" />
+        </set>
+        <set name="accountJournalsForDefaultDebitAccountId" table="account_journal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="default_debit_account_id">
+                    <comment>Default Debit Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountJournal" />
+        </set>
+        <set name="accountTaxesForRefundAccountId" table="account_tax" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="refund_account_id">
+                    <comment>Tax Account on Refunds</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountTax" />
+        </set>
+        <set name="resCompaniesForTransferAccountId" table="res_company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="transfer_account_id">
+                    <comment>Inter-Banks Transfer Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ResCompany" />
+        </set>
+        <set name="accountBankStatementLines" table="account_bank_statement_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id">
+                    <comment>Counterpart Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountBankStatementLine" />
+        </set>
+        <set name="accountAccountAccountTags" table="account_account_account_tag" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_account_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountAccountTag" />
+        </set>
+        <set name="accountPayments" table="account_payment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="writeoff_account_id">
+                    <comment>Difference Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountPayment" />
+        </set>
+        <set name="accountMoveLineReconcileWriteoffs" table="account_move_line_reconcile_writeoff" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="writeoff_acc_id" not-null="true">
+                    <comment>Write-Off account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveLineReconcileWriteoff" />
+        </set>
+        <set name="accountAssetCategoriesForAccountAssetId" table="account_asset_category" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_asset_id" not-null="true">
+                    <comment>Asset Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAssetCategory" />
+        </set>
+        <set name="stockChangeStandardPrices" table="stock_change_standard_price" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="counterpart_account_id" not-null="true">
+                    <comment>Counter-Part Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.StockChangeStandardPrice" />
+        </set>
+        <set name="accountReconcileModelsForSecondAccountId" table="account_reconcile_model" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="second_account_id">
+                    <comment>Second Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountReconcileModel" />
+        </set>
+        <set name="accountAssetCategoriesForAccountDepreciationExpenseId" table="account_asset_category" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_depreciation_expense_id" not-null="true">
+                    <comment>Depreciation Entries: Expense Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAssetCategory" />
+        </set>
+        <set name="accountInvoices" table="account_invoice" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id" not-null="true">
+                    <comment>Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoice" />
+        </set>
+        <set name="accountAssetCategoriesForAccountDepreciationId" table="account_asset_category" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_depreciation_id" not-null="true">
+                    <comment>Depreciation Entries: Asset Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAssetCategory" />
+        </set>
+        <set name="hrEmployees" table="hr_employee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id">
+                    <comment>Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrEmployee" />
+        </set>
+        <set name="accountMoveLines" table="account_move_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_id" not-null="true">
+                    <comment>Account</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveLine" />
+        </set>
+        <set name="accountFiscalPositionAccountsForAccountDestId" table="account_fiscal_position_account" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_dest_id" not-null="true">
+                    <comment>Account to Use Instead</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFiscalPositionAccount" />
+        </set>
+    </class>
+</hibernate-mapping>

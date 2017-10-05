@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.HrJob" table="hr_job">
+        <comment>Job Position</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>Recruitment Responsible</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrEmployee" class="com.kye.table.HrEmployee" fetch="select">
+            <column name="manager_id">
+                <comment>Department Manager</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrDepartment" class="com.kye.table.HrDepartment" fetch="select">
+            <column name="department_id">
+                <comment>Department</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="mailAlias" class="com.kye.table.MailAlias" fetch="select">
+            <column name="alias_id" not-null="true">
+                <comment>Alias</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="address_id">
+                <comment>Job Location</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="requirements" type="string">
+            <column name="requirements">
+                <comment>Requirements</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state" not-null="true">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="expectedEmployees" type="java.lang.Integer">
+            <column name="expected_employees">
+                <comment>Total Forecasted Employees</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Job Description</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Job Title</comment>
+            </column>
+        </property>
+        <property name="noOfRecruitment" type="java.lang.Integer">
+            <column name="no_of_recruitment">
+                <comment>Expected New Employees</comment>
+            </column>
+        </property>
+        <property name="noOfHiredEmployee" type="java.lang.Integer">
+            <column name="no_of_hired_employee">
+                <comment>Hired Employees</comment>
+            </column>
+        </property>
+        <property name="noOfEmployee" type="java.lang.Integer">
+            <column name="no_of_employee">
+                <comment>Current Number of Employees</comment>
+            </column>
+        </property>
+        <property name="color" type="java.lang.Integer">
+            <column name="color">
+                <comment>Color Index</comment>
+            </column>
+        </property>
+        <set name="hrRecruitmentStages" table="hr_recruitment_stage" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="job_id">
+                    <comment>Job Specific</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrRecruitmentStage" />
+        </set>
+        <set name="hrEmployees" table="hr_employee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="job_id">
+                    <comment>Job Title</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrEmployee" />
+        </set>
+        <set name="hrContracts" table="hr_contract" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="job_id">
+                    <comment>Job Title</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrContract" />
+        </set>
+        <set name="hrRecruitmentSources" table="hr_recruitment_source" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="job_id">
+                    <comment>Job ID</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrRecruitmentSource" />
+        </set>
+        <set name="hrApplicants" table="hr_applicant" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="job_id">
+                    <comment>Applied Job</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrApplicant" />
+        </set>
+    </class>
+</hibernate-mapping>

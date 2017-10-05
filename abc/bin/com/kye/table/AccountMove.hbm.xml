@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountMove" table="account_move">
+        <comment>Account Entry</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountJournal" class="com.kye.table.AccountJournal" fetch="select">
+            <column name="journal_id" not-null="true">
+                <comment>Journal</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountPartialReconcile" class="com.kye.table.AccountPartialReconcile" fetch="select">
+            <column name="tax_cash_basis_rec_id">
+                <comment>Tax Cash Basis Entry of</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Partner</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountBankStatementLine" class="com.kye.table.AccountBankStatementLine" fetch="select">
+            <column name="statement_line_id">
+                <comment>Bank statement line reconciled with this entry</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Number</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state" not-null="true">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="ref" type="string">
+            <column name="ref">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="131089" scale="0">
+                <comment>Amount</comment>
+            </column>
+        </property>
+        <property name="matchedPercentage" type="big_decimal">
+            <column name="matched_percentage" precision="131089" scale="0">
+                <comment>Percentage Matched</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="narration" type="string">
+            <column name="narration">
+                <comment>Internal Note</comment>
+            </column>
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="13" not-null="true">
+                <comment>Date</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <set name="accountAssetDepreciationLines" table="account_asset_depreciation_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="move_id">
+                    <comment>Depreciation Entry</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAssetDepreciationLine" />
+        </set>
+        <set name="posOrders" table="pos_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_move">
+                    <comment>Journal Entry</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PosOrder" />
+        </set>
+        <set name="accountMoveLines" table="account_move_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="move_id" not-null="true">
+                    <comment>Journal Entry</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveLine" />
+        </set>
+        <set name="accountInvoices" table="account_invoice" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="move_id">
+                    <comment>Journal Entry</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoice" />
+        </set>
+        <set name="hrExpenseSheets" table="hr_expense_sheet" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_move_id">
+                    <comment>Journal Entry</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrExpenseSheet" />
+        </set>
+        <set name="accountFullReconciles" table="account_full_reconcile" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="exchange_move_id">
+                    <comment>Exchange move id</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFullReconcile" />
+        </set>
+    </class>
+</hibernate-mapping>

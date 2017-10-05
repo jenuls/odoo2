@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.GamificationBadgeRuleBadgeRel" table="gamification_badge_rule_badge_rel">
+        <comment>RELATION BETWEEN gamification_badge AND gamification_badge</comment>
+        <composite-id name="id" class="com.kye.table.GamificationBadgeRuleBadgeRelId">
+            <key-property name="badge1Id" type="int">
+                <column name="badge1_id" />
+            </key-property>
+            <key-property name="badge2Id" type="int">
+                <column name="badge2_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="gamificationBadgeByBadge2Id" class="com.kye.table.GamificationBadge" update="false" insert="false" fetch="select">
+            <column name="badge2_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="gamificationBadgeByBadge1Id" class="com.kye.table.GamificationBadge" update="false" insert="false" fetch="select">
+            <column name="badge1_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

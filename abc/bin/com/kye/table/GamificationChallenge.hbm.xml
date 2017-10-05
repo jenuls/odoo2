@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.GamificationChallenge" table="gamification_challenge">
+        <comment>Gamification challenge</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="gamificationBadgeByRewardFirstId" class="com.kye.table.GamificationBadge" fetch="select">
+            <column name="reward_first_id">
+                <comment>For 1st user</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByManagerId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="manager_id">
+                <comment>Responsible</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="gamificationBadgeByRewardThirdId" class="com.kye.table.GamificationBadge" fetch="select">
+            <column name="reward_third_id">
+                <comment>For 3rd user</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="gamificationBadgeByRewardSecondId" class="com.kye.table.GamificationBadge" fetch="select">
+            <column name="reward_second_id">
+                <comment>For 2nd user</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="gamificationBadgeByRewardId" class="com.kye.table.GamificationBadge" fetch="select">
+            <column name="reward_id">
+                <comment>For Every Succeeding User</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="mailChannel" class="com.kye.table.MailChannel" fetch="select">
+            <column name="report_message_group_id">
+                <comment>Send a copy to</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="mailTemplate" class="com.kye.table.MailTemplate" fetch="select">
+            <column name="report_template_id" not-null="true">
+                <comment>Report Template</comment>
+            </column>
+        </many-to-one>
+        <property name="rewardFailure" type="java.lang.Boolean">
+            <column name="reward_failure">
+                <comment>Reward Bests if not Succeeded?</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="nextReportDate" type="date">
+            <column name="next_report_date" length="13">
+                <comment>Next Report Date</comment>
+            </column>
+        </property>
+        <property name="period" type="string">
+            <column name="period" not-null="true">
+                <comment>Periodicity</comment>
+            </column>
+        </property>
+        <property name="lastReportDate" type="date">
+            <column name="last_report_date" length="13">
+                <comment>Last Report Date</comment>
+            </column>
+        </property>
+        <property name="remindUpdateDelay" type="java.lang.Integer">
+            <column name="remind_update_delay">
+                <comment>Non-updated manual goals will be reminded after</comment>
+            </column>
+        </property>
+        <property name="category" type="string">
+            <column name="category" not-null="true">
+                <comment>Appears in</comment>
+            </column>
+        </property>
+        <property name="reportMessageFrequency" type="string">
+            <column name="report_message_frequency" not-null="true">
+                <comment>Report Frequency</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="rewardRealtime" type="java.lang.Boolean">
+            <column name="reward_realtime">
+                <comment>Reward as soon as every goal is reached</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state" not-null="true">
+                <comment>State</comment>
+            </column>
+        </property>
+        <property name="startDate" type="date">
+            <column name="start_date" length="13">
+                <comment>Start Date</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="endDate" type="date">
+            <column name="end_date" length="13">
+                <comment>End Date</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="userDomain" type="string">
+            <column name="user_domain">
+                <comment>User domain</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Challenge Name</comment>
+            </column>
+        </property>
+        <property name="visibilityMode" type="string">
+            <column name="visibility_mode" not-null="true">
+                <comment>Display Mode</comment>
+            </column>
+        </property>
+        <set name="gamificationChallengeUsersRels" table="gamification_challenge_users_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="gamification_challenge_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.GamificationChallengeUsersRel" />
+        </set>
+        <set name="gamificationBadgeUsers" table="gamification_badge_user" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="challenge_id">
+                    <comment>Challenge originating</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationBadgeUser" />
+        </set>
+        <set name="gamificationGoals" table="gamification_goal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="challenge_id">
+                    <comment>Challenge</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationGoal" />
+        </set>
+        <set name="gamificationChallengeLines" table="gamification_challenge_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="challenge_id" not-null="true">
+                    <comment>Challenge</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationChallengeLine" />
+        </set>
+        <set name="gamificationInvitedUserIdsRels" table="gamification_invited_user_ids_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="gamification_challenge_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.GamificationInvitedUserIdsRel" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CalendarEvent" table="calendar_event">
+        <comment>Event</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>Responsible</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="crmLead" class="com.kye.table.CrmLead" fetch="select">
+            <column name="opportunity_id">
+                <comment>Opportunity</comment>
+            </column>
+        </many-to-one>
+        <property name="allday" type="java.lang.Boolean">
+            <column name="allday">
+                <comment>All Day</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="fr" type="java.lang.Boolean">
+            <column name="fr">
+                <comment>Fri</comment>
+            </column>
+        </property>
+        <property name="startDatetime" type="timestamp">
+            <column name="start_datetime" length="29">
+                <comment>Start DateTime</comment>
+            </column>
+        </property>
+        <property name="monthBy" type="string">
+            <column name="month_by">
+                <comment>Option</comment>
+            </column>
+        </property>
+        <property name="stopDate" type="date">
+            <column name="stop_date" length="13">
+                <comment>End Date</comment>
+            </column>
+        </property>
+        <property name="rrule" type="string">
+            <column name="rrule">
+                <comment>Recurrent Rule</comment>
+            </column>
+        </property>
+        <property name="duration" type="java.lang.Double">
+            <column name="duration" precision="17" scale="17">
+                <comment>Duration</comment>
+            </column>
+        </property>
+        <property name="finalDate" type="date">
+            <column name="final_date" length="13">
+                <comment>Repeat Until</comment>
+            </column>
+        </property>
+        <property name="privacy" type="string">
+            <column name="privacy">
+                <comment>Privacy</comment>
+            </column>
+        </property>
+        <property name="tu" type="java.lang.Boolean">
+            <column name="tu">
+                <comment>Tue</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="weekList" type="string">
+            <column name="week_list">
+                <comment>Weekday</comment>
+            </column>
+        </property>
+        <property name="showAs" type="string">
+            <column name="show_as">
+                <comment>Show Time as</comment>
+            </column>
+        </property>
+        <property name="startDate" type="date">
+            <column name="start_date" length="13">
+                <comment>Start Date</comment>
+            </column>
+        </property>
+        <property name="location" type="string">
+            <column name="location">
+                <comment>Location</comment>
+            </column>
+        </property>
+        <property name="th" type="java.lang.Boolean">
+            <column name="th">
+                <comment>Thu</comment>
+            </column>
+        </property>
+        <property name="su" type="java.lang.Boolean">
+            <column name="su">
+                <comment>Sun</comment>
+            </column>
+        </property>
+        <property name="start" type="timestamp">
+            <column name="start" length="29" not-null="true">
+                <comment>Start</comment>
+            </column>
+        </property>
+        <property name="recurrentIdDate" type="timestamp">
+            <column name="recurrent_id_date" length="29">
+                <comment>Recurrent ID date</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="stop" type="timestamp">
+            <column name="stop" length="29" not-null="true">
+                <comment>Stop</comment>
+            </column>
+        </property>
+        <property name="endType" type="string">
+            <column name="end_type">
+                <comment>Recurrence Termination</comment>
+            </column>
+        </property>
+        <property name="stopDatetime" type="timestamp">
+            <column name="stop_datetime" length="29">
+                <comment>End Datetime</comment>
+            </column>
+        </property>
+        <property name="displayStart" type="string">
+            <column name="display_start">
+                <comment>Date</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="day" type="java.lang.Integer">
+            <column name="day">
+                <comment>Date of month</comment>
+            </column>
+        </property>
+        <property name="count" type="java.lang.Integer">
+            <column name="count">
+                <comment>Repeat</comment>
+            </column>
+        </property>
+        <property name="byday" type="string">
+            <column name="byday">
+                <comment>By day</comment>
+            </column>
+        </property>
+        <property name="rruleType" type="string">
+            <column name="rrule_type">
+                <comment>Recurrency</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Meeting Subject</comment>
+            </column>
+        </property>
+        <property name="we" type="java.lang.Boolean">
+            <column name="we">
+                <comment>Wed</comment>
+            </column>
+        </property>
+        <property name="mo" type="java.lang.Boolean">
+            <column name="mo">
+                <comment>Mon</comment>
+            </column>
+        </property>
+        <property name="interval" type="java.lang.Integer">
+            <column name="interval">
+                <comment>Repeat Every</comment>
+            </column>
+        </property>
+        <property name="recurrentId" type="java.lang.Integer">
+            <column name="recurrent_id">
+                <comment>Recurrent ID</comment>
+            </column>
+        </property>
+        <property name="recurrency" type="java.lang.Boolean">
+            <column name="recurrency">
+                <comment>Recurrent</comment>
+            </column>
+        </property>
+        <property name="sa" type="java.lang.Boolean">
+            <column name="sa">
+                <comment>Sat</comment>
+            </column>
+        </property>
+        <set name="calendarAttendees" table="calendar_attendee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="event_id">
+                    <comment>Meeting linked</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CalendarAttendee" />
+        </set>
+        <set name="calendarAlarmCalendarEventRels" table="calendar_alarm_calendar_event_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="calendar_event_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.CalendarAlarmCalendarEventRel" />
+        </set>
+        <set name="hrHolidayses" table="hr_holidays" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="meeting_id">
+                    <comment>Meeting</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrHolidays" />
+        </set>
+        <set name="meetingCategoryRels" table="meeting_category_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="event_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.MeetingCategoryRel" />
+        </set>
+        <set name="calendarEventResPartnerRels" table="calendar_event_res_partner_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="calendar_event_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.CalendarEventResPartnerRel" />
+        </set>
+    </class>
+</hibernate-mapping>

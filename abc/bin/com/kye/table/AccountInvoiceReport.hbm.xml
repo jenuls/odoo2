@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountInvoiceReport" table="account_invoice_report">
+        <composite-id name="id" class="com.kye.table.AccountInvoiceReportId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="date" type="date">
+                <column name="date" length="13" />
+            </key-property>
+            <key-property name="productId" type="java.lang.Integer">
+                <column name="product_id" />
+            </key-property>
+            <key-property name="partnerId" type="java.lang.Integer">
+                <column name="partner_id" />
+            </key-property>
+            <key-property name="countryId" type="java.lang.Integer">
+                <column name="country_id" />
+            </key-property>
+            <key-property name="accountAnalyticId" type="java.lang.Integer">
+                <column name="account_analytic_id" />
+            </key-property>
+            <key-property name="paymentTermId" type="java.lang.Integer">
+                <column name="payment_term_id" />
+            </key-property>
+            <key-property name="uomName" type="string">
+                <column name="uom_name" />
+            </key-property>
+            <key-property name="currencyId" type="java.lang.Integer">
+                <column name="currency_id" />
+            </key-property>
+            <key-property name="journalId" type="java.lang.Integer">
+                <column name="journal_id" />
+            </key-property>
+            <key-property name="fiscalPositionId" type="java.lang.Integer">
+                <column name="fiscal_position_id" />
+            </key-property>
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="companyId" type="java.lang.Integer">
+                <column name="company_id" />
+            </key-property>
+            <key-property name="nbr" type="java.lang.Integer">
+                <column name="nbr" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="type" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="state" />
+            </key-property>
+            <key-property name="weight" type="big_decimal">
+                <column name="weight" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="volume" type="java.lang.Double">
+                <column name="volume" precision="17" scale="17" />
+            </key-property>
+            <key-property name="categId" type="java.lang.Integer">
+                <column name="categ_id" />
+            </key-property>
+            <key-property name="dateDue" type="date">
+                <column name="date_due" length="13" />
+            </key-property>
+            <key-property name="accountId" type="java.lang.Integer">
+                <column name="account_id" />
+            </key-property>
+            <key-property name="accountLineId" type="java.lang.Integer">
+                <column name="account_line_id" />
+            </key-property>
+            <key-property name="partnerBankId" type="java.lang.Integer">
+                <column name="partner_bank_id" />
+            </key-property>
+            <key-property name="productQty" type="big_decimal">
+                <column name="product_qty" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="priceTotal" type="big_decimal">
+                <column name="price_total" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="priceAverage" type="big_decimal">
+                <column name="price_average" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="currencyRate" type="big_decimal">
+                <column name="currency_rate" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="residual" type="big_decimal">
+                <column name="residual" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="commercialPartnerId" type="java.lang.Integer">
+                <column name="commercial_partner_id" />
+            </key-property>
+            <key-property name="teamId" type="java.lang.Integer">
+                <column name="team_id" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

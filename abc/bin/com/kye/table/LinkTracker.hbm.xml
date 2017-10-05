@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.LinkTracker" table="link_tracker">
+        <comment>link.tracker</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmMedium" class="com.kye.table.UtmMedium" fetch="select">
+            <column name="medium_id">
+                <comment>Medium</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmCampaign" class="com.kye.table.UtmCampaign" fetch="select">
+            <column name="campaign_id">
+                <comment>Campaign</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="mailMassMailing" class="com.kye.table.MailMassMailing" fetch="select">
+            <column name="mass_mailing_id">
+                <comment>Mass Mailing</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmSource" class="com.kye.table.UtmSource" fetch="select">
+            <column name="source_id">
+                <comment>Source</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="mailMassMailingCampaign" class="com.kye.table.MailMassMailingCampaign" fetch="select">
+            <column name="mass_mailing_campaign_id">
+                <comment>Mass Mailing Campaign</comment>
+            </column>
+        </many-to-one>
+        <property name="count" type="java.lang.Integer">
+            <column name="count">
+                <comment>Number of Clicks</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="title" type="string">
+            <column name="title">
+                <comment>Page Title</comment>
+            </column>
+        </property>
+        <property name="url" type="string">
+            <column name="url" not-null="true">
+                <comment>Target URL</comment>
+            </column>
+        </property>
+        <property name="favicon" type="string">
+            <column name="favicon">
+                <comment>Favicon</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <set name="linkTrackerCodes" table="link_tracker_code" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="link_id" not-null="true">
+                    <comment>Link</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.LinkTrackerCode" />
+        </set>
+        <set name="linkTrackerClicks" table="link_tracker_click" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="link_id" not-null="true">
+                    <comment>Link</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.LinkTrackerClick" />
+        </set>
+    </class>
+</hibernate-mapping>

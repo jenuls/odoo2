@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrModel" table="ir_model">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelFields" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="website_form_default_field_id">
+                <comment>Field for custom form data</comment>
+            </column>
+        </many-to-one>
+        <property name="model" type="string">
+            <column name="model" not-null="true" unique="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" />
+        </property>
+        <property name="info" type="string">
+            <column name="info" />
+        </property>
+        <property name="transient_" type="java.lang.Boolean">
+            <column name="transient" />
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="websiteFormLabel" type="string">
+            <column name="website_form_label">
+                <comment>Label for form action</comment>
+            </column>
+        </property>
+        <property name="websiteFormAccess" type="java.lang.Boolean">
+            <column name="website_form_access">
+                <comment>Allowed to use in forms</comment>
+            </column>
+        </property>
+        <set name="baseActionRules" table="base_action_rule" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model_id" not-null="true">
+                    <comment>Related Document Model</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.BaseActionRule" />
+        </set>
+        <set name="mailTemplatesForModelId" table="mail_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model_id">
+                    <comment>Applies to</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MailTemplate" />
+        </set>
+        <set name="irRules" table="ir_rule" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model_id" not-null="true">
+                    <comment>Object</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrRule" />
+        </set>
+        <set name="irValueses" table="ir_values" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model_id">
+                    <comment>Model (change only)</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrValues" />
+        </set>
+        <set name="irActServersForCrudModelId" table="ir_act_server" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="crud_model_id">
+                    <comment>Create/Write Target Model</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrActServer" />
+        </set>
+        <set name="irModelFieldses" table="ir_model_fields" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.IrModelFields" />
+        </set>
+        <set name="irActServersForSubObject" table="ir_act_server" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sub_object">
+                    <comment>Sub-model</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrActServer" />
+        </set>
+        <set name="mailTemplatesForSubObject" table="mail_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sub_object">
+                    <comment>Sub-model</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MailTemplate" />
+        </set>
+        <set name="irActServersForModelId" table="ir_act_server" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model_id" not-null="true">
+                    <comment>Base Model</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrActServer" />
+        </set>
+        <set name="irModelAccesses" table="ir_model_access" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model_id" not-null="true">
+                    <comment>Object</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrModelAccess" />
+        </set>
+        <set name="irModelConstraints" table="ir_model_constraint" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.IrModelConstraint" />
+        </set>
+        <set name="fetchmailServers" table="fetchmail_server" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="object_id">
+                    <comment>Create a New Record</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.FetchmailServer" />
+        </set>
+        <set name="irActServersForWkfModelId" table="ir_act_server" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="wkf_model_id">
+                    <comment>Target Model</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrActServer" />
+        </set>
+        <set name="mailAliasesForAliasModelId" table="mail_alias" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="alias_model_id" not-null="true">
+                    <comment>Aliased Model</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MailAlias" />
+        </set>
+        <set name="mailAliasesForAliasParentModelId" table="mail_alias" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="alias_parent_model_id">
+                    <comment>Parent Model</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MailAlias" />
+        </set>
+        <set name="emailTemplatePreviewsForModelId" table="email_template_preview" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model_id">
+                    <comment>Applies to</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.EmailTemplatePreview" />
+        </set>
+        <set name="gamificationGoalDefinitions" table="gamification_goal_definition" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model_id">
+                    <comment>Model</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationGoalDefinition" />
+        </set>
+        <set name="emailTemplatePreviewsForSubObject" table="email_template_preview" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sub_object">
+                    <comment>Sub-model</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.EmailTemplatePreview" />
+        </set>
+        <set name="irModelRelations" table="ir_model_relation" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.IrModelRelation" />
+        </set>
+    </class>
+</hibernate-mapping>

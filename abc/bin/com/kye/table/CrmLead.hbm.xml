@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmLead" table="crm_lead">
+        <comment>Lead/Opportunity</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="crmTeam" class="com.kye.table.CrmTeam" fetch="select">
+            <column name="team_id">
+                <comment>Sales Team</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>Salesperson</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="crmLostReason" class="com.kye.table.CrmLostReason" fetch="select">
+            <column name="lost_reason">
+                <comment>Lost Reason</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCountryState" class="com.kye.table.ResCountryState" fetch="select">
+            <column name="state_id">
+                <comment>State</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Customer</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmCampaign" class="com.kye.table.UtmCampaign" fetch="select">
+            <column name="campaign_id">
+                <comment>Campaign</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmSource" class="com.kye.table.UtmSource" fetch="select">
+            <column name="source_id">
+                <comment>Source</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="crmStage" class="com.kye.table.CrmStage" fetch="select">
+            <column name="stage_id">
+                <comment>Stage</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmMedium" class="com.kye.table.UtmMedium" fetch="select">
+            <column name="medium_id">
+                <comment>Medium</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCountry" class="com.kye.table.ResCountry" fetch="select">
+            <column name="country_id">
+                <comment>Country</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="crmActivity" class="com.kye.table.CrmActivity" fetch="select">
+            <column name="next_activity_id">
+                <comment>Next Activity</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartnerTitle" class="com.kye.table.ResPartnerTitle" fetch="select">
+            <column name="title">
+                <comment>Title</comment>
+            </column>
+        </many-to-one>
+        <property name="dateClosed" type="timestamp">
+            <column name="date_closed" length="29">
+                <comment>Closed Date</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Create Date</comment>
+            </column>
+        </property>
+        <property name="probability" type="java.lang.Double">
+            <column name="probability" precision="17" scale="17">
+                <comment>Probability</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="color" type="java.lang.Integer">
+            <column name="color">
+                <comment>Color Index</comment>
+            </column>
+        </property>
+        <property name="dateLastStageUpdate" type="timestamp">
+            <column name="date_last_stage_update" length="29">
+                <comment>Last Stage Update</comment>
+            </column>
+        </property>
+        <property name="dateActionLast" type="timestamp">
+            <column name="date_action_last" length="29">
+                <comment>Last Action</comment>
+            </column>
+        </property>
+        <property name="dayClose" type="java.lang.Double">
+            <column name="day_close" precision="17" scale="17">
+                <comment>Days to Close</comment>
+            </column>
+        </property>
+        <property name="dayOpen" type="java.lang.Double">
+            <column name="day_open" precision="17" scale="17">
+                <comment>Days to Assign</comment>
+            </column>
+        </property>
+        <property name="contactName" type="string">
+            <column name="contact_name">
+                <comment>Contact Name</comment>
+            </column>
+        </property>
+        <property name="dateActionNext" type="timestamp">
+            <column name="date_action_next" length="29">
+                <comment>Next Action</comment>
+            </column>
+        </property>
+        <property name="city" type="string">
+            <column name="city">
+                <comment>City</comment>
+            </column>
+        </property>
+        <property name="dateConversion" type="timestamp">
+            <column name="date_conversion" length="29">
+                <comment>Conversion Date</comment>
+            </column>
+        </property>
+        <property name="optOut" type="java.lang.Boolean">
+            <column name="opt_out">
+                <comment>Opt-Out</comment>
+            </column>
+        </property>
+        <property name="dateOpen" type="timestamp">
+            <column name="date_open" length="29">
+                <comment>Assigned</comment>
+            </column>
+        </property>
+        <property name="partnerName" type="string">
+            <column name="partner_name">
+                <comment>Customer Name</comment>
+            </column>
+        </property>
+        <property name="plannedRevenue" type="java.lang.Double">
+            <column name="planned_revenue" precision="17" scale="17">
+                <comment>Expected Revenue</comment>
+            </column>
+        </property>
+        <property name="priority" type="string">
+            <column name="priority">
+                <comment>Rating</comment>
+            </column>
+        </property>
+        <property name="emailCc" type="string">
+            <column name="email_cc">
+                <comment>Global CC</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true">
+                <comment>Type</comment>
+            </column>
+        </property>
+        <property name="function" type="string">
+            <column name="function">
+                <comment>Job Position</comment>
+            </column>
+        </property>
+        <property name="fax" type="string">
+            <column name="fax">
+                <comment>Fax</comment>
+            </column>
+        </property>
+        <property name="zip" type="string">
+            <column name="zip">
+                <comment>Zip</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Notes</comment>
+            </column>
+        </property>
+        <property name="street2" type="string">
+            <column name="street2">
+                <comment>Street2</comment>
+            </column>
+        </property>
+        <property name="titleAction" type="string">
+            <column name="title_action">
+                <comment>Next Activity Summary</comment>
+            </column>
+        </property>
+        <property name="phone" type="string">
+            <column name="phone">
+                <comment>Phone</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Update Date</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="dateAction" type="date">
+            <column name="date_action" length="13">
+                <comment>Next Activity Date</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Opportunity</comment>
+            </column>
+        </property>
+        <property name="dateDeadline" type="date">
+            <column name="date_deadline" length="13">
+                <comment>Expected Closing</comment>
+            </column>
+        </property>
+        <property name="mobile" type="string">
+            <column name="mobile">
+                <comment>Mobile</comment>
+            </column>
+        </property>
+        <property name="street" type="string">
+            <column name="street">
+                <comment>Street</comment>
+            </column>
+        </property>
+        <property name="emailFrom" type="string">
+            <column name="email_from">
+                <comment>Email</comment>
+            </column>
+        </property>
+        <property name="messageBounce" type="java.lang.Integer">
+            <column name="message_bounce">
+                <comment>Bounce</comment>
+            </column>
+        </property>
+        <property name="referred" type="string">
+            <column name="referred">
+                <comment>Referred By</comment>
+            </column>
+        </property>
+        <set name="crmActivityLogs" table="crm_activity_log" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="lead_id" not-null="true">
+                    <comment>Lead</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmActivityLog" />
+        </set>
+        <set name="saleOrders" table="sale_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="opportunity_id">
+                    <comment>Opportunity</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.SaleOrder" />
+        </set>
+        <set name="mergeOpportunityRels" table="merge_opportunity_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="opportunity_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.MergeOpportunityRel" />
+        </set>
+        <set name="crmLeadTagRels" table="crm_lead_tag_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="lead_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.CrmLeadTagRel" />
+        </set>
+        <set name="crmLeadCrmLead2opportunityPartnerRels" table="crm_lead_crm_lead2opportunity_partner_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="crm_lead_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.CrmLeadCrmLead2opportunityPartnerRel" />
+        </set>
+        <set name="calendarEvents" table="calendar_event" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="opportunity_id">
+                    <comment>Opportunity</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CalendarEvent" />
+        </set>
+        <set name="crmLeadCrmLead2opportunityPartnerMassRels" table="crm_lead_crm_lead2opportunity_partner_mass_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="crm_lead_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.CrmLeadCrmLead2opportunityPartnerMassRel" />
+        </set>
+    </class>
+</hibernate-mapping>

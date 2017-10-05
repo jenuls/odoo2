@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AssetAssetReport" table="asset_asset_report">
+        <composite-id name="id" class="com.kye.table.AssetAssetReportId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="name" />
+            </key-property>
+            <key-property name="depreciationDate" type="date">
+                <column name="depreciation_date" length="13" />
+            </key-property>
+            <key-property name="date" type="date">
+                <column name="date" length="13" />
+            </key-property>
+            <key-property name="grossValue" type="big_decimal">
+                <column name="gross_value" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="depreciationValue" type="big_decimal">
+                <column name="depreciation_value" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="installmentValue" type="big_decimal">
+                <column name="installment_value" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="postedValue" type="big_decimal">
+                <column name="posted_value" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="unpostedValue" type="big_decimal">
+                <column name="unposted_value" precision="131089" scale="0" />
+            </key-property>
+            <key-property name="assetId" type="java.lang.Integer">
+                <column name="asset_id" />
+            </key-property>
+            <key-property name="moveCheck" type="java.lang.Boolean">
+                <column name="move_check" />
+            </key-property>
+            <key-property name="assetCategoryId" type="java.lang.Integer">
+                <column name="asset_category_id" />
+            </key-property>
+            <key-property name="partnerId" type="java.lang.Integer">
+                <column name="partner_id" />
+            </key-property>
+            <key-property name="state" type="string">
+                <column name="state" />
+            </key-property>
+            <key-property name="installmentNbr" type="java.lang.Long">
+                <column name="installment_nbr" />
+            </key-property>
+            <key-property name="depreciationNbr" type="java.lang.Long">
+                <column name="depreciation_nbr" />
+            </key-property>
+            <key-property name="companyId" type="java.lang.Integer">
+                <column name="company_id" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

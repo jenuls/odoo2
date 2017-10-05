@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrActReportXml" table="ir_act_report_xml">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid" />
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid" />
+        </many-to-one>
+        <many-to-one name="reportPaperformat" class="com.kye.table.ReportPaperformat" fetch="select">
+            <column name="paperformat_id">
+                <comment>Paper format</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irValues" class="com.kye.table.IrValues" fetch="select">
+            <column name="ir_values_id">
+                <comment>More Menu entry</comment>
+            </column>
+        </many-to-one>
+        <property name="help" type="string">
+            <column name="help" />
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29" />
+        </property>
+        <property name="usage" type="string">
+            <column name="usage" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="parser" type="string">
+            <column name="parser">
+                <comment>Parser Class</comment>
+            </column>
+        </property>
+        <property name="header" type="java.lang.Boolean">
+            <column name="header">
+                <comment>Add RML Header</comment>
+            </column>
+        </property>
+        <property name="reportType" type="string">
+            <column name="report_type" not-null="true">
+                <comment>Report type</comment>
+            </column>
+        </property>
+        <property name="attachment" type="string">
+            <column name="attachment">
+                <comment>Save as Attachment Prefix</comment>
+            </column>
+        </property>
+        <property name="reportSxwContentData" type="binary">
+            <column name="report_sxw_content_data">
+                <comment>SXW Content</comment>
+            </column>
+        </property>
+        <property name="reportXml" type="string">
+            <column name="report_xml">
+                <comment>XML Path</comment>
+            </column>
+        </property>
+        <property name="reportRmlContentData" type="binary">
+            <column name="report_rml_content_data">
+                <comment>RML Content</comment>
+            </column>
+        </property>
+        <property name="auto" type="java.lang.Boolean">
+            <column name="auto">
+                <comment>Custom Python Parser</comment>
+            </column>
+        </property>
+        <property name="reportFile" type="string">
+            <column name="report_file">
+                <comment>Report File</comment>
+            </column>
+        </property>
+        <property name="multi" type="java.lang.Boolean">
+            <column name="multi">
+                <comment>On Multiple Doc.</comment>
+            </column>
+        </property>
+        <property name="reportXsl" type="string">
+            <column name="report_xsl">
+                <comment>XSL Path</comment>
+            </column>
+        </property>
+        <property name="reportRml" type="string">
+            <column name="report_rml">
+                <comment>Main Report File Path/controller</comment>
+            </column>
+        </property>
+        <property name="reportName" type="string">
+            <column name="report_name" not-null="true">
+                <comment>Template Name</comment>
+            </column>
+        </property>
+        <property name="attachmentUse" type="java.lang.Boolean">
+            <column name="attachment_use">
+                <comment>Reload from Attachment</comment>
+            </column>
+        </property>
+        <property name="model" type="string">
+            <column name="model" not-null="true">
+                <comment>Model</comment>
+            </column>
+        </property>
+        <property name="printReportName" type="string">
+            <column name="print_report_name">
+                <comment>Printed Report Name</comment>
+            </column>
+        </property>
+        <set name="mailTemplates" table="mail_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="report_template">
+                    <comment>Optional report to print and attach</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MailTemplate" />
+        </set>
+        <set name="emailTemplatePreviews" table="email_template_preview" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="report_template">
+                    <comment>Optional report to print and attach</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.EmailTemplatePreview" />
+        </set>
+        <set name="resGroupsReportRels" table="res_groups_report_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="uid" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.ResGroupsReportRel" />
+        </set>
+    </class>
+</hibernate-mapping>

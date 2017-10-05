@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.BarcodeNomenclature" table="barcode_nomenclature">
+        <comment>barcode.nomenclature</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="32" not-null="true">
+                <comment>Nomenclature Name</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="upcEanConv" type="string">
+            <column name="upc_ean_conv" not-null="true">
+                <comment>UPC/EAN Conversion</comment>
+            </column>
+        </property>
+        <set name="stockPickingTypes" table="stock_picking_type" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="barcode_nomenclature_id">
+                    <comment>Barcode Nomenclature</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.StockPickingType" />
+        </set>
+        <set name="barcodeRules" table="barcode_rule" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="barcode_nomenclature_id">
+                    <comment>Barcode Nomenclature</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.BarcodeRule" />
+        </set>
+        <set name="posConfigs" table="pos_config" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="barcode_nomenclature_id" not-null="true">
+                    <comment>Barcodes</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PosConfig" />
+        </set>
+    </class>
+</hibernate-mapping>

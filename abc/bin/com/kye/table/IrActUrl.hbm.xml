@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrActUrl" table="ir_act_url">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid" />
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid" />
+        </many-to-one>
+        <property name="help" type="string">
+            <column name="help" />
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29" />
+        </property>
+        <property name="usage" type="string">
+            <column name="usage" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="target" type="string">
+            <column name="target" not-null="true">
+                <comment>Action Target</comment>
+            </column>
+        </property>
+        <property name="url" type="string">
+            <column name="url" not-null="true">
+                <comment>Action URL</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrProperty" table="ir_property">
+        <comment>ir.property</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelFields" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="fields_id" not-null="true">
+                <comment>Field</comment>
+            </column>
+        </many-to-one>
+        <property name="valueInteger" type="java.lang.Integer">
+            <column name="value_integer">
+                <comment>Value integer</comment>
+            </column>
+        </property>
+        <property name="valueFloat" type="java.lang.Double">
+            <column name="value_float" precision="17" scale="17">
+                <comment>Value float</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name">
+                <comment>Name</comment>
+            </column>
+        </property>
+        <property name="valueText" type="string">
+            <column name="value_text">
+                <comment>Value text</comment>
+            </column>
+        </property>
+        <property name="resId" type="string">
+            <column name="res_id">
+                <comment>Resource</comment>
+            </column>
+        </property>
+        <property name="valueDatetime" type="timestamp">
+            <column name="value_datetime" length="29">
+                <comment>Value datetime</comment>
+            </column>
+        </property>
+        <property name="valueBinary" type="binary">
+            <column name="value_binary">
+                <comment>Value binary</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="valueReference" type="string">
+            <column name="value_reference">
+                <comment>Value reference</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true">
+                <comment>Type</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

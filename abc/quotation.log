@@ -1,0 +1,894 @@
+[2017/02/13 01:53:25][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 01:53:25][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 01:53:25][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/02/13 01:53:28][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/02/13 01:54:14][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 01:54:14][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 01:54:14][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/02/13 01:54:14][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 01:54:17][com.kye.main.CheckSO][INFO ]: 所有的報價單數量 :  3
+[2017/02/13 01:54:17][com.kye.main.CheckSO][INFO ]: 新增的報價單數量:  3
+[2017/02/13 01:54:17][com.kye.main.CheckSO][INFO ]: 新產生的報價單: [SO035, SO028, SO023]
+[2017/02/13 01:54:17][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/02/13 01:54:17][com.kye.main.CheckSO][INFO ]: 刪除檔案[ so_summary_20170213.xlsx ]:  true
+[2017/02/13 01:54:17][com.kye.main.CheckSO][DEBUG]: 處理單號: SO035
+[2017/02/13 01:54:17][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf1-1(100260CPC DI)
+[2017/02/13 01:54:17][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf1-1
+[2017/02/13 01:54:17][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf1-1@geniusnet.com
+[2017/02/13 01:54:17][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/02/13 01:54:17][com.kye.main.CheckSO][INFO ]: Contact: 陳文政
+[2017/02/13 01:54:17][com.kye.main.CheckSO][DEBUG]: poNo: SO035  ,   Item No: 31300725110  ,   Name:  RS,LUXEMATE 100,USB,BLK,POR,C!  ,  單價: 0.00   ,   數量: 20.000  ,  總價: 0.0 ,   qtySum: 20 ,   sumAmount: 0.0
+[2017/02/13 01:54:18][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO035.xlsx
+[2017/02/13 01:54:18][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給庫存人員及業務
+[2017/02/13 01:54:18][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/02/13 01:54:18][com.kye.main.CheckSO][DEBUG]: 處理單號: SO028
+[2017/02/13 01:54:18][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf3-1(133768 MICRO COMPUTER CO LTD)
+[2017/02/13 01:54:18][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf3-1
+[2017/02/13 01:54:18][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf3-1@geniusnet.com
+[2017/02/13 01:54:18][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/02/13 01:54:18][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/02/13 01:54:18][com.kye.main.CheckSO][DEBUG]: poNo: SO028  ,   Item No: 31010116100  ,   Name:  RS,DX-110,USB,BLACK,G5  ,  單價: 0.00   ,   數量: 2.000  ,  總價: 0.0 ,   qtySum: 2 ,   sumAmount: 0.0
+[2017/02/13 01:54:18][com.kye.main.CheckSO][DEBUG]: poNo: SO028  ,   Item No: 31010105102  ,   Name:  RS,DX-120,USB,WHITE,G5  ,  單價: 0.00   ,   數量: 5.000  ,  總價: 0.0 ,   qtySum: 7 ,   sumAmount: 0.0
+[2017/02/13 01:54:18][com.kye.main.CheckSO][DEBUG]: poNo: SO028  ,   Item No: 31010105104  ,   Name:  RS,DX-120,USB,RED,G5  ,  單價: 0.00   ,   數量: 1.000  ,  總價: 0.0 ,   qtySum: 8 ,   sumAmount: 0.0
+[2017/02/13 01:54:19][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO028.xlsx
+[2017/02/13 01:54:19][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給庫存人員及業務
+[2017/02/13 01:54:19][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/02/13 01:54:19][com.kye.main.CheckSO][DEBUG]: 處理單號: SO023
+[2017/02/13 01:54:19][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-1(217183 CISOG DISTRIBUTIONS LTD)
+[2017/02/13 01:54:19][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-1
+[2017/02/13 01:54:19][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-1@geniusnet.com
+[2017/02/13 01:54:19][com.kye.main.CheckSO][DEBUG]: state: Aveiro
+[2017/02/13 01:54:19][com.kye.main.CheckSO][INFO ]: Contact: 陳海威
+[2017/02/13 01:54:19][com.kye.main.CheckSO][DEBUG]: poNo: SO023  ,   Item No: 31300725110  ,   Name:  RS,LUXEMATE 100,USB,BLK,POR,C!  ,  單價: 0.00   ,   數量: 6.000  ,  總價: 0.0 ,   qtySum: 6 ,   sumAmount: 0.0
+[2017/02/13 01:54:19][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO023.xlsx
+[2017/02/13 01:54:19][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給庫存人員及業務
+[2017/02/13 01:54:19][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/02/13 01:54:19][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/02/13 01:54:19][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/02/13 02:33:41][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:33:41][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:33:41][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/02/13 02:33:41][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 02:33:41][com.kye.main.CheckSO][DEBUG]: SO035
+[2017/02/13 02:33:41][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/02/13 02:33:41][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/02/13 02:33:44][com.kye.main.CheckSO][INFO ]: 所有的報價單數量 :  3
+[2017/02/13 02:33:44][com.kye.main.CheckSO][INFO ]: 新增的報價單數量:  0
+[2017/02/13 02:33:44][com.kye.main.CheckSO][INFO ]: 新產生的報價單: []
+[2017/02/13 02:33:44][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/02/13 02:33:44][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/02/13 02:34:13][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:34:13][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:34:13][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/02/13 02:34:13][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 02:34:13][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/02/13 02:34:13][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/02/13 02:34:16][com.kye.main.CheckSO][INFO ]: 所有的報價單數量 :  3
+[2017/02/13 02:34:16][com.kye.main.CheckSO][INFO ]: 新增的報價單數量:  1
+[2017/02/13 02:34:16][com.kye.main.CheckSO][INFO ]: 新產生的報價單: [SO035]
+[2017/02/13 02:34:16][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/02/13 02:34:16][com.kye.main.CheckSO][INFO ]: 刪除檔案[ so_summary_20170213.xlsx ]:  true
+[2017/02/13 02:34:16][com.kye.main.CheckSO][DEBUG]: 處理單號: SO035
+[2017/02/13 02:34:16][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf1-1(100260CPC DI)
+[2017/02/13 02:34:16][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf1-1
+[2017/02/13 02:34:16][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf1-1@geniusnet.com
+[2017/02/13 02:34:16][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/02/13 02:34:16][com.kye.main.CheckSO][INFO ]: Contact: 陳文政
+[2017/02/13 02:34:16][com.kye.main.CheckSO][DEBUG]: poNo: SO035  ,   Item No: 31300725110  ,   Name:  RS,LUXEMATE 100,USB,BLK,POR,C!  ,  單價: 0.00   ,   數量: 20.000  ,  總價: 0.0 ,   qtySum: 20 ,   sumAmount: 0.0
+[2017/02/13 02:34:17][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO035.xlsx
+[2017/02/13 02:34:17][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給庫存人員及業務
+[2017/02/13 02:34:17][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/02/13 02:34:17][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/02/13 02:34:17][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/02/13 02:52:02][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:52:02][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:52:02][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/02/13 02:52:02][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 02:52:02][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/02/13 02:52:02][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/02/13 02:52:02][com.kye.main.CheckSO][DEBUG]: SO035
+[2017/02/13 02:52:05][com.kye.main.CheckSO][INFO ]: 所有的報價單數量 :  2
+[2017/02/13 02:52:05][com.kye.main.CheckSO][INFO ]: 新增的報價單數量:  0
+[2017/02/13 02:52:05][com.kye.main.CheckSO][INFO ]: 新產生的報價單: []
+[2017/02/13 02:52:05][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/02/13 02:52:05][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/02/13 02:52:24][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:52:24][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:52:24][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/02/13 02:52:24][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 02:52:24][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/02/13 02:52:24][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/02/13 02:52:27][com.kye.main.CheckSO][INFO ]: 所有的報價單數量 :  2
+[2017/02/13 02:52:27][com.kye.main.CheckSO][INFO ]: 新增的報價單數量:  0
+[2017/02/13 02:52:27][com.kye.main.CheckSO][INFO ]: 新產生的報價單: []
+[2017/02/13 02:52:27][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/02/13 02:52:27][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/02/13 02:54:04][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:54:04][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:54:04][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/02/13 02:54:04][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 02:54:04][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/02/13 02:54:04][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/02/13 02:54:07][com.kye.main.CheckSO][INFO ]: 所有的報價單數量 :  2
+[2017/02/13 02:54:07][com.kye.main.CheckSO][INFO ]: 新增的報價單數量:  0
+[2017/02/13 02:54:07][com.kye.main.CheckSO][INFO ]: 新產生的報價單: []
+[2017/02/13 02:54:07][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/02/13 02:54:07][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/02/13 02:55:20][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:55:20][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:55:20][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/02/13 02:55:20][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 02:55:20][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/02/13 02:55:20][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/02/13 02:55:23][com.kye.main.CheckSO][INFO ]: 所有的報價單數量 :  2
+[2017/02/13 02:55:23][com.kye.main.CheckSO][INFO ]: 新增的報價單數量:  0
+[2017/02/13 02:55:23][com.kye.main.CheckSO][INFO ]: 新產生的報價單: []
+[2017/02/13 02:55:23][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/02/13 02:55:23][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/02/13 02:57:05][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:57:05][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 02:57:05][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/02/13 02:57:05][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 02:57:05][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/02/13 02:57:08][com.kye.main.CheckSO][INFO ]: 所有的報價單數量 :  2
+[2017/02/13 02:57:08][com.kye.main.CheckSO][INFO ]: 新增的報價單數量:  1
+[2017/02/13 02:57:08][com.kye.main.CheckSO][INFO ]: 新產生的報價單: [SO028]
+[2017/02/13 02:57:08][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/02/13 02:57:08][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO035.xlsx ]:  true
+[2017/02/13 02:57:08][com.kye.main.CheckSO][DEBUG]: 處理單號: SO028
+[2017/02/13 02:57:08][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf3-1(133768 MICRO COMPUTER CO LTD)
+[2017/02/13 02:57:08][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf3-1
+[2017/02/13 02:57:08][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf3-1@geniusnet.com
+[2017/02/13 02:57:08][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/02/13 02:57:08][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/02/13 02:57:08][com.kye.main.CheckSO][DEBUG]: poNo: SO028  ,   Item No: 31010116100  ,   Name:  RS,DX-110,USB,BLACK,G5  ,  單價: 0.00   ,   數量: 2.000  ,  總價: 0.0 ,   qtySum: 2 ,   sumAmount: 0.0
+[2017/02/13 02:57:08][com.kye.main.CheckSO][DEBUG]: poNo: SO028  ,   Item No: 31010105102  ,   Name:  RS,DX-120,USB,WHITE,G5  ,  單價: 0.00   ,   數量: 5.000  ,  總價: 0.0 ,   qtySum: 7 ,   sumAmount: 0.0
+[2017/02/13 02:57:08][com.kye.main.CheckSO][DEBUG]: poNo: SO028  ,   Item No: 31010105104  ,   Name:  RS,DX-120,USB,RED,G5  ,  單價: 0.00   ,   數量: 1.000  ,  總價: 0.0 ,   qtySum: 8 ,   sumAmount: 0.0
+[2017/02/13 02:57:09][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO028.xlsx
+[2017/02/13 02:57:09][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給庫存人員及業務
+[2017/02/13 02:57:10][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/02/13 02:57:10][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/02/13 02:57:10][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/02/13 03:11:54][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 03:11:54][com.kye.main.CheckSO][INFO ]: 
+[2017/02/13 03:11:54][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/02/13 03:11:54][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 03:11:54][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/02/13 03:11:54][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/02/13 03:11:58][com.kye.main.CheckSO][INFO ]: 所有的報價單數量 :  2
+[2017/02/13 03:11:58][com.kye.main.CheckSO][INFO ]: 新增的報價單數量:  0
+[2017/02/13 03:11:58][com.kye.main.CheckSO][INFO ]: 新產生的報價單: []
+[2017/02/13 03:11:58][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/02/13 03:11:58][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/17 02:35:24][com.kye.main.CheckSO][INFO ]: 
+[2017/04/17 02:35:24][com.kye.main.CheckSO][INFO ]: 
+[2017/04/17 02:35:24][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/17 02:35:24][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/17 02:35:24][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/17 02:35:24][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/17 02:35:24][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/17 02:35:24][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/17 02:35:27][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000  ,  總價: 5266.8 ,   qtySum: 1386 ,   sumAmount: 5266.8
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00   ,   數量: 14.000  ,  總價: 0.0 ,   qtySum: 1400 ,   sumAmount: 5266.8
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000  ,  總價: 15444.0 ,   qtySum: 3974 ,   sumAmount: 20710.8
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00   ,   數量: 26.000  ,  總價: 0.0 ,   qtySum: 4000 ,   sumAmount: 20710.8
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000  ,  總價: 31046.4 ,   qtySum: 7168 ,   sumAmount: 51757.2
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00   ,   數量: 32.000  ,  總價: 0.0 ,   qtySum: 7200 ,   sumAmount: 51757.2
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000  ,  總價: 3049.2000000000003 ,   qtySum: 8586 ,   sumAmount: 54806.4
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 0.00   ,   數量: 14.000  ,  總價: 0.0 ,   qtySum: 8600 ,   sumAmount: 54806.4
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000  ,  總價: 9850.5 ,   qtySum: 13550 ,   sumAmount: 64656.9
+[2017/04/17 02:35:27][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 0.00   ,   數量: 50.000  ,  總價: 0.0 ,   qtySum: 13600 ,   sumAmount: 64656.9
+[2017/04/17 02:35:28][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/17 02:35:28][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給業務
+[2017/04/17 02:35:29][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/04/17 02:35:29][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/04/17 02:35:29][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/17 02:38:09][com.kye.main.CheckSO][INFO ]: 
+[2017/04/17 02:38:09][com.kye.main.CheckSO][INFO ]: 
+[2017/04/17 02:38:09][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/17 02:38:09][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/17 02:38:09][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/17 02:38:09][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/17 02:38:09][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/17 02:38:09][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/17 02:38:09][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/17 02:38:09][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  true
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/17 02:38:12][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000  ,  總價: 5266.8 ,   qtySum: 1386 ,   sumAmount: 5266.8
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00   ,   數量: 14.000  ,  總價: 0.0 ,   qtySum: 1400 ,   sumAmount: 5266.8
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000  ,  總價: 15444.0 ,   qtySum: 3974 ,   sumAmount: 20710.8
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00   ,   數量: 26.000  ,  總價: 0.0 ,   qtySum: 4000 ,   sumAmount: 20710.8
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000  ,  總價: 31046.4 ,   qtySum: 7168 ,   sumAmount: 51757.2
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00   ,   數量: 32.000  ,  總價: 0.0 ,   qtySum: 7200 ,   sumAmount: 51757.2
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000  ,  總價: 3049.2000000000003 ,   qtySum: 8586 ,   sumAmount: 54806.4
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 0.00   ,   數量: 14.000  ,  總價: 0.0 ,   qtySum: 8600 ,   sumAmount: 54806.4
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000  ,  總價: 9850.5 ,   qtySum: 13550 ,   sumAmount: 64656.9
+[2017/04/17 02:38:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 0.00   ,   數量: 50.000  ,  總價: 0.0 ,   qtySum: 13600 ,   sumAmount: 64656.9
+[2017/04/17 02:38:13][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/17 02:38:13][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給業務
+[2017/04/17 02:38:14][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/04/17 02:38:14][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/04/17 02:38:14][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/18 03:32:36][com.kye.main.CheckSO][INFO ]: 
+[2017/04/18 03:32:36][com.kye.main.CheckSO][INFO ]: 
+[2017/04/18 03:32:36][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/18 03:32:36][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/18 03:32:36][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/18 03:32:36][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/18 03:32:36][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/18 03:32:36][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/18 03:32:36][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/18 03:32:36][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  true
+[2017/04/18 03:32:39][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/18 03:32:39][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/18 03:32:39][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/18 03:32:39][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/18 03:32:39][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/18 03:32:39][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/18 03:33:48][com.kye.main.CheckSO][INFO ]: 
+[2017/04/18 03:33:48][com.kye.main.CheckSO][INFO ]: 
+[2017/04/18 03:33:48][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/18 03:33:48][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/18 03:33:48][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/18 03:33:48][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/18 03:33:48][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/18 03:33:48][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/18 03:33:48][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/18 03:33:51][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/18 03:33:51][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/18 03:33:51][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/18 03:33:51][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/18 03:33:51][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/18 03:33:51][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/18 03:34:54][com.kye.main.CheckSO][INFO ]: 
+[2017/04/18 03:34:54][com.kye.main.CheckSO][INFO ]: 
+[2017/04/18 03:34:54][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/18 03:34:54][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/18 03:34:54][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/18 03:34:54][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/18 03:34:54][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/18 03:34:54][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/18 03:34:54][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/18 03:34:58][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/18 03:34:58][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/18 03:34:58][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/18 03:34:58][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/18 03:34:58][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/18 03:34:58][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/18 03:41:50][com.kye.main.CheckSO][INFO ]: 
+[2017/04/18 03:41:50][com.kye.main.CheckSO][INFO ]: 
+[2017/04/18 03:41:50][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/18 03:41:50][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/18 03:41:50][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/18 03:41:50][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/18 03:41:50][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/18 03:41:50][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/18 03:41:50][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/18 03:41:53][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/18 03:41:53][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/18 03:41:53][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/18 03:41:53][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/18 03:41:53][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/18 03:41:53][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/18 03:42:55][com.kye.main.CheckSO][INFO ]: 
+[2017/04/18 03:42:55][com.kye.main.CheckSO][INFO ]: 
+[2017/04/18 03:42:55][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/18 03:42:55][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/18 03:42:55][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/18 03:42:55][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/18 03:42:55][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/18 03:42:55][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/18 03:42:55][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/18 03:42:58][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/18 03:42:58][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/18 03:42:58][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/18 03:42:58][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/18 03:42:58][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/18 03:42:58][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/18 03:42:58][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/18 03:42:58][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/18 03:42:58][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/18 03:42:58][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/18 03:42:58][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/18 03:42:58][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/18 03:42:58][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/18 03:42:58][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/18 03:42:58][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/18 03:42:58][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/18 03:42:58][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000  ,  總價: 5266.8 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/18 03:42:58][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000  ,  總價: 15444.0 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/18 03:42:58][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000  ,  總價: 31046.4 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/18 03:42:58][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000  ,  總價: 3049.2000000000003 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/18 03:42:58][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000  ,  總價: 9850.5 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/18 03:42:59][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/18 03:42:59][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給業務
+[2017/04/18 03:42:59][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/04/18 03:42:59][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/04/18 03:42:59][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/19 12:09:14][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:09:14][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:09:14][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 12:09:14][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 12:09:14][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 12:09:14][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 12:09:14][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 12:09:14][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 12:09:14][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 12:09:14][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  true
+[2017/04/19 12:09:17][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 12:09:17][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 12:09:17][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 12:09:17][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 12:09:17][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 12:09:17][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 12:09:17][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 12:09:17][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:09:17][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:09:17][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,  單價: 0.00   ,   數量: 14.000
+[2017/04/19 12:10:07][com.kye.main.CheckSO][DEBUG]: 搜尋比對到主料號，原數量: 1386
+[2017/04/19 12:10:19][com.kye.main.CheckSO][DEBUG]: 新數量: 1400
+[2017/04/19 12:10:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 12:10:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,  單價: 0.00   ,   數量: 26.000
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 搜尋比對到主料號，原數量: 2574
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 新數量: 2600
+[2017/04/19 12:10:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 12:10:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,  單價: 0.00   ,   數量: 32.000
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 搜尋比對到主料號，原數量: 3168
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 新數量: 3200
+[2017/04/19 12:10:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 12:10:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,  單價: 0.00   ,   數量: 14.000
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 搜尋比對到主料號，原數量: 1386
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 新數量: 1400
+[2017/04/19 12:10:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 12:10:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,  單價: 0.00   ,   數量: 50.000
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 搜尋比對到主料號，原數量: 4950
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: 新數量: 5000
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1400.000  ,  總價: 5266.8 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2600.000  ,  總價: 15444.0 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3200.000  ,  總價: 31046.4 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1400.000  ,  總價: 3049.2000000000003 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:10:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 5000.000  ,  總價: 9850.5 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:10:47][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/19 12:10:47][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給業務
+[2017/04/19 12:10:48][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/04/19 12:10:48][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/04/19 12:10:48][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/19 12:17:16][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:17:16][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:17:16][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 12:17:16][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 12:17:16][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 12:17:16][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 12:17:16][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 12:17:16][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 12:17:16][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 12:17:16][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  true
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 12:17:19][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 12:17:19][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 12:17:19][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,  單價: 0.00   ,   數量: 14.000
+[2017/04/19 12:17:19][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 12:17:19][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,  單價: 0.00   ,   數量: 26.000
+[2017/04/19 12:17:19][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 12:17:19][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,  單價: 0.00   ,   數量: 32.000
+[2017/04/19 12:17:19][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 12:17:19][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,  單價: 0.00   ,   數量: 14.000
+[2017/04/19 12:17:19][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 12:17:19][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,  單價: 0.00   ,   數量: 50.000
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000  ,  總價: 5266.8 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000  ,  總價: 15444.0 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000  ,  總價: 31046.4 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000  ,  總價: 3049.2000000000003 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:17:19][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000  ,  總價: 9850.5 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:17:20][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/19 12:17:20][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給業務
+[2017/04/19 12:17:21][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/04/19 12:17:21][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/04/19 12:17:21][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/19 12:20:21][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:20:21][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:20:21][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 12:20:21][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 12:20:21][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 12:20:21][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 12:20:21][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 12:20:21][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 12:20:21][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 12:20:21][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  true
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 12:20:24][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 12:20:24][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 12:20:24][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,  單價: 0.00   ,   數量: 14.000
+[2017/04/19 12:20:24][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 12:20:24][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,  單價: 0.00   ,   數量: 26.000
+[2017/04/19 12:20:24][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 12:20:24][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,  單價: 0.00   ,   數量: 32.000
+[2017/04/19 12:20:24][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 12:20:24][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,  單價: 0.00   ,   數量: 14.000
+[2017/04/19 12:20:24][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 12:20:24][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,  單價: 0.00   ,   數量: 50.000
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000  ,  總價: 5266.8 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000  ,  總價: 15444.0 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000  ,  總價: 31046.4 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000  ,  總價: 3049.2000000000003 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:20:24][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000  ,  總價: 9850.5 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:24:48][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:24:48][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:24:48][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 12:24:48][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 12:24:48][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 12:24:48][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 12:24:48][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 12:24:48][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 12:24:48][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 12:24:51][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 12:24:51][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 12:24:51][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,  單價: 0.00   ,   數量: 14.000
+[2017/04/19 12:24:51][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 12:24:51][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,  單價: 0.00   ,   數量: 26.000
+[2017/04/19 12:24:51][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 12:24:51][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,  單價: 0.00   ,   數量: 32.000
+[2017/04/19 12:24:51][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 12:24:51][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,  單價: 0.00   ,   數量: 14.000
+[2017/04/19 12:24:51][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 12:24:51][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,  單價: 0.00   ,   數量: 50.000
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000  ,  總價: 5280.800 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000  ,  總價: 15470.000 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000  ,  總價: 31078.400 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000  ,  總價: 3063.2000000000003 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:24:51][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000  ,  總價: 9900.500 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:28:43][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:28:43][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:28:43][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 12:28:43][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 12:28:43][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 12:28:43][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 12:28:43][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 12:28:43][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 12:28:43][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 12:28:46][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 12:28:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 12:28:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:28:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 12:28:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:28:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 12:28:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:28:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 12:28:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:28:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 12:28:46][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000  ,  總價: 5280.800 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000  ,  總價: 15470.000 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000  ,  總價: 31078.400 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000  ,  總價: 3063.2000000000003 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:28:46][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000  ,  總價: 9900.500 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:28:47][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/19 12:28:47][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給業務
+[2017/04/19 12:28:47][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/04/19 12:28:47][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/04/19 12:28:47][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/19 12:32:36][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:32:36][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:32:36][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 12:32:36][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 12:32:36][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 12:32:36][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 12:32:36][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 12:32:36][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 12:32:36][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 12:32:36][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  false
+[2017/04/19 12:32:36][com.kye.main.CheckSO][INFO ]: 刪除檔案[ ~$SO204.xlsx ]:  false
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 原始數量: 5266.8
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 原始數量: 5280.800
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 原始數量: 15444.0
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 原始數量: 15470.000
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 原始數量: 31046.4
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 原始數量: 31078.400
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 原始數量: 3049.2000000000003
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 原始數量: 3063.2000000000003
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 原始數量: 9850.5
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: 原始數量: 9900.500
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000  ,  總價: 5280.800 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000  ,  總價: 15470.000 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000  ,  總價: 31078.400 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000  ,  總價: 3063.2000000000003 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:32:39][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000  ,  總價: 9900.500 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/19 12:32:39][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/19 12:32:46][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:32:46][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:32:46][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 12:32:46][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 12:32:46][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 12:32:46][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 12:32:46][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 12:32:46][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 12:32:46][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 12:32:46][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  true
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 12:32:49][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 12:32:49][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 12:32:49][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 原始數量: 5266.8
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 原始數量: 5280.800
+[2017/04/19 12:32:49][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 12:32:49][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 原始數量: 15444.0
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 原始數量: 15470.000
+[2017/04/19 12:32:49][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 12:32:49][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 原始數量: 31046.4
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 原始數量: 31078.400
+[2017/04/19 12:32:49][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 12:32:49][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 原始數量: 3049.2000000000003
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 原始數量: 3063.2000000000003
+[2017/04/19 12:32:49][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 12:32:49][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 原始數量: 9850.5
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: 原始數量: 9900.500
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000  ,  總價: 5280.800 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000  ,  總價: 15470.000 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000  ,  總價: 31078.400 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000  ,  總價: 3063.2000000000003 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:32:49][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000  ,  總價: 9900.500 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:32:50][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/19 12:32:50][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給業務
+[2017/04/19 12:32:50][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/04/19 12:32:50][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/04/19 12:32:50][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/19 12:42:57][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:42:57][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:42:57][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 12:42:57][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 12:42:57][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 12:42:57][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 12:42:57][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 12:42:57][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 12:42:57][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 12:42:57][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  false
+[2017/04/19 12:42:57][com.kye.main.CheckSO][INFO ]: 刪除檔案[ ~$SO204.xlsx ]:  false
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 12:43:00][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 12:43:00][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 12:43:00][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 原始總數量: 1386.000
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 1400.000
+[2017/04/19 12:43:00][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 12:43:00][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 原始總數量: 2574.000
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 2600.000
+[2017/04/19 12:43:00][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 12:43:00][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 原始總數量: 3168.000
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 3200.000
+[2017/04/19 12:43:00][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 12:43:00][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 原始總數量: 1386.000
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 1400.000
+[2017/04/19 12:43:00][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 12:43:00][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 原始總數量: 4950.000
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 5000.000
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000  ,  總價: 5266.8 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000  ,  總價: 15444.0 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000  ,  總價: 31046.4 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000  ,  總價: 3049.2000000000003 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:43:00][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000  ,  總價: 9850.5 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:43:01][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/19 12:43:01][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/19 12:43:09][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:43:09][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:43:09][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 12:43:09][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 12:43:09][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 12:43:09][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 12:43:09][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 12:43:09][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 12:43:09][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 12:43:09][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  true
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 12:43:12][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 12:43:12][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 12:43:12][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 原始總數量: 1386.000
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 1400.000
+[2017/04/19 12:43:12][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 12:43:12][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 原始總數量: 2574.000
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 2600.000
+[2017/04/19 12:43:12][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 12:43:12][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 原始總數量: 3168.000
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 3200.000
+[2017/04/19 12:43:12][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 12:43:12][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 原始總數量: 1386.000
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 1400.000
+[2017/04/19 12:43:12][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 12:43:12][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 原始總數量: 4950.000
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 5000.000
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000  ,  總價: 5266.8 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000  ,  總價: 15444.0 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000  ,  總價: 31046.4 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000  ,  總價: 3049.2000000000003 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:43:12][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000  ,  總價: 9850.5 ,   qtySum: 13464 ,   sumAmount: 64656.9
+[2017/04/19 12:43:13][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/19 12:43:13][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給業務
+[2017/04/19 12:43:13][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/04/19 12:43:13][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/04/19 12:43:13][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/19 12:50:52][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:50:52][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 12:50:52][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 12:50:52][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 12:50:52][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 12:50:52][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 12:50:52][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 12:50:52][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 12:50:52][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 12:50:52][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  true
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 12:50:55][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 12:50:55][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 12:50:55][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 原始總數量: 1386.000
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 1400.000
+[2017/04/19 12:50:55][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 12:50:55][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 原始總數量: 2574.000
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 2600.000
+[2017/04/19 12:50:55][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 12:50:55][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 原始總數量: 3168.000
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 3200.000
+[2017/04/19 12:50:55][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 12:50:55][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 原始總數量: 1386.000
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 1400.000
+[2017/04/19 12:50:55][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 12:50:55][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 原始總數量: 4950.000
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 5000.000
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000   ,   總數量: 1400.000  ,  總價: 5266.8 ,   qtySum: 27064 ,   sumAmount: 64656.9
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000   ,   總數量: 2600.000  ,  總價: 15444.0 ,   qtySum: 27064 ,   sumAmount: 64656.9
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000   ,   總數量: 3200.000  ,  總價: 31046.4 ,   qtySum: 27064 ,   sumAmount: 64656.9
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000   ,   總數量: 1400.000  ,  總價: 3049.2000000000003 ,   qtySum: 27064 ,   sumAmount: 64656.9
+[2017/04/19 12:50:55][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000   ,   總數量: 5000.000  ,  總價: 9850.5 ,   qtySum: 27064 ,   sumAmount: 64656.9
+[2017/04/19 12:50:56][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/19 12:50:56][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給業務
+[2017/04/19 12:50:56][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/04/19 12:50:56][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/04/19 12:50:56][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/19 01:20:07][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 01:20:08][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 01:20:08][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 01:20:08][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 01:20:08][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 01:20:08][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 01:20:08][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 01:20:08][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 01:20:08][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 01:20:08][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  true
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 01:20:10][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 01:20:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 01:20:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 原始總數量: 1386.000
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 1400.000
+[2017/04/19 01:20:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 01:20:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 原始總數量: 2574.000
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 2600.000
+[2017/04/19 01:20:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 01:20:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 原始總數量: 3168.000
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 3200.000
+[2017/04/19 01:20:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 01:20:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 原始總數量: 1386.000
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 1400.000
+[2017/04/19 01:20:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 01:20:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 原始總數量: 4950.000
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 5000.000
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000   ,   總數量: 1400.000  ,  總價: 5266.8 ,   qtySum: 27064 ,   sumAmount: 64656.9
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000   ,   總數量: 2600.000  ,  總價: 15444.0 ,   qtySum: 27064 ,   sumAmount: 64656.9
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000   ,   總數量: 3200.000  ,  總價: 31046.4 ,   qtySum: 27064 ,   sumAmount: 64656.9
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000   ,   總數量: 1400.000  ,  總價: 3049.2000000000003 ,   qtySum: 27064 ,   sumAmount: 64656.9
+[2017/04/19 01:20:10][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000   ,   總數量: 5000.000  ,  總價: 9850.5 ,   qtySum: 27064 ,   sumAmount: 64656.9
+[2017/04/19 01:20:11][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/19 01:20:11][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給業務
+[2017/04/19 01:20:12][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/04/19 01:20:12][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/04/19 01:20:12][com.kye.main.CheckSO][INFO ]: ===================Program End=====================
+[2017/04/19 01:28:06][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 01:28:06][com.kye.main.CheckSO][INFO ]: 
+[2017/04/19 01:28:06][com.kye.main.CheckSO][INFO ]: ==============Program Start===============
+[2017/04/19 01:28:06][com.kye.main.CheckSO][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/04/19 01:28:06][com.kye.main.CheckSO][DEBUG]: SO023
+[2017/04/19 01:28:06][com.kye.main.CheckSO][DEBUG]: SO028
+[2017/04/19 01:28:06][com.kye.main.CheckSO][DEBUG]: SO204
+[2017/04/19 01:28:06][com.kye.main.CheckSO][INFO ]: 取得設定檔報價單: [SO204]
+[2017/04/19 01:28:06][com.kye.main.CheckSO][INFO ]: 清空報表資料夾
+[2017/04/19 01:28:06][com.kye.main.CheckSO][INFO ]: 刪除檔案[ SO204.xlsx ]:  true
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 處理單號: SO204
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: customerName: customers-sf6-2(204010 COREX (PTY) LTD)
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: saleName: sales-sf6-2
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: saleMail: sales-sf6-2@geniusnet.com
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: state: null
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: Contact: 
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80  ,  數量: 1386.000  ,  總價: 5266.8
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31300711100] RS,KB-110X,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 原始總數量: 1386.000
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 1400.000
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00  ,  數量: 2574.000  ,  總價: 15444.0
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31330209100] RS,KM-125,USB,BLK,US,CB  ,  單價: 0.00  ,  數量: 26.000  ,  總價: 0.0
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 原始總數量: 2574.000
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 2600.000
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80  ,  數量: 3168.000  ,  總價: 31046.4
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31340045105] RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 0.00  ,  數量: 32.000  ,  總價: 0.0
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 原始總數量: 3168.000
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 3200.000
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 2.20  ,  數量: 1386.000  ,  總價: 3049.2000000000003
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31710151100] RS,HS-200C  ,  單價: 0.00  ,  數量: 14.000  ,  總價: 0.0
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 原始總數量: 1386.000
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 1400.000
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 1.99  ,  數量: 4950.000  ,  總價: 9850.5
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: so NO: SO204  ,  Item Name: [31010105100] RS,DX-120,USB,BLACK,G5  ,  單價: 0.00  ,  數量: 50.000  ,  總價: 0.0
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 此料號為RMA品項 ,  在報表上，須與主料號合併為一列資料
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 原始總數量: 4950.000
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: 增加後總數量: 5000.000
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31300711100  ,   Name:  RS,KB-110X,USB,BLK,US,CB  ,  單價: 3.80   ,   數量: 1386.000   ,   總數量: 1400.000  ,  總價: 5266.8 ,   qtySum: 13600 ,   sumAmount: 64656.9
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31330209100  ,   Name:  RS,KM-125,USB,BLK,US,CB  ,  單價: 6.00   ,   數量: 2574.000   ,   總數量: 2600.000  ,  總價: 15444.0 ,   qtySum: 13600 ,   sumAmount: 64656.9
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31340045105  ,   Name:  RS,SLIMSTAR 8000ME,USB,BLK,US!  ,  單價: 9.80   ,   數量: 3168.000   ,   總數量: 3200.000  ,  總價: 31046.4 ,   qtySum: 13600 ,   sumAmount: 64656.9
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31710151100  ,   Name:  RS,HS-200C  ,  單價: 2.20   ,   數量: 1386.000   ,   總數量: 1400.000  ,  總價: 3049.2000000000003 ,   qtySum: 13600 ,   sumAmount: 64656.9
+[2017/04/19 01:28:10][com.kye.main.CheckSO][DEBUG]: poNo: SO204  ,   Item No: 31010105100  ,   Name:  RS,DX-120,USB,BLACK,G5  ,  單價: 1.99   ,   數量: 4950.000   ,   總數量: 5000.000  ,  總價: 9850.5 ,   qtySum: 13600 ,   sumAmount: 64656.9
+[2017/04/19 01:28:10][com.kye.main.CheckSO][INFO ]: 匯出檔案: .\excel_report\SO204.xlsx
+[2017/04/19 01:28:11][com.kye.main.CheckSO][INFO ]: 新報價單，夾檔，發送mail 給業務
+[2017/04/19 01:28:11][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/04/19 01:28:11][com.kye.main.CheckSO][INFO ]: 發送成功後，將處理過的報價單寫入清單中，避免重覆發送mail通知==== 
+[2017/04/19 01:28:11][com.kye.main.CheckSO][INFO ]: ===================Program End=====================

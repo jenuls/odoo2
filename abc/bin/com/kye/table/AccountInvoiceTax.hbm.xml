@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountInvoiceTax" table="account_invoice_tax">
+        <comment>Invoice Tax</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAnalyticAccount" class="com.kye.table.AccountAnalyticAccount" fetch="select">
+            <column name="account_analytic_id">
+                <comment>Analytic account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountInvoice" class="com.kye.table.AccountInvoice" fetch="select">
+            <column name="invoice_id">
+                <comment>Invoice</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountTax" class="com.kye.table.AccountTax" fetch="select">
+            <column name="tax_id">
+                <comment>Tax</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccount" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="account_id" not-null="true">
+                <comment>Tax Account</comment>
+            </column>
+        </many-to-one>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="manual" type="java.lang.Boolean">
+            <column name="manual">
+                <comment>Manual</comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="131089" scale="0">
+                <comment>Amount</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Tax Description</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

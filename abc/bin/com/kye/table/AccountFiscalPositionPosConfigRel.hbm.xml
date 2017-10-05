@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountFiscalPositionPosConfigRel" table="account_fiscal_position_pos_config_rel">
+        <comment>RELATION BETWEEN pos_config AND account_fiscal_position</comment>
+        <composite-id name="id" class="com.kye.table.AccountFiscalPositionPosConfigRelId">
+            <key-property name="posConfigId" type="int">
+                <column name="pos_config_id" />
+            </key-property>
+            <key-property name="accountFiscalPositionId" type="int">
+                <column name="account_fiscal_position_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="accountFiscalPosition" class="com.kye.table.AccountFiscalPosition" update="false" insert="false" fetch="select">
+            <column name="account_fiscal_position_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="posConfig" class="com.kye.table.PosConfig" update="false" insert="false" fetch="select">
+            <column name="pos_config_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_111"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/excel_poi3.14"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate5.2.3"/>
+	<classpathentry kind="lib" path="E:/程式開發資源/JAVA_Library/jdbc/postgreSQL/postgresql-9.4.1212.jre7.jar"/>
+	<classpathentry kind="lib" path="E:/程式開發資源/JAVA_Library/commons-beanutils-1.9.3/commons-beanutils-1.9.3.jar" sourcepath="E:/程式開發資源/JAVA_Library/commons-beanutils-1.9.3/commons-beanutils-1.9.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/E:/程式開發資源/JAVA_Library/commons-beanutils-1.9.3/commons-beanutils-1.9.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/程式開發資源/JAVA_Library/log4j/apache-log4j-1.2.16/log4j-1.2.16.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaMail1.3"/>
+	<classpathentry kind="lib" path="E:/程式開發資源/JAVA_Library/jsoup-1.8.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

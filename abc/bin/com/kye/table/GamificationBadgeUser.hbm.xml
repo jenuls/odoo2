@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.GamificationBadgeUser" table="gamification_badge_user">
+        <comment>Gamification user badge</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id" not-null="true">
+                <comment>User</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrEmployee" class="com.kye.table.HrEmployee" fetch="select">
+            <column name="employee_id">
+                <comment>Employee</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersBySenderId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="sender_id">
+                <comment>Sender</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Creator</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="gamificationChallenge" class="com.kye.table.GamificationChallenge" fetch="select">
+            <column name="challenge_id">
+                <comment>Challenge originating</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="gamificationBadge" class="com.kye.table.GamificationBadge" fetch="select">
+            <column name="badge_id" not-null="true">
+                <comment>Badge</comment>
+            </column>
+        </many-to-one>
+        <property name="comment" type="string">
+            <column name="comment">
+                <comment>Comment</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="level" type="string">
+            <column name="level">
+                <comment>Forum Badge Level</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

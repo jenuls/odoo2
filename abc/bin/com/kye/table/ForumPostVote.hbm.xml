@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.ForumPostVote" table="forum_post_vote">
+        <comment>Vote</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id" not-null="true">
+                <comment>User</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByRecipientId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="recipient_id">
+                <comment>To</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="forumForum" class="com.kye.table.ForumForum" fetch="select">
+            <column name="forum_id">
+                <comment>Forum</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="forumPost" class="com.kye.table.ForumPost" fetch="select">
+            <column name="post_id" not-null="true">
+                <comment>Post</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Create Date</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="vote" type="string">
+            <column name="vote" not-null="true">
+                <comment>Vote</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountAnalyticLine" table="account_analytic_line">
+        <comment>Analytic Line</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>User</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Partner</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="productProduct" class="com.kye.table.ProductProduct" fetch="select">
+            <column name="product_id">
+                <comment>Product</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="projectProject" class="com.kye.table.ProjectProject" fetch="select">
+            <column name="project_id">
+                <comment>Project</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id">
+                <comment>Account Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrDepartment" class="com.kye.table.HrDepartment" fetch="select">
+            <column name="department_id">
+                <comment>Department</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="saleOrderLine" class="com.kye.table.SaleOrderLine" fetch="select">
+            <column name="so_line">
+                <comment>Sale Order Line</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccount" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="general_account_id">
+                <comment>Financial Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountMoveLine" class="com.kye.table.AccountMoveLine" fetch="select">
+            <column name="move_id">
+                <comment>Move Line</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="productUom" class="com.kye.table.ProductUom" fetch="select">
+            <column name="product_uom_id">
+                <comment>Unit of Measure</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAnalyticAccount" class="com.kye.table.AccountAnalyticAccount" fetch="select">
+            <column name="account_id" not-null="true">
+                <comment>Analytic Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="projectTask" class="com.kye.table.ProjectTask" fetch="select">
+            <column name="task_id">
+                <comment>Task</comment>
+            </column>
+        </many-to-one>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="131089" scale="0" not-null="true">
+                <comment>Amount</comment>
+            </column>
+        </property>
+        <property name="unitAmount" type="java.lang.Double">
+            <column name="unit_amount" precision="17" scale="17">
+                <comment>Quantity</comment>
+            </column>
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="13" not-null="true">
+                <comment>Date</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="code" type="string">
+            <column name="code" length="8">
+                <comment>Code</comment>
+            </column>
+        </property>
+        <property name="ref" type="string">
+            <column name="ref">
+                <comment>Ref.</comment>
+            </column>
+        </property>
+        <property name="amountCurrency" type="big_decimal">
+            <column name="amount_currency" precision="131089" scale="0">
+                <comment>Amount currency</comment>
+            </column>
+        </property>
+        <set name="accountAnalyticLineTagRels" table="account_analytic_line_tag_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="line_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAnalyticLineTagRel" />
+        </set>
+    </class>
+</hibernate-mapping>

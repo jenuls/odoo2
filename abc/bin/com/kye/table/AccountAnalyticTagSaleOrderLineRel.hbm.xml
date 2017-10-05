@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountAnalyticTagSaleOrderLineRel" table="account_analytic_tag_sale_order_line_rel">
+        <comment>RELATION BETWEEN sale_order_line AND account_analytic_tag</comment>
+        <composite-id name="id" class="com.kye.table.AccountAnalyticTagSaleOrderLineRelId">
+            <key-property name="saleOrderLineId" type="int">
+                <column name="sale_order_line_id" />
+            </key-property>
+            <key-property name="accountAnalyticTagId" type="int">
+                <column name="account_analytic_tag_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="accountAnalyticTag" class="com.kye.table.AccountAnalyticTag" update="false" insert="false" fetch="select">
+            <column name="account_analytic_tag_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="saleOrderLine" class="com.kye.table.SaleOrderLine" update="false" insert="false" fetch="select">
+            <column name="sale_order_line_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

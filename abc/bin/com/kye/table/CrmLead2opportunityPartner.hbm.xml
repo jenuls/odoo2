@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmLead2opportunityPartner" table="crm_lead2opportunity_partner">
+        <comment>Lead To Opportunity Partner</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>Salesperson</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="crmTeam" class="com.kye.table.CrmTeam" fetch="select">
+            <column name="team_id">
+                <comment>Sales Team</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Customer</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Conversion Action</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="action" type="string">
+            <column name="action" not-null="true">
+                <comment>Related Customer</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <set name="crmLeadCrmLead2opportunityPartnerRels" table="crm_lead_crm_lead2opportunity_partner_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="crm_lead2opportunity_partner_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.CrmLeadCrmLead2opportunityPartnerRel" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrModelData" table="ir_model_data">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid" />
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid" />
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29" />
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29" />
+        </property>
+        <property name="noupdate" type="java.lang.Boolean">
+            <column name="noupdate" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="dateInit" type="timestamp">
+            <column name="date_init" length="29" />
+        </property>
+        <property name="dateUpdate" type="timestamp">
+            <column name="date_update" length="29" />
+        </property>
+        <property name="module" type="string">
+            <column name="module" not-null="true" />
+        </property>
+        <property name="model" type="string">
+            <column name="model" not-null="true" />
+        </property>
+        <property name="resId" type="java.lang.Integer">
+            <column name="res_id" />
+        </property>
+        <set name="irUiViews" table="ir_ui_view" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="model_data_id">
+                    <comment>Model Data</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrUiView" />
+        </set>
+    </class>
+</hibernate-mapping>

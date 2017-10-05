@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrFilters" table="ir_filters">
+        <comment>Filters</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>User</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="sort" type="string">
+            <column name="sort" not-null="true">
+                <comment>Sort</comment>
+            </column>
+        </property>
+        <property name="modelId" type="string">
+            <column name="model_id" not-null="true">
+                <comment>Model</comment>
+            </column>
+        </property>
+        <property name="domain" type="string">
+            <column name="domain" not-null="true">
+                <comment>Domain</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Filter Name</comment>
+            </column>
+        </property>
+        <property name="isDefault" type="java.lang.Boolean">
+            <column name="is_default">
+                <comment>Default filter</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="context" type="string">
+            <column name="context" not-null="true">
+                <comment>Context</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="actionId" type="java.lang.Integer">
+            <column name="action_id">
+                <comment>Action</comment>
+            </column>
+        </property>
+        <set name="baseActionRulesForFilterPreId" table="base_action_rule" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="filter_pre_id">
+                    <comment>Before Update Filter</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.BaseActionRule" />
+        </set>
+        <set name="baseActionRulesForFilterId" table="base_action_rule" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="filter_id">
+                    <comment>Filter</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.BaseActionRule" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.ForumPostResUsersRel" table="forum_post_res_users_rel">
+        <comment>RELATION BETWEEN forum_post AND res_users</comment>
+        <composite-id name="id" class="com.kye.table.ForumPostResUsersRelId">
+            <key-property name="forumPostId" type="int">
+                <column name="forum_post_id" />
+            </key-property>
+            <key-property name="resUsersId" type="int">
+                <column name="res_users_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="resUsers" class="com.kye.table.ResUsers" update="false" insert="false" fetch="select">
+            <column name="res_users_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="forumPost" class="com.kye.table.ForumPost" update="false" insert="false" fetch="select">
+            <column name="forum_post_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

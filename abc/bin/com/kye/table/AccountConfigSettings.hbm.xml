@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountConfigSettings" table="account_config_settings">
+        <comment>account.config.settings</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="accountTaxTemplateByPurchaseTaxId" class="com.kye.table.AccountTaxTemplate" fetch="select">
+            <column name="purchase_tax_id">
+                <comment>Default purchase tax</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountTaxByDefaultPurchaseTaxId" class="com.kye.table.AccountTax" fetch="select">
+            <column name="default_purchase_tax_id">
+                <comment>Default Purchase Tax</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="paymentAcquirer" class="com.kye.table.PaymentAcquirer" fetch="select">
+            <column name="default_acquirer">
+                <comment>Default Acquirer</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id" not-null="true">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountTaxTemplateBySaleTaxId" class="com.kye.table.AccountTaxTemplate" fetch="select">
+            <column name="sale_tax_id">
+                <comment>Default sale tax</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountChartTemplate" class="com.kye.table.AccountChartTemplate" fetch="select">
+            <column name="chart_template_id">
+                <comment>Template</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplate" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="template_transfer_account_id">
+                <comment>Template transfer account id</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountTaxByDefaultSaleTaxId" class="com.kye.table.AccountTax" fetch="select">
+            <column name="default_sale_tax_id">
+                <comment>Default Sale Tax</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="moduleAccountAsset" type="java.lang.Boolean">
+            <column name="module_account_asset">
+                <comment>Assets management</comment>
+            </column>
+        </property>
+        <property name="moduleAccountAccountant" type="java.lang.Boolean">
+            <column name="module_account_accountant">
+                <comment>Full accounting features: journals, legal statements, chart of accounts, etc.</comment>
+            </column>
+        </property>
+        <property name="hasChartOfAccounts" type="java.lang.Boolean">
+            <column name="has_chart_of_accounts">
+                <comment>Company has a chart of accounts</comment>
+            </column>
+        </property>
+        <property name="completeTaxSet" type="java.lang.Boolean">
+            <column name="complete_tax_set">
+                <comment>Complete set of taxes</comment>
+            </column>
+        </property>
+        <property name="moduleAccountSepa" type="java.lang.Boolean">
+            <column name="module_account_sepa">
+                <comment>Use SEPA payments</comment>
+            </column>
+        </property>
+        <property name="moduleAccountBankStatementImportCsv" type="java.lang.Boolean">
+            <column name="module_account_bank_statement_import_csv">
+                <comment>Import in .csv format</comment>
+            </column>
+        </property>
+        <property name="moduleAccountBudget" type="java.lang.Boolean">
+            <column name="module_account_budget">
+                <comment>Budget management</comment>
+            </column>
+        </property>
+        <property name="groupWarningAccount" type="java.lang.Integer">
+            <column name="group_warning_account">
+                <comment>Warning</comment>
+            </column>
+        </property>
+        <property name="groupMultiCurrency" type="java.lang.Boolean">
+            <column name="group_multi_currency">
+                <comment>Allow multi currencies</comment>
+            </column>
+        </property>
+        <property name="groupProformaInvoices" type="java.lang.Boolean">
+            <column name="group_proforma_invoices">
+                <comment>Allow pro-forma invoices</comment>
+            </column>
+        </property>
+        <property name="moduleAccountReports" type="java.lang.Boolean">
+            <column name="module_account_reports">
+                <comment>Get dynamic accounting reports</comment>
+            </column>
+        </property>
+        <property name="moduleAccountPlaid" type="java.lang.Boolean">
+            <column name="module_account_plaid">
+                <comment>Plaid Connector</comment>
+            </column>
+        </property>
+        <property name="hasDefaultCompany" type="java.lang.Boolean">
+            <column name="has_default_company">
+                <comment>Has default company</comment>
+            </column>
+        </property>
+        <property name="purchaseTaxRate" type="java.lang.Double">
+            <column name="purchase_tax_rate" precision="17" scale="17">
+                <comment>Purchase tax (%)</comment>
+            </column>
+        </property>
+        <property name="moduleAccountBankStatementImportOfx" type="java.lang.Boolean">
+            <column name="module_account_bank_statement_import_ofx">
+                <comment>Import in .ofx format</comment>
+            </column>
+        </property>
+        <property name="moduleL10nUsCheckPrinting" type="java.lang.Boolean">
+            <column name="module_l10n_us_check_printing">
+                <comment>Allow check printing and deposits</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="saleTaxRate" type="java.lang.Double">
+            <column name="sale_tax_rate" precision="17" scale="17">
+                <comment>Sales tax (%)</comment>
+            </column>
+        </property>
+        <property name="moduleAccountBatchDeposit" type="java.lang.Boolean">
+            <column name="module_account_batch_deposit">
+                <comment>Use batch deposit</comment>
+            </column>
+        </property>
+        <property name="moduleAccountYodlee" type="java.lang.Boolean">
+            <column name="module_account_yodlee">
+                <comment>Bank Interface - Sync your bank feeds automatically</comment>
+            </column>
+        </property>
+        <property name="moduleAccountTaxCashBasis" type="java.lang.Boolean">
+            <column name="module_account_tax_cash_basis">
+                <comment>Allow Tax Cash Basis</comment>
+            </column>
+        </property>
+        <property name="moduleAccountBankStatementImportQif" type="java.lang.Boolean">
+            <column name="module_account_bank_statement_import_qif">
+                <comment>Import .qif files</comment>
+            </column>
+        </property>
+        <property name="groupAnalyticAccounting" type="java.lang.Boolean">
+            <column name="group_analytic_accounting">
+                <comment>Analytic accounting</comment>
+            </column>
+        </property>
+        <property name="moduleAccountDeferredRevenue" type="java.lang.Boolean">
+            <column name="module_account_deferred_revenue">
+                <comment>Revenue Recognition</comment>
+            </column>
+        </property>
+        <property name="moduleAccountReportsFollowup" type="java.lang.Boolean">
+            <column name="module_account_reports_followup">
+                <comment>Enable payment followup management</comment>
+            </column>
+        </property>
+        <property name="groupAnalyticAccountForSales" type="java.lang.Boolean">
+            <column name="group_analytic_account_for_sales">
+                <comment>Analytic accounting for sales</comment>
+            </column>
+        </property>
+        <property name="groupAnalyticAccountForPurchases" type="java.lang.Boolean">
+            <column name="group_analytic_account_for_purchases">
+                <comment>Analytic accounting for purchases</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrTranslation" table="ir_translation">
+        <comment>ir.translation</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resLang" class="com.kye.table.ResLang" fetch="select">
+            <column name="lang">
+                <comment>Language</comment>
+            </column>
+        </many-to-one>
+        <property name="src" type="string">
+            <column name="src">
+                <comment>Internal Source</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Translated field</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type">
+                <comment>Type</comment>
+            </column>
+        </property>
+        <property name="module" type="string">
+            <column name="module">
+                <comment>Module</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="comments" type="string">
+            <column name="comments">
+                <comment>Translation comments</comment>
+            </column>
+        </property>
+        <property name="value" type="string">
+            <column name="value">
+                <comment>Translation Value</comment>
+            </column>
+        </property>
+        <property name="resId" type="java.lang.Integer">
+            <column name="res_id">
+                <comment>Record ID</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

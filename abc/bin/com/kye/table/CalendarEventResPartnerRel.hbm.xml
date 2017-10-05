@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CalendarEventResPartnerRel" table="calendar_event_res_partner_rel">
+        <comment>RELATION BETWEEN calendar_event AND res_partner</comment>
+        <composite-id name="id" class="com.kye.table.CalendarEventResPartnerRelId">
+            <key-property name="calendarEventId" type="int">
+                <column name="calendar_event_id" />
+            </key-property>
+            <key-property name="resPartnerId" type="int">
+                <column name="res_partner_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="calendarEvent" class="com.kye.table.CalendarEvent" update="false" insert="false" fetch="select">
+            <column name="calendar_event_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" update="false" insert="false" fetch="select">
+            <column name="res_partner_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

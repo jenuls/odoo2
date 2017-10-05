@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.BusPresence" table="bus_presence">
+        <comment>User Presence</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsers" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id" not-null="true" unique="true">
+                <comment>Users</comment>
+            </column>
+        </many-to-one>
+        <property name="status" type="string">
+            <column name="status">
+                <comment>IM Status</comment>
+            </column>
+        </property>
+        <property name="lastPresence" type="timestamp">
+            <column name="last_presence" length="29">
+                <comment>Last Presence</comment>
+            </column>
+        </property>
+        <property name="lastPoll" type="timestamp">
+            <column name="last_poll" length="29">
+                <comment>Last Poll</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrLogging" table="ir_logging">
+        <comment>ir.logging</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsers" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <property name="createUid" type="java.lang.Integer">
+            <column name="create_uid">
+                <comment>Uid</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Create date</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Name</comment>
+            </column>
+        </property>
+        <property name="level" type="string">
+            <column name="level">
+                <comment>Level</comment>
+            </column>
+        </property>
+        <property name="message" type="string">
+            <column name="message" not-null="true">
+                <comment>Message</comment>
+            </column>
+        </property>
+        <property name="func" type="string">
+            <column name="func" not-null="true">
+                <comment>Function</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="path" type="string">
+            <column name="path" not-null="true">
+                <comment>Path</comment>
+            </column>
+        </property>
+        <property name="line" type="string">
+            <column name="line" not-null="true">
+                <comment>Line</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true">
+                <comment>Type</comment>
+            </column>
+        </property>
+        <property name="dbname" type="string">
+            <column name="dbname">
+                <comment>Database Name</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

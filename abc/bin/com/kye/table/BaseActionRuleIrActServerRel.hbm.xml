@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.BaseActionRuleIrActServerRel" table="base_action_rule_ir_act_server_rel">
+        <comment>RELATION BETWEEN base_action_rule AND ir_act_server</comment>
+        <composite-id name="id" class="com.kye.table.BaseActionRuleIrActServerRelId">
+            <key-property name="baseActionRuleId" type="int">
+                <column name="base_action_rule_id" />
+            </key-property>
+            <key-property name="irActServerId" type="int">
+                <column name="ir_act_server_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="baseActionRule" class="com.kye.table.BaseActionRule" update="false" insert="false" fetch="select">
+            <column name="base_action_rule_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="irActServer" class="com.kye.table.IrActServer" update="false" insert="false" fetch="select">
+            <column name="ir_act_server_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

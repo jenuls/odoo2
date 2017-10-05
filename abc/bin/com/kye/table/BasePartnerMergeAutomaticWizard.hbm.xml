@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.BasePartnerMergeAutomaticWizard" table="base_partner_merge_automatic_wizard">
+        <comment>base.partner.merge.automatic.wizard</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="dst_partner_id">
+                <comment>Destination Contact</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="basePartnerMergeLine" class="com.kye.table.BasePartnerMergeLine" fetch="select">
+            <column name="current_line_id">
+                <comment>Current Line</comment>
+            </column>
+        </many-to-one>
+        <property name="excludeJournalItem" type="java.lang.Boolean">
+            <column name="exclude_journal_item">
+                <comment>Journal Items associated to the contact</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="groupByVat" type="java.lang.Boolean">
+            <column name="group_by_vat">
+                <comment>VAT</comment>
+            </column>
+        </property>
+        <property name="groupByEmail" type="java.lang.Boolean">
+            <column name="group_by_email">
+                <comment>Email</comment>
+            </column>
+        </property>
+        <property name="excludeContact" type="java.lang.Boolean">
+            <column name="exclude_contact">
+                <comment>A user associated to the contact</comment>
+            </column>
+        </property>
+        <property name="groupByIsCompany" type="java.lang.Boolean">
+            <column name="group_by_is_company">
+                <comment>Is Company</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state" not-null="true">
+                <comment>State</comment>
+            </column>
+        </property>
+        <property name="maximumGroup" type="java.lang.Integer">
+            <column name="maximum_group">
+                <comment>Maximum of Group of Contacts</comment>
+            </column>
+        </property>
+        <property name="numberGroup" type="java.lang.Integer">
+            <column name="number_group">
+                <comment>Group of Contacts</comment>
+            </column>
+        </property>
+        <property name="groupByName" type="java.lang.Boolean">
+            <column name="group_by_name">
+                <comment>Name</comment>
+            </column>
+        </property>
+        <property name="groupByParentId" type="java.lang.Boolean">
+            <column name="group_by_parent_id">
+                <comment>Parent Company</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <set name="basePartnerMergeLines" table="base_partner_merge_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="wizard_id">
+                    <comment>Wizard</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.BasePartnerMergeLine" />
+        </set>
+        <set name="basePartnerMergeAutomaticWizardResPartnerRels" table="base_partner_merge_automatic_wizard_res_partner_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="base_partner_merge_automatic_wizard_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.BasePartnerMergeAutomaticWizardResPartnerRel" />
+        </set>
+    </class>
+</hibernate-mapping>

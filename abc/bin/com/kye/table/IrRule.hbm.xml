@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrRule" table="ir_rule">
+        <comment>ir.rule</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModel" class="com.kye.table.IrModel" fetch="select">
+            <column name="model_id" not-null="true">
+                <comment>Object</comment>
+            </column>
+        </many-to-one>
+        <property name="domainForce" type="string">
+            <column name="domain_force">
+                <comment>Domain</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name">
+                <comment>Name</comment>
+            </column>
+        </property>
+        <property name="global" type="java.lang.Boolean">
+            <column name="global">
+                <comment>Global</comment>
+            </column>
+        </property>
+        <property name="permWrite" type="java.lang.Boolean">
+            <column name="perm_write">
+                <comment>Apply for Write</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="permUnlink" type="java.lang.Boolean">
+            <column name="perm_unlink">
+                <comment>Apply for Delete</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="permRead" type="java.lang.Boolean">
+            <column name="perm_read">
+                <comment>Apply for Read</comment>
+            </column>
+        </property>
+        <property name="permCreate" type="java.lang.Boolean">
+            <column name="perm_create">
+                <comment>Apply for Create</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <set name="ruleGroupRels" table="rule_group_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="rule_group_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.RuleGroupRel" />
+        </set>
+    </class>
+</hibernate-mapping>

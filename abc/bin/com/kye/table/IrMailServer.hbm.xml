@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrMailServer" table="ir_mail_server">
+        <comment>ir.mail_server</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Priority</comment>
+            </column>
+        </property>
+        <property name="smtpPort" type="int">
+            <column name="smtp_port" not-null="true">
+                <comment>SMTP Port</comment>
+            </column>
+        </property>
+        <property name="smtpHost" type="string">
+            <column name="smtp_host" not-null="true">
+                <comment>SMTP Server</comment>
+            </column>
+        </property>
+        <property name="smtpUser" type="string">
+            <column name="smtp_user" length="64">
+                <comment>Username</comment>
+            </column>
+        </property>
+        <property name="smtpPass" type="string">
+            <column name="smtp_pass" length="64">
+                <comment>Password</comment>
+            </column>
+        </property>
+        <property name="smtpDebug" type="java.lang.Boolean">
+            <column name="smtp_debug">
+                <comment>Debugging</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="smtpEncryption" type="string">
+            <column name="smtp_encryption" not-null="true">
+                <comment>Connection Security</comment>
+            </column>
+        </property>
+        <set name="emailTemplatePreviews" table="email_template_preview" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mail_server_id">
+                    <comment>Outgoing Mail Server</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.EmailTemplatePreview" />
+        </set>
+        <set name="mailTemplates" table="mail_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mail_server_id">
+                    <comment>Outgoing Mail Server</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MailTemplate" />
+        </set>
+        <set name="mailComposeMessages" table="mail_compose_message" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mail_server_id">
+                    <comment>Outgoing mail server</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MailComposeMessage" />
+        </set>
+        <set name="surveyMailComposeMessages" table="survey_mail_compose_message" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mail_server_id">
+                    <comment>Outgoing mail server</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.SurveyMailComposeMessage" />
+        </set>
+        <set name="mailMessages" table="mail_message" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mail_server_id">
+                    <comment>Outgoing mail server</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MailMessage" />
+        </set>
+    </class>
+</hibernate-mapping>

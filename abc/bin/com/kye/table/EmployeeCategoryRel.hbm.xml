@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.EmployeeCategoryRel" table="employee_category_rel">
+        <comment>RELATION BETWEEN hr_employee_category AND hr_employee</comment>
+        <composite-id name="id" class="com.kye.table.EmployeeCategoryRelId">
+            <key-property name="categoryId" type="int">
+                <column name="category_id" />
+            </key-property>
+            <key-property name="empId" type="int">
+                <column name="emp_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="hrEmployee" class="com.kye.table.HrEmployee" update="false" insert="false" fetch="select">
+            <column name="emp_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="hrEmployeeCategory" class="com.kye.table.HrEmployeeCategory" update="false" insert="false" fetch="select">
+            <column name="category_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

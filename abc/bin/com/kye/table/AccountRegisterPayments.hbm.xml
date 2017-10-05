@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountRegisterPayments" table="account_register_payments">
+        <comment>Register payments on multiple invoices</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id" not-null="true">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountJournal" class="com.kye.table.AccountJournal" fetch="select">
+            <column name="journal_id" not-null="true">
+                <comment>Payment Journal</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountPaymentMethod" class="com.kye.table.AccountPaymentMethod" fetch="select">
+            <column name="payment_method_id" not-null="true">
+                <comment>Payment Method Type</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Partner</comment>
+            </column>
+        </many-to-one>
+        <property name="paymentDate" type="date">
+            <column name="payment_date" length="13" not-null="true">
+                <comment>Payment Date</comment>
+            </column>
+        </property>
+        <property name="communication" type="string">
+            <column name="communication">
+                <comment>Memo</comment>
+            </column>
+        </property>
+        <property name="partnerType" type="string">
+            <column name="partner_type">
+                <comment>Partner type</comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="131089" scale="0" not-null="true">
+                <comment>Payment Amount</comment>
+            </column>
+        </property>
+        <property name="paymentType" type="string">
+            <column name="payment_type" not-null="true">
+                <comment>Payment Type</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

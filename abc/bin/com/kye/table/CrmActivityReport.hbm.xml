@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmActivityReport" table="crm_activity_report">
+        <composite-id name="id" class="com.kye.table.CrmActivityReportId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="subtypeId" type="java.lang.Integer">
+                <column name="subtype_id" />
+            </key-property>
+            <key-property name="authorId" type="java.lang.Integer">
+                <column name="author_id" />
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="date" length="29" />
+            </key-property>
+            <key-property name="subject" type="string">
+                <column name="subject" />
+            </key-property>
+            <key-property name="leadId" type="java.lang.Integer">
+                <column name="lead_id" />
+            </key-property>
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="teamId" type="java.lang.Integer">
+                <column name="team_id" />
+            </key-property>
+            <key-property name="countryId" type="java.lang.Integer">
+                <column name="country_id" />
+            </key-property>
+            <key-property name="companyId" type="java.lang.Integer">
+                <column name="company_id" />
+            </key-property>
+            <key-property name="stageId" type="java.lang.Integer">
+                <column name="stage_id" />
+            </key-property>
+            <key-property name="partnerId" type="java.lang.Integer">
+                <column name="partner_id" />
+            </key-property>
+            <key-property name="leadType" type="string">
+                <column name="lead_type" />
+            </key-property>
+            <key-property name="active" type="java.lang.Boolean">
+                <column name="active" />
+            </key-property>
+            <key-property name="probability" type="java.lang.Double">
+                <column name="probability" precision="17" scale="17" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

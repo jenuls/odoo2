@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountFiscalPositionTemplate" table="account_fiscal_position_template">
+        <comment>Template for Fiscal Position</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountChartTemplate" class="com.kye.table.AccountChartTemplate" fetch="select">
+            <column name="chart_template_id" not-null="true">
+                <comment>Chart Template</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Fiscal Position Template</comment>
+            </column>
+        </property>
+        <property name="note" type="string">
+            <column name="note">
+                <comment>Notes</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <set name="accountFiscalPositionAccountTemplates" table="account_fiscal_position_account_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="position_id" not-null="true">
+                    <comment>Fiscal Mapping</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFiscalPositionAccountTemplate" />
+        </set>
+        <set name="accountFiscalPositionTaxTemplates" table="account_fiscal_position_tax_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="position_id" not-null="true">
+                    <comment>Fiscal Position</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFiscalPositionTaxTemplate" />
+        </set>
+    </class>
+</hibernate-mapping>

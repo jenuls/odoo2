@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.EventMail" table="event_mail">
+        <comment>event.mail</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="mailTemplate" class="com.kye.table.MailTemplate" fetch="select">
+            <column name="template_id" not-null="true">
+                <comment>Email to Send</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="eventEvent" class="com.kye.table.EventEvent" fetch="select">
+            <column name="event_id" not-null="true">
+                <comment>Event</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="intervalUnit" type="string">
+            <column name="interval_unit" not-null="true">
+                <comment>Unit</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Display order</comment>
+            </column>
+        </property>
+        <property name="intervalType" type="string">
+            <column name="interval_type" not-null="true">
+                <comment>When to Run</comment>
+            </column>
+        </property>
+        <property name="intervalNbr" type="java.lang.Integer">
+            <column name="interval_nbr">
+                <comment>Interval</comment>
+            </column>
+        </property>
+        <property name="done" type="java.lang.Boolean">
+            <column name="done">
+                <comment>Sent</comment>
+            </column>
+        </property>
+        <property name="scheduledDate" type="timestamp">
+            <column name="scheduled_date" length="29">
+                <comment>Scheduled Sent Mail</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="mailSent" type="java.lang.Boolean">
+            <column name="mail_sent">
+                <comment>Mail Sent on Event</comment>
+            </column>
+        </property>
+        <set name="eventMailRegistrations" table="event_mail_registration" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="scheduler_id" not-null="true">
+                    <comment>Mail Scheduler</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.EventMailRegistration" />
+        </set>
+    </class>
+</hibernate-mapping>

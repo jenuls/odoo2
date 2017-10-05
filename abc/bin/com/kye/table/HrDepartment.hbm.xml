@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.HrDepartment" table="hr_department">
+        <comment>Hr Department</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrEmployee" class="com.kye.table.HrEmployee" fetch="select">
+            <column name="manager_id">
+                <comment>Manager</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrDepartment" class="com.kye.table.HrDepartment" fetch="select">
+            <column name="parent_id">
+                <comment>Parent Department</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="color" type="java.lang.Integer">
+            <column name="color">
+                <comment>Color Index</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="note" type="string">
+            <column name="note">
+                <comment>Note</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Department Name</comment>
+            </column>
+        </property>
+        <set name="hrContracts" table="hr_contract" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="department_id">
+                    <comment>Department</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrContract" />
+        </set>
+        <set name="hrHolidayses" table="hr_holidays" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="department_id">
+                    <comment>Department</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrHolidays" />
+        </set>
+        <set name="hrJobs" table="hr_job" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="department_id">
+                    <comment>Department</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrJob" />
+        </set>
+        <set name="accountAnalyticLines" table="account_analytic_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="department_id">
+                    <comment>Department</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAnalyticLine" />
+        </set>
+        <set name="hrApplicants" table="hr_applicant" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="department_id">
+                    <comment>Department</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrApplicant" />
+        </set>
+        <set name="hrEmployees" table="hr_employee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="department_id">
+                    <comment>Department</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrEmployee" />
+        </set>
+        <set name="hrExpenseSheets" table="hr_expense_sheet" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="department_id">
+                    <comment>Department</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrExpenseSheet" />
+        </set>
+        <set name="hrDepartments" table="hr_department" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent_id">
+                    <comment>Parent Department</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrDepartment" />
+        </set>
+        <set name="summaryDeptRels" table="summary_dept_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="dept_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.SummaryDeptRel" />
+        </set>
+    </class>
+</hibernate-mapping>

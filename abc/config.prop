@@ -1,0 +1,28 @@
+#如果有設定[order_no], 表示不檢查是否有新報價單，直接以這邊的單號來產生mail，多筆以逗號分隔 ，一般是除錯用。
+order_no=SO204
+
+#產生的報表存放位置
+excel_path=.\\excel_report
+
+#-----------mail  設定---------------
+mail_server=ms1.geniusnet.com.tw
+from_mail=odoo@geniusnet.com.tw
+mail_user=odoo@geniusnet.com.tw
+mail_password=odoo123
+
+#[mail_add_type]  是指為[mail_to]內容是要附加在收件者後面或者直接取代  ( append/replace)
+# append: 正常應為此選項， replace: 一般是偵錯用， 
+mail_add_type=replace
+
+#[mail_to]應該設定是給負責odoo的業務
+#多個mail 以分號分隔
+mail_to=david_chen@geniusnet.com.tw
+mail_cc=
+
+
+#mail_bcc ，是檢查問題用，每一個發送的mail ，皆會送至bcc，以便日後確認mail是否有發送。查問題
+#多個mail 以分號分隔
+mail_bcc=
+
+#庫存管理者的mail。 銷售總表會寄給此人。
+stock_man_mail=david_chen@geniusnet.com.tw

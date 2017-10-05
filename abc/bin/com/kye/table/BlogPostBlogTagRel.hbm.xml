@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.BlogPostBlogTagRel" table="blog_post_blog_tag_rel">
+        <comment>RELATION BETWEEN blog_tag AND blog_post</comment>
+        <composite-id name="id" class="com.kye.table.BlogPostBlogTagRelId">
+            <key-property name="blogTagId" type="int">
+                <column name="blog_tag_id" />
+            </key-property>
+            <key-property name="blogPostId" type="int">
+                <column name="blog_post_id" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

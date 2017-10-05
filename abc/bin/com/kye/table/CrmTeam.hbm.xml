@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmTeam" table="crm_team">
+        <comment>Sales Team</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>Team Leader</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="mailAlias" class="com.kye.table.MailAlias" fetch="select">
+            <column name="alias_id" not-null="true">
+                <comment>Alias</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resourceCalendar" class="com.kye.table.ResourceCalendar" fetch="select">
+            <column name="resource_calendar_id">
+                <comment>Working Time</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="color" type="java.lang.Integer">
+            <column name="color">
+                <comment>Color Index</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Sales Team</comment>
+            </column>
+        </property>
+        <property name="replyTo" type="string">
+            <column name="reply_to">
+                <comment>Reply-To</comment>
+            </column>
+        </property>
+        <property name="useLeads" type="java.lang.Boolean">
+            <column name="use_leads">
+                <comment>Leads</comment>
+            </column>
+        </property>
+        <property name="useOpportunities" type="java.lang.Boolean">
+            <column name="use_opportunities">
+                <comment>Opportunities</comment>
+            </column>
+        </property>
+        <property name="useQuotations" type="java.lang.Boolean">
+            <column name="use_quotations">
+                <comment>Quotations</comment>
+            </column>
+        </property>
+        <property name="invoicedTarget" type="java.lang.Integer">
+            <column name="invoiced_target">
+                <comment>Invoice Target</comment>
+            </column>
+        </property>
+        <property name="useInvoices" type="java.lang.Boolean">
+            <column name="use_invoices">
+                <comment>Invoices</comment>
+            </column>
+        </property>
+        <set name="crmMergeOpportunities" table="crm_merge_opportunity" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="team_id">
+                    <comment>Sales Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmMergeOpportunity" />
+        </set>
+        <set name="resUserses" table="res_users" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sale_team_id">
+                    <comment>Sales Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ResUsers" />
+        </set>
+        <set name="crmLead2opportunityPartners" table="crm_lead2opportunity_partner" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="team_id">
+                    <comment>Sales Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmLead2opportunityPartner" />
+        </set>
+        <set name="accountInvoices" table="account_invoice" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="team_id">
+                    <comment>Sales Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoice" />
+        </set>
+        <set name="crmActivities" table="crm_activity" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="team_id">
+                    <comment>Sales Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmActivity" />
+        </set>
+        <set name="resPartners" table="res_partner" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="team_id">
+                    <comment>Sales Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ResPartner" />
+        </set>
+        <set name="crmLeads" table="crm_lead" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="team_id">
+                    <comment>Sales Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmLead" />
+        </set>
+        <set name="crmStages" table="crm_stage" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="team_id">
+                    <comment>Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmStage" />
+        </set>
+        <set name="crmActivityLogs" table="crm_activity_log" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="team_id">
+                    <comment>Sales Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmActivityLog" />
+        </set>
+        <set name="saleOrders" table="sale_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="team_id">
+                    <comment>Sales Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.SaleOrder" />
+        </set>
+        <set name="websites" table="website" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="salesteam_id">
+                    <comment>Sales Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.Website" />
+        </set>
+        <set name="crmLead2opportunityPartnerMasses" table="crm_lead2opportunity_partner_mass" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="team_id">
+                    <comment>Sales Team</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmLead2opportunityPartnerMass" />
+        </set>
+    </class>
+</hibernate-mapping>

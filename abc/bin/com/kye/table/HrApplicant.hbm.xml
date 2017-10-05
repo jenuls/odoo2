@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.HrApplicant" table="hr_applicant">
+        <comment>Applicant</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>Responsible</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrRecruitmentStageByStageId" class="com.kye.table.HrRecruitmentStage" fetch="select">
+            <column name="stage_id">
+                <comment>Stage</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrRecruitmentDegree" class="com.kye.table.HrRecruitmentDegree" fetch="select">
+            <column name="type_id">
+                <comment>Degree</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrEmployee" class="com.kye.table.HrEmployee" fetch="select">
+            <column name="emp_id">
+                <comment>Employee</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrRecruitmentStageByLastStageId" class="com.kye.table.HrRecruitmentStage" fetch="select">
+            <column name="last_stage_id">
+                <comment>Last Stage</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrJob" class="com.kye.table.HrJob" fetch="select">
+            <column name="job_id">
+                <comment>Applied Job</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrDepartment" class="com.kye.table.HrDepartment" fetch="select">
+            <column name="department_id">
+                <comment>Department</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmMedium" class="com.kye.table.UtmMedium" fetch="select">
+            <column name="medium_id">
+                <comment>Medium</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Contact</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmCampaign" class="com.kye.table.UtmCampaign" fetch="select">
+            <column name="campaign_id">
+                <comment>Campaign</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmSource" class="com.kye.table.UtmSource" fetch="select">
+            <column name="source_id">
+                <comment>Source</comment>
+            </column>
+        </many-to-one>
+        <property name="dateClosed" type="timestamp">
+            <column name="date_closed" length="29">
+                <comment>Closed</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Creation Date</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="color" type="java.lang.Integer">
+            <column name="color">
+                <comment>Color Index</comment>
+            </column>
+        </property>
+        <property name="dateLastStageUpdate" type="timestamp">
+            <column name="date_last_stage_update" length="29">
+                <comment>Last Stage Update</comment>
+            </column>
+        </property>
+        <property name="salaryExpectedExtra" type="string">
+            <column name="salary_expected_extra">
+                <comment>Expected Salary Extra</comment>
+            </column>
+        </property>
+        <property name="salaryProposed" type="java.lang.Double">
+            <column name="salary_proposed" precision="17" scale="17">
+                <comment>Proposed Salary</comment>
+            </column>
+        </property>
+        <property name="availability" type="date">
+            <column name="availability" length="13">
+                <comment>Availability</comment>
+            </column>
+        </property>
+        <property name="partnerName" type="string">
+            <column name="partner_name">
+                <comment>Applicant's Name</comment>
+            </column>
+        </property>
+        <property name="priority" type="string">
+            <column name="priority">
+                <comment>Appreciation</comment>
+            </column>
+        </property>
+        <property name="emailCc" type="string">
+            <column name="email_cc">
+                <comment>Watchers Emails</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="titleAction" type="string">
+            <column name="title_action" length="64">
+                <comment>Next Action</comment>
+            </column>
+        </property>
+        <property name="probability" type="java.lang.Double">
+            <column name="probability" precision="17" scale="17">
+                <comment>Probability</comment>
+            </column>
+        </property>
+        <property name="partnerMobile" type="string">
+            <column name="partner_mobile" length="32">
+                <comment>Mobile</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Update Date</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="dateAction" type="date">
+            <column name="date_action" length="13">
+                <comment>Next Action Date</comment>
+            </column>
+        </property>
+        <property name="reference" type="string">
+            <column name="reference">
+                <comment>Referred By</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Subject / Application Name</comment>
+            </column>
+        </property>
+        <property name="salaryExpected" type="java.lang.Double">
+            <column name="salary_expected" precision="17" scale="17">
+                <comment>Expected Salary</comment>
+            </column>
+        </property>
+        <property name="dateOpen" type="timestamp">
+            <column name="date_open" length="29">
+                <comment>Assigned</comment>
+            </column>
+        </property>
+        <property name="salaryProposedExtra" type="string">
+            <column name="salary_proposed_extra">
+                <comment>Proposed Salary Extra</comment>
+            </column>
+        </property>
+        <property name="partnerPhone" type="string">
+            <column name="partner_phone" length="32">
+                <comment>Phone</comment>
+            </column>
+        </property>
+        <property name="emailFrom" type="string">
+            <column name="email_from" length="128">
+                <comment>Email</comment>
+            </column>
+        </property>
+        <set name="hrApplicantHrApplicantCategoryRels" table="hr_applicant_hr_applicant_category_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="hr_applicant_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.HrApplicantHrApplicantCategoryRel" />
+        </set>
+    </class>
+</hibernate-mapping>

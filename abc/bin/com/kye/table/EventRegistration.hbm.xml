@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.EventRegistration" table="event_registration">
+        <comment>Attendee</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="eventEvent" class="com.kye.table.EventEvent" fetch="select">
+            <column name="event_id" not-null="true">
+                <comment>Event</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="eventEventTicket" class="com.kye.table.EventEventTicket" fetch="select">
+            <column name="event_ticket_id">
+                <comment>Event Ticket</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="saleOrder" class="com.kye.table.SaleOrder" fetch="select">
+            <column name="sale_order_id">
+                <comment>Source Sale Order</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="saleOrderLine" class="com.kye.table.SaleOrderLine" fetch="select">
+            <column name="sale_order_line_id">
+                <comment>Sale Order Line</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Contact</comment>
+            </column>
+        </many-to-one>
+        <property name="dateClosed" type="timestamp">
+            <column name="date_closed" length="29">
+                <comment>Attended Date</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="email">
+                <comment>Email</comment>
+            </column>
+        </property>
+        <property name="phone" type="string">
+            <column name="phone">
+                <comment>Phone</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="origin" type="string">
+            <column name="origin">
+                <comment>Source Document</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name">
+                <comment>Attendee Name</comment>
+            </column>
+        </property>
+        <property name="dateOpen" type="timestamp">
+            <column name="date_open" length="29">
+                <comment>Registration Date</comment>
+            </column>
+        </property>
+        <set name="eventMailRegistrations" table="event_mail_registration" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="registration_id" not-null="true">
+                    <comment>Attendee</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.EventMailRegistration" />
+        </set>
+        <set name="registrationEditorLines" table="registration_editor_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="registration_id">
+                    <comment>Original Registration</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.RegistrationEditorLine" />
+        </set>
+    </class>
+</hibernate-mapping>

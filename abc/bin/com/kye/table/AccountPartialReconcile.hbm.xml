@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountPartialReconcile" table="account_partial_reconcile">
+        <comment>Partial Reconcile</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountMoveLineByDebitMoveId" class="com.kye.table.AccountMoveLine" fetch="select">
+            <column name="debit_move_id" not-null="true">
+                <comment>Debit move id</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountFullReconcile" class="com.kye.table.AccountFullReconcile" fetch="select">
+            <column name="full_reconcile_id">
+                <comment>Full Reconcile</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountMoveLineByCreditMoveId" class="com.kye.table.AccountMoveLine" fetch="select">
+            <column name="credit_move_id" not-null="true">
+                <comment>Credit move id</comment>
+            </column>
+        </many-to-one>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="131089" scale="0">
+                <comment>Amount</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="amountCurrency" type="big_decimal">
+            <column name="amount_currency" precision="131089" scale="0">
+                <comment>Amount in Currency</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <set name="accountFullReconciles" table="account_full_reconcile" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="exchange_partial_rec_id">
+                    <comment>Exchange partial rec id</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFullReconcile" />
+        </set>
+        <set name="accountMoves" table="account_move" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tax_cash_basis_rec_id">
+                    <comment>Tax Cash Basis Entry of</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMove" />
+        </set>
+    </class>
+</hibernate-mapping>

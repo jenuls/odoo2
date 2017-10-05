@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmLeadCrmLead2opportunityPartnerRel" table="crm_lead_crm_lead2opportunity_partner_rel">
+        <comment>RELATION BETWEEN crm_lead2opportunity_partner AND crm_lead</comment>
+        <composite-id name="id" class="com.kye.table.CrmLeadCrmLead2opportunityPartnerRelId">
+            <key-property name="crmLead2opportunityPartnerId" type="int">
+                <column name="crm_lead2opportunity_partner_id" />
+            </key-property>
+            <key-property name="crmLeadId" type="int">
+                <column name="crm_lead_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="crmLead" class="com.kye.table.CrmLead" update="false" insert="false" fetch="select">
+            <column name="crm_lead_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="crmLead2opportunityPartner" class="com.kye.table.CrmLead2opportunityPartner" update="false" insert="false" fetch="select">
+            <column name="crm_lead2opportunity_partner_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

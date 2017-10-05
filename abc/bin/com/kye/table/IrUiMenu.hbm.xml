@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrUiMenu" table="ir_ui_menu">
+        <comment>ir.ui.menu</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irUiMenu" class="com.kye.table.IrUiMenu" fetch="select">
+            <column name="parent_id">
+                <comment>Parent Menu</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="parentLeft" type="java.lang.Integer">
+            <column name="parent_left" />
+        </property>
+        <property name="parentRight" type="java.lang.Integer">
+            <column name="parent_right" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Menu</comment>
+            </column>
+        </property>
+        <property name="webIcon" type="string">
+            <column name="web_icon">
+                <comment>Web Icon File</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="action" type="string">
+            <column name="action">
+                <comment>Action</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="loadXmlid" type="java.lang.Boolean">
+            <column name="load_xmlid">
+                <comment>Load xmlid</comment>
+            </column>
+        </property>
+        <set name="irUiMenuGroupRels" table="ir_ui_menu_group_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="menu_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.IrUiMenuGroupRel" />
+        </set>
+        <set name="irUiMenus" table="ir_ui_menu" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent_id">
+                    <comment>Parent Menu</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrUiMenu" />
+        </set>
+        <set name="wizardIrModelMenuCreates" table="wizard_ir_model_menu_create" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="menu_id" not-null="true">
+                    <comment>Parent Menu</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.WizardIrModelMenuCreate" />
+        </set>
+        <set name="webPlanners" table="web_planner" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="menu_id" not-null="true">
+                    <comment>Menu</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.WebPlanner" />
+        </set>
+    </class>
+</hibernate-mapping>

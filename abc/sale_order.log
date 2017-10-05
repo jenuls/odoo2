@@ -1,0 +1,1110 @@
+[2017/02/10 02:42:30][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 02:42:30][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 02:42:30][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 02:42:30][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 02:42:33][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 02:43:29][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 02:43:29][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 02:43:29][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 02:43:29][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 02:43:32][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 02:43:32][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  2
+[2017/02/10 02:43:32][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO023, SO010]
+[2017/02/10 02:43:57][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 02:43:57][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 02:43:57][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 02:43:57][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 02:43:57][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 02:44:00][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 02:44:00][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 02:44:00][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO010]
+[2017/02/10 02:48:59][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 02:48:59][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 02:48:59][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 02:48:59][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 02:48:59][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 02:49:02][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 02:49:02][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 02:49:02][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO010]
+[2017/02/10 02:49:02][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:00:16][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:00:16][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:00:16][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:00:16][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:00:16][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:00:19][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:00:19][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:00:19][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO010]
+[2017/02/10 05:00:19][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:00:19][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ SO010.xlsx ]:  true
+[2017/02/10 05:00:19][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ SO023.xlsx ]:  true
+[2017/02/10 05:01:04][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:01:04][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:01:04][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:01:04][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:01:04][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:01:07][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:01:07][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:01:07][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO010]
+[2017/02/10 05:01:07][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:02:06][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:02:06][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:02:06][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:02:06][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:02:06][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:02:09][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:02:09][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:02:09][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO010]
+[2017/02/10 05:02:09][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:02:10][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:02:10][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:03:55][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:03:55][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:03:55][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:03:55][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:03:58][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:03:58][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  2
+[2017/02/10 05:03:58][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO023, SO010]
+[2017/02/10 05:03:58][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:03:58][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/10 05:03:58][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:03:59][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:15:22][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:15:22][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:15:22][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:15:22][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:15:22][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:15:25][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:15:25][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:15:25][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/10 05:15:25][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:15:25][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/10 05:15:26][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:15:26][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:20:49][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:20:49][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:20:49][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:20:49][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:20:49][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:20:52][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:20:52][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:20:52][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/10 05:20:52][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:20:52][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  false
+[2017/02/10 05:20:52][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ ~$so_summary_20170210.xlsx ]:  false
+[2017/02/10 05:20:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO028料號: SO028是新單: Y
+[2017/02/10 05:20:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO028料號: SO028是新單: Y
+[2017/02/10 05:20:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO028料號: SO028是新單: Y
+[2017/02/10 05:20:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO023料號: SO023是新單: 
+[2017/02/10 05:20:53][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:20:53][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:21:50][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:21:50][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:21:50][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:21:50][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:21:50][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:21:53][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:21:53][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:21:53][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/10 05:21:53][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:21:53][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/10 05:21:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/10 05:21:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/10 05:21:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/10 05:21:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/02/10 05:21:53][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:21:54][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:24:45][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:24:45][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:24:45][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:24:45][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:24:45][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:24:48][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:24:48][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:24:48][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/10 05:24:48][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:24:48][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/10 05:24:48][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/10 05:24:48][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/10 05:24:48][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/10 05:24:48][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/02/10 05:24:48][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:24:48][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:28:02][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:28:02][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:28:02][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:28:02][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:28:02][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:28:05][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:28:05][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:28:05][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/10 05:28:05][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:28:05][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/10 05:28:05][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/10 05:28:05][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/10 05:28:05][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/10 05:28:05][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/02/10 05:28:05][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:28:06][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:30:01][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:30:01][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:30:01][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:30:01][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:30:01][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/02/10 05:30:04][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:30:04][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:30:04][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO023]
+[2017/02/10 05:30:04][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:30:04][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/10 05:30:04][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: 
+[2017/02/10 05:30:04][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: 
+[2017/02/10 05:30:04][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: 
+[2017/02/10 05:30:04][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: Y
+[2017/02/10 05:30:04][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:30:05][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:41:24][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:41:24][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:41:24][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:41:24][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:41:24][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:41:27][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:41:27][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:41:27][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/10 05:41:27][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:41:27][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/10 05:41:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/10 05:41:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/10 05:41:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/10 05:41:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/02/10 05:41:28][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:41:28][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:47:54][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:47:54][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:47:54][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:47:54][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:47:54][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:47:57][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:47:57][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:47:57][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/10 05:47:57][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:47:57][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/10 05:47:57][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/10 05:47:57][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/10 05:47:57][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/10 05:47:57][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/02/10 05:47:57][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:47:57][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:50:19][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:50:19][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:50:19][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:50:19][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:50:19][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:50:22][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:50:22][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:50:22][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/10 05:50:22][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:50:22][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/10 05:50:22][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/10 05:50:22][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/10 05:50:22][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/10 05:50:22][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/02/10 05:50:23][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:50:23][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:52:33][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:52:33][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:52:33][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:52:33][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:52:33][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:52:36][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:52:36][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:52:36][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/10 05:52:36][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:52:36][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/10 05:52:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/10 05:52:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/10 05:52:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/10 05:52:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/02/10 05:52:37][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:52:37][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:54:42][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:54:42][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:54:42][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:54:42][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:54:42][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:54:44][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:54:44][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:54:44][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/10 05:54:44][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:54:44][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/10 05:54:44][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/10 05:54:44][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/10 05:54:44][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/10 05:54:44][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/02/10 05:54:45][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:54:45][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/10 05:55:01][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:55:01][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/10 05:55:01][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/10 05:55:01][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/10 05:55:01][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/10 05:55:04][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/10 05:55:04][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/10 05:55:04][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/10 05:55:04][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/10 05:55:04][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/10 05:55:04][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/10 05:55:04][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/10 05:55:04][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/02/10 05:55:05][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170210.xlsx
+[2017/02/10 05:55:05][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/13 09:39:46][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/13 09:39:46][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/13 09:39:46][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/13 09:39:46][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 09:39:46][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/13 09:39:50][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  2
+[2017/02/13 09:39:50][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  1
+[2017/02/13 09:39:50][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO028]
+[2017/02/13 09:39:50][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/13 09:39:50][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170210.xlsx ]:  true
+[2017/02/13 09:39:50][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/13 09:39:50][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/13 09:39:50][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/13 09:39:50][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/02/13 09:39:50][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170213.xlsx
+[2017/02/13 09:39:51][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/13 01:52:46][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/13 01:52:46][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/13 01:52:46][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/13 01:52:46][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 01:52:46][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/02/13 01:52:49][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  3
+[2017/02/13 01:52:49][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  2
+[2017/02/13 01:52:49][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO035, SO028]
+[2017/02/13 01:52:49][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/13 01:52:49][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ so_summary_20170213.xlsx ]:  true
+[2017/02/13 01:52:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO035 ,料號: 31300725110 ,是新單: Y
+[2017/02/13 01:52:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/13 01:52:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/13 01:52:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/13 01:52:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/02/13 01:52:50][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170213.xlsx
+[2017/02/13 01:52:50][com.kye.main.SendSoSummary][INFO ]: 發送mail給庫存人員 (銷售單總表)
+[2017/02/13 01:52:51][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/02/13 01:52:51][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，避免重覆發送mail通知==== 
+[2017/02/13 01:52:51][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/02/13 02:15:46][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/13 02:15:46][com.kye.main.SendSoSummary][INFO ]: 
+[2017/02/13 02:15:46][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/02/13 02:15:46][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  3
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  3
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO035, SO023, SO028]
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ SO023.xlsx ]:  true
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ SO028.xlsx ]:  true
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 刪除檔案[ SO035.xlsx ]:  true
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO035 ,料號: 31300725110 ,是新單: Y
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: Y
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: Y
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: Y
+[2017/02/13 02:15:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: Y
+[2017/02/13 02:15:50][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170213.xlsx
+[2017/02/13 02:15:50][com.kye.main.SendSoSummary][INFO ]: 發送mail給庫存人員 (銷售單總表)
+[2017/02/13 02:15:50][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/02/13 02:15:50][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，避免重覆發送mail通知==== 
+[2017/02/13 02:15:50][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 10:28:41][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 10:28:41][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 10:28:41][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 10:28:41][com.kye.main.SendSoSummary][DEBUG]: #此檔案用來存放已處理過的報價單。系統會搜尋資料庫所有報價單，然後再去除這裡已處理的報價單，才是要新增的報價單
+[2017/03/03 10:28:41][com.kye.main.SendSoSummary][DEBUG]: SO035
+[2017/03/03 10:28:41][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 10:28:41][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 10:28:44][com.kye.main.SendSoSummary][INFO ]: 所有的銷售單數量 :  13
+[2017/03/03 10:28:44][com.kye.main.SendSoSummary][INFO ]: 新增的報價單數量:  11
+[2017/03/03 10:28:44][com.kye.main.SendSoSummary][INFO ]: 新產生的報價單: [SO101, SO102, SO044, SO098, SO021, SO091, SO108, SO117, SO103, SO026, SO104]
+[2017/03/03 10:28:44][com.kye.main.SendSoSummary][INFO ]: 清空報表資料夾
+[2017/03/03 10:36:37][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 10:36:37][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 10:36:37][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 10:36:39][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 10:56:01][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 10:56:01][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 10:56:01][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 10:56:04][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 10:56:04][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 10:59:36][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 10:59:36][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 10:59:36][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 10:59:39][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 10:59:39][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 11:00:07][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:00:07][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:00:07][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:00:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:01:20][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:01:20][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:01:20][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:01:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:12:50][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:12:50][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:12:50][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:12:53][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:14:42][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:14:42][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:14:42][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 11:14:45][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 11:14:45][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 11:14:45][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:14:45][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:14:45][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:14:45][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:14:45][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:14:45][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是新單: 
+[2017/03/03 11:14:45][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:14:45][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:14:45][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:14:46][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: 
+[2017/03/03 11:14:46][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:14:46][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:14:46][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:14:46][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:14:46][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:14:46][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:14:46][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 11:14:46][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，避免重覆發送mail通知==== 
+[2017/03/03 11:14:46][com.kye.main.SendSoSummary][ERROR]: 
+[2017/03/03 11:14:46][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 11:45:24][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:45:24][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:45:24][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:45:27][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:45:28][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 11:45:28][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，避免重覆發送mail通知==== 
+[2017/03/03 11:45:28][com.kye.main.SendSoSummary][ERROR]: 
+[2017/03/03 11:45:28][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 11:47:23][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:47:23][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 11:47:23][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:47:26][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是新單: 
+[2017/03/03 11:47:27][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 11:47:27][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，避免重覆發送mail通知==== 
+[2017/03/03 11:47:27][com.kye.main.SendSoSummary][ERROR]: 
+[2017/03/03 11:47:27][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 12:03:57][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 12:03:57][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 12:03:57][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單
+[2017/03/03 12:04:00][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是新單
+[2017/03/03 12:04:01][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 12:04:01][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，視為已處理舊單==== 
+[2017/03/03 12:04:01][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 12:09:19][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 12:09:19][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 12:09:19][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是新單
+[2017/03/03 12:09:23][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 12:09:24][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，視為已處理舊單==== 
+[2017/03/03 12:09:24][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 12:09:37][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 12:09:37][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 12:09:37][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單
+[2017/03/03 12:09:40][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是新單
+[2017/03/03 12:09:41][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 12:09:41][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，視為已處理舊單==== 
+[2017/03/03 12:09:41][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 12:12:14][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 12:12:14][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 12:12:14][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是新單
+[2017/03/03 12:12:17][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 12:12:18][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，視為已處理舊單==== 
+[2017/03/03 12:12:18][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 12:12:53][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 12:12:53][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 12:12:53][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是舊單
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 12:12:56][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是舊單
+[2017/03/03 12:12:57][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 12:12:57][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，視為已處理舊單==== 
+[2017/03/03 12:12:57][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 02:00:49][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 02:00:49][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 02:00:49][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:00:52][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:00:53][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 02:00:53][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，視為已處理舊單==== 
+[2017/03/03 02:00:53][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 02:03:33][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 02:03:33][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 02:03:33][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:03:36][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:03:37][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 02:03:37][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 02:03:46][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 02:03:46][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 02:03:46][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:03:49][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:03:50][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 02:03:50][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，視為已處理舊單==== 
+[2017/03/03 02:03:50][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 02:05:40][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 02:05:40][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 02:05:40][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:05:43][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:05:44][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 02:05:44][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，視為已處理舊單==== 
+[2017/03/03 02:05:44][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================
+[2017/03/03 02:07:06][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 02:07:06][com.kye.main.SendSoSummary][INFO ]: 
+[2017/03/03 02:07:06][com.kye.main.SendSoSummary][INFO ]: ==============Program Start(SendSoSummary)===============
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO101
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO102
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO044
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO023
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO098
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO021
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO108
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO028
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO117
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO103
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO026
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO104
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][DEBUG]: SO091
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  [SO117, SO108, SO104, SO103, SO102, SO101, SO098, SO091, SO044, SO028, SO026, SO023, SO021]
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][INFO ]: 已確認銷售單數量 :  13
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][INFO ]: 單號: SO117 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][INFO ]: 單號: SO108 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][INFO ]: 單號: SO104 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][INFO ]: 單號: SO103 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][INFO ]: 單號: SO102 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:07:09][com.kye.main.SendSoSummary][INFO ]: 單號: SO101 ,料號: 31010116106 ,是舊單
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO098 ,料號: 31010116103 ,是舊單
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO091 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO044 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105102 ,是舊單
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010105104 ,是舊單
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO028 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO026 ,料號: 31010116100 ,是舊單
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO023 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 單號: SO021 ,料號: 31300725110 ,是舊單
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 匯出檔案: .\excel_report\so_summary_20170303.xlsx
+[2017/03/03 02:07:10][com.kye.main.SendSoSummary][INFO ]: 發送mail給庫存人員 (銷售單總表)
+[2017/03/03 02:07:11][com.kye.util.MailUtil][INFO ]: mail發送成功
+[2017/03/03 02:07:11][com.kye.main.SendSoSummary][INFO ]: 發送成功後，將處理過的銷售單寫入清單中，視為已處理舊單==== 
+[2017/03/03 02:07:11][com.kye.main.SendSoSummary][INFO ]: ===================Program End=====================

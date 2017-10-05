@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.GamificationBadge" table="gamification_badge">
+        <comment>Gamification badge</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="ruleMaxNumber" type="java.lang.Integer">
+            <column name="rule_max_number">
+                <comment>Limitation Number</comment>
+            </column>
+        </property>
+        <property name="ruleMax" type="java.lang.Boolean">
+            <column name="rule_max">
+                <comment>Monthly Limited Sending</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Badge</comment>
+            </column>
+        </property>
+        <property name="ruleAuth" type="string">
+            <column name="rule_auth" not-null="true">
+                <comment>Allowance to Grant</comment>
+            </column>
+        </property>
+        <property name="level" type="string">
+            <column name="level">
+                <comment>Forum Badge Level</comment>
+            </column>
+        </property>
+        <set name="gamificationBadgeUsers" table="gamification_badge_user" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="badge_id" not-null="true">
+                    <comment>Badge</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationBadgeUser" />
+        </set>
+        <set name="gamificationBadgeRuleBadgeRelsForBadge2Id" table="gamification_badge_rule_badge_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="badge2_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.GamificationBadgeRuleBadgeRel" />
+        </set>
+        <set name="gamificationChallengesForRewardFirstId" table="gamification_challenge" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="reward_first_id">
+                    <comment>For 1st user</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationChallenge" />
+        </set>
+        <set name="gamificationBadgeUserWizards" table="gamification_badge_user_wizard" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="badge_id" not-null="true">
+                    <comment>Badge</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationBadgeUserWizard" />
+        </set>
+        <set name="gamificationBadgeRuleBadgeRelsForBadge1Id" table="gamification_badge_rule_badge_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="badge1_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.GamificationBadgeRuleBadgeRel" />
+        </set>
+        <set name="gamificationChallengesForRewardSecondId" table="gamification_challenge" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="reward_second_id">
+                    <comment>For 2nd user</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationChallenge" />
+        </set>
+        <set name="relBadgeAuthUserses" table="rel_badge_auth_users" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="gamification_badge_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.RelBadgeAuthUsers" />
+        </set>
+        <set name="gamificationChallengesForRewardThirdId" table="gamification_challenge" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="reward_third_id">
+                    <comment>For 3rd user</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationChallenge" />
+        </set>
+        <set name="gamificationChallengesForRewardId" table="gamification_challenge" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="reward_id">
+                    <comment>For Every Succeeding User</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationChallenge" />
+        </set>
+        <set name="badgeUnlockedDefinitionRels" table="badge_unlocked_definition_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="gamification_badge_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.BadgeUnlockedDefinitionRel" />
+        </set>
+    </class>
+</hibernate-mapping>

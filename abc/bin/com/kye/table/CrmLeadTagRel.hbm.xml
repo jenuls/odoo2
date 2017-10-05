@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmLeadTagRel" table="crm_lead_tag_rel">
+        <comment>RELATION BETWEEN crm_lead AND crm_lead_tag</comment>
+        <composite-id name="id" class="com.kye.table.CrmLeadTagRelId">
+            <key-property name="leadId" type="int">
+                <column name="lead_id" />
+            </key-property>
+            <key-property name="tagId" type="int">
+                <column name="tag_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="crmLead" class="com.kye.table.CrmLead" update="false" insert="false" fetch="select">
+            <column name="lead_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="crmLeadTag" class="com.kye.table.CrmLeadTag" update="false" insert="false" fetch="select">
+            <column name="tag_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

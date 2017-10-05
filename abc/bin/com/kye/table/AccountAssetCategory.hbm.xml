@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountAssetCategory" table="account_asset_category">
+        <comment>Asset category</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="accountAccountByAccountDepreciationId" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="account_depreciation_id" not-null="true">
+                <comment>Depreciation Entries: Asset Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountByAccountAssetId" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="account_asset_id" not-null="true">
+                <comment>Asset Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAnalyticAccount" class="com.kye.table.AccountAnalyticAccount" fetch="select">
+            <column name="account_analytic_id">
+                <comment>Analytic Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountJournal" class="com.kye.table.AccountJournal" fetch="select">
+            <column name="journal_id" not-null="true">
+                <comment>Journal</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id" not-null="true">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountByAccountDepreciationExpenseId" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="account_depreciation_expense_id" not-null="true">
+                <comment>Depreciation Entries: Expense Account</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="methodEnd" type="date">
+            <column name="method_end" length="13">
+                <comment>Ending date</comment>
+            </column>
+        </property>
+        <property name="prorata" type="java.lang.Boolean">
+            <column name="prorata">
+                <comment>Prorata Temporis</comment>
+            </column>
+        </property>
+        <property name="groupEntries" type="java.lang.Boolean">
+            <column name="group_entries">
+                <comment>Group Journal Entries</comment>
+            </column>
+        </property>
+        <property name="methodProgressFactor" type="java.lang.Double">
+            <column name="method_progress_factor" precision="17" scale="17">
+                <comment>Degressive Factor</comment>
+            </column>
+        </property>
+        <property name="methodPeriod" type="int">
+            <column name="method_period" not-null="true">
+                <comment>Period Length</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true">
+                <comment>Type</comment>
+            </column>
+        </property>
+        <property name="method" type="string">
+            <column name="method" not-null="true">
+                <comment>Computation Method</comment>
+            </column>
+        </property>
+        <property name="methodNumber" type="java.lang.Integer">
+            <column name="method_number">
+                <comment>Number of Depreciations</comment>
+            </column>
+        </property>
+        <property name="methodTime" type="string">
+            <column name="method_time" not-null="true">
+                <comment>Time Method</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Asset Type</comment>
+            </column>
+        </property>
+        <property name="openAsset" type="java.lang.Boolean">
+            <column name="open_asset">
+                <comment>Auto-confirm Assets</comment>
+            </column>
+        </property>
+        <set name="accountAssetAssets" table="account_asset_asset" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="category_id" not-null="true">
+                    <comment>Category</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAssetAsset" />
+        </set>
+        <set name="accountInvoiceLines" table="account_invoice_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="asset_category_id">
+                    <comment>Asset Category</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoiceLine" />
+        </set>
+    </class>
+</hibernate-mapping>

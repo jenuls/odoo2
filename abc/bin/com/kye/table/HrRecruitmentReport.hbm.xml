@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.HrRecruitmentReport" table="hr_recruitment_report">
+        <composite-id name="id" class="com.kye.table.HrRecruitmentReportId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="active" type="java.lang.Boolean">
+                <column name="active" />
+            </key-property>
+            <key-property name="dateCreate" type="timestamp">
+                <column name="date_create" length="29" />
+            </key-property>
+            <key-property name="dateClosed" type="date">
+                <column name="date_closed" length="13" />
+            </key-property>
+            <key-property name="dateLastStageUpdate" type="timestamp">
+                <column name="date_last_stage_update" length="29" />
+            </key-property>
+            <key-property name="partnerId" type="java.lang.Integer">
+                <column name="partner_id" />
+            </key-property>
+            <key-property name="companyId" type="java.lang.Integer">
+                <column name="company_id" />
+            </key-property>
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="jobId" type="java.lang.Integer">
+                <column name="job_id" />
+            </key-property>
+            <key-property name="typeId" type="java.lang.Integer">
+                <column name="type_id" />
+            </key-property>
+            <key-property name="departmentId" type="java.lang.Integer">
+                <column name="department_id" />
+            </key-property>
+            <key-property name="priority" type="string">
+                <column name="priority" />
+            </key-property>
+            <key-property name="stageId" type="java.lang.Integer">
+                <column name="stage_id" />
+            </key-property>
+            <key-property name="lastStageId" type="java.lang.Integer">
+                <column name="last_stage_id" />
+            </key-property>
+            <key-property name="mediumId" type="java.lang.Integer">
+                <column name="medium_id" />
+            </key-property>
+            <key-property name="sourceId" type="java.lang.Integer">
+                <column name="source_id" />
+            </key-property>
+            <key-property name="salaryProp" type="java.lang.Double">
+                <column name="salary_prop" precision="17" scale="17" />
+            </key-property>
+            <key-property name="salaryPropAvg" type="java.lang.Double">
+                <column name="salary_prop_avg" precision="17" scale="17" />
+            </key-property>
+            <key-property name="salaryExp" type="java.lang.Double">
+                <column name="salary_exp" precision="17" scale="17" />
+            </key-property>
+            <key-property name="salaryExpAvg" type="java.lang.Double">
+                <column name="salary_exp_avg" precision="17" scale="17" />
+            </key-property>
+            <key-property name="delayClose" type="java.lang.Double">
+                <column name="delay_close" precision="17" scale="17" />
+            </key-property>
+            <key-property name="nbr" type="java.lang.Long">
+                <column name="nbr" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

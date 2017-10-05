@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.HrExpense" table="hr_expense">
+        <comment>Expense</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrEmployee" class="com.kye.table.HrEmployee" fetch="select">
+            <column name="employee_id" not-null="true">
+                <comment>Employee</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAnalyticAccount" class="com.kye.table.AccountAnalyticAccount" fetch="select">
+            <column name="analytic_account_id">
+                <comment>Analytic Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrExpenseSheet" class="com.kye.table.HrExpenseSheet" fetch="select">
+            <column name="sheet_id">
+                <comment>Expense Report</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="productProduct" class="com.kye.table.ProductProduct" fetch="select">
+            <column name="product_id" not-null="true">
+                <comment>Product</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="productUom" class="com.kye.table.ProductUom" fetch="select">
+            <column name="product_uom_id" not-null="true">
+                <comment>Unit of Measure</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccount" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="account_id">
+                <comment>Account</comment>
+            </column>
+        </many-to-one>
+        <property name="totalAmount" type="big_decimal">
+            <column name="total_amount" precision="131089" scale="0">
+                <comment>Total</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="reference" type="string">
+            <column name="reference">
+                <comment>Bill Reference</comment>
+            </column>
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="13">
+                <comment>Date</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="untaxedAmount" type="big_decimal">
+            <column name="untaxed_amount" precision="131089" scale="0">
+                <comment>Subtotal</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="paymentMode" type="string">
+            <column name="payment_mode">
+                <comment>Payment By</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Expense Description</comment>
+            </column>
+        </property>
+        <property name="unitAmount" type="big_decimal">
+            <column name="unit_amount" precision="131089" scale="0" not-null="true">
+                <comment>Unit Price</comment>
+            </column>
+        </property>
+        <property name="quantity" type="big_decimal">
+            <column name="quantity" precision="131089" scale="0" not-null="true">
+                <comment>Quantity</comment>
+            </column>
+        </property>
+        <set name="expenseTaxes" table="expense_tax" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="expense_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.ExpenseTax" />
+        </set>
+    </class>
+</hibernate-mapping>

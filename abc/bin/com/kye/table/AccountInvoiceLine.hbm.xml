@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountInvoiceLine" table="account_invoice_line">
+        <comment>Invoice Line</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAnalyticAccount" class="com.kye.table.AccountAnalyticAccount" fetch="select">
+            <column name="account_analytic_id">
+                <comment>Analytic Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="saleLayoutCategory" class="com.kye.table.SaleLayoutCategory" fetch="select">
+            <column name="layout_category_id">
+                <comment>Section</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="productUom" class="com.kye.table.ProductUom" fetch="select">
+            <column name="uom_id">
+                <comment>Unit of Measure</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Partner</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="productProduct" class="com.kye.table.ProductProduct" fetch="select">
+            <column name="product_id">
+                <comment>Product</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountInvoice" class="com.kye.table.AccountInvoice" fetch="select">
+            <column name="invoice_id">
+                <comment>Invoice Reference</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAssetCategory" class="com.kye.table.AccountAssetCategory" fetch="select">
+            <column name="asset_category_id">
+                <comment>Asset Category</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccount" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="account_id" not-null="true">
+                <comment>Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="purchaseOrderLine" class="com.kye.table.PurchaseOrderLine" fetch="select">
+            <column name="purchase_line_id">
+                <comment>Purchase Order Line</comment>
+            </column>
+        </many-to-one>
+        <property name="origin" type="string">
+            <column name="origin">
+                <comment>Source Document</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="priceUnit" type="big_decimal">
+            <column name="price_unit" precision="131089" scale="0" not-null="true">
+                <comment>Unit Price</comment>
+            </column>
+        </property>
+        <property name="priceSubtotal" type="big_decimal">
+            <column name="price_subtotal" precision="131089" scale="0">
+                <comment>Amount</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="discount" type="big_decimal">
+            <column name="discount" precision="131089" scale="0">
+                <comment>Discount (%)</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="priceSubtotalSigned" type="big_decimal">
+            <column name="price_subtotal_signed" precision="131089" scale="0">
+                <comment>Amount Signed</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="quantity" type="big_decimal">
+            <column name="quantity" precision="131089" scale="0" not-null="true">
+                <comment>Quantity</comment>
+            </column>
+        </property>
+        <property name="layoutCategorySequence" type="java.lang.Integer">
+            <column name="layout_category_sequence">
+                <comment>Layout Sequence</comment>
+            </column>
+        </property>
+        <property name="assetEndDate" type="date">
+            <column name="asset_end_date" length="13">
+                <comment>Asset End Date</comment>
+            </column>
+        </property>
+        <property name="assetStartDate" type="date">
+            <column name="asset_start_date" length="13">
+                <comment>Asset Start Date</comment>
+            </column>
+        </property>
+        <property name="assetMrr" type="big_decimal">
+            <column name="asset_mrr" precision="131089" scale="0">
+                <comment>Monthly Recurring Revenue</comment>
+            </column>
+        </property>
+        <set name="mrpRepairLines" table="mrp_repair_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_line_id">
+                    <comment>Invoice Line</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MrpRepairLine" />
+        </set>
+        <set name="saleOrderLineInvoiceRels" table="sale_order_line_invoice_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_line_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.SaleOrderLineInvoiceRel" />
+        </set>
+        <set name="mrpRepairFees" table="mrp_repair_fee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_line_id">
+                    <comment>Invoice Line</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MrpRepairFee" />
+        </set>
+        <set name="accountAnalyticTagAccountInvoiceLineRels" table="account_analytic_tag_account_invoice_line_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_invoice_line_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAnalyticTagAccountInvoiceLineRel" />
+        </set>
+        <set name="accountInvoiceLineTaxes" table="account_invoice_line_tax" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_line_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoiceLineTax" />
+        </set>
+    </class>
+</hibernate-mapping>

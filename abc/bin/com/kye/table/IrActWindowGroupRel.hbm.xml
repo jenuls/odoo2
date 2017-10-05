@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrActWindowGroupRel" table="ir_act_window_group_rel">
+        <comment>RELATION BETWEEN ir_act_window AND res_groups</comment>
+        <composite-id name="id" class="com.kye.table.IrActWindowGroupRelId">
+            <key-property name="actId" type="int">
+                <column name="act_id" />
+            </key-property>
+            <key-property name="gid" type="int">
+                <column name="gid" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="resGroups" class="com.kye.table.ResGroups" update="false" insert="false" fetch="select">
+            <column name="gid" not-null="true" />
+        </many-to-one>
+        <many-to-one name="irActWindow" class="com.kye.table.IrActWindow" update="false" insert="false" fetch="select">
+            <column name="act_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

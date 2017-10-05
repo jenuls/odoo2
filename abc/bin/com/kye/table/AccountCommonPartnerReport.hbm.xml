@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountCommonPartnerReport" table="account_common_partner_report">
+        <comment>Account Common Partner Report</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <property name="dateFrom" type="date">
+            <column name="date_from" length="13">
+                <comment>Start Date</comment>
+            </column>
+        </property>
+        <property name="resultSelection" type="string">
+            <column name="result_selection" not-null="true">
+                <comment>Partner's</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="dateTo" type="date">
+            <column name="date_to" length="13">
+                <comment>End Date</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="targetMove" type="string">
+            <column name="target_move" not-null="true">
+                <comment>Target Moves</comment>
+            </column>
+        </property>
+        <set name="accountCommonPartnerReportAccountJournalRels" table="account_common_partner_report_account_journal_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_common_partner_report_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountCommonPartnerReportAccountJournalRel" />
+        </set>
+    </class>
+</hibernate-mapping>

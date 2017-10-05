@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrModuleModule" table="ir_module_module">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid" />
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid" />
+        </many-to-one>
+        <many-to-one name="irModuleCategory" class="com.kye.table.IrModuleCategory" fetch="select">
+            <column name="category_id" />
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29" />
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" />
+        </property>
+        <property name="summary" type="string">
+            <column name="summary" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" unique="true" />
+        </property>
+        <property name="author" type="string">
+            <column name="author" />
+        </property>
+        <property name="icon" type="string">
+            <column name="icon" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="16" />
+        </property>
+        <property name="latestVersion" type="string">
+            <column name="latest_version" />
+        </property>
+        <property name="shortdesc" type="string">
+            <column name="shortdesc" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="application" type="java.lang.Boolean">
+            <column name="application" />
+        </property>
+        <property name="demo" type="java.lang.Boolean">
+            <column name="demo" />
+        </property>
+        <property name="web" type="java.lang.Boolean">
+            <column name="web" />
+        </property>
+        <property name="license" type="string">
+            <column name="license" length="32" />
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence" />
+        </property>
+        <property name="autoInstall" type="java.lang.Boolean">
+            <column name="auto_install" />
+        </property>
+        <property name="maintainer" type="string">
+            <column name="maintainer">
+                <comment>Maintainer</comment>
+            </column>
+        </property>
+        <property name="contributors" type="string">
+            <column name="contributors">
+                <comment>Contributors</comment>
+            </column>
+        </property>
+        <property name="viewsByModule" type="string">
+            <column name="views_by_module">
+                <comment>Views</comment>
+            </column>
+        </property>
+        <property name="publishedVersion" type="string">
+            <column name="published_version">
+                <comment>Published Version</comment>
+            </column>
+        </property>
+        <property name="menusByModule" type="string">
+            <column name="menus_by_module">
+                <comment>Menus</comment>
+            </column>
+        </property>
+        <property name="url" type="string">
+            <column name="url">
+                <comment>URL</comment>
+            </column>
+        </property>
+        <property name="reportsByModule" type="string">
+            <column name="reports_by_module">
+                <comment>Reports</comment>
+            </column>
+        </property>
+        <set name="irModuleModuleDependencies" table="ir_module_module_dependency" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="module_id" />
+            </key>
+            <one-to-many class="com.kye.table.IrModuleModuleDependency" />
+        </set>
+        <set name="irModelRelations" table="ir_model_relation" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="module" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.IrModelRelation" />
+        </set>
+        <set name="paymentAcquirers" table="payment_acquirer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="module_id">
+                    <comment>Corresponding Module</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PaymentAcquirer" />
+        </set>
+        <set name="relModulesLangexports" table="rel_modules_langexport" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="module_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.RelModulesLangexport" />
+        </set>
+        <set name="irModelConstraints" table="ir_model_constraint" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="module" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.IrModelConstraint" />
+        </set>
+    </class>
+</hibernate-mapping>

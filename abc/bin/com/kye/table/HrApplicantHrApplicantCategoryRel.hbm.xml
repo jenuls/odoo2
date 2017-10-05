@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.HrApplicantHrApplicantCategoryRel" table="hr_applicant_hr_applicant_category_rel">
+        <comment>RELATION BETWEEN hr_applicant AND hr_applicant_category</comment>
+        <composite-id name="id" class="com.kye.table.HrApplicantHrApplicantCategoryRelId">
+            <key-property name="hrApplicantId" type="int">
+                <column name="hr_applicant_id" />
+            </key-property>
+            <key-property name="hrApplicantCategoryId" type="int">
+                <column name="hr_applicant_category_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="hrApplicantCategory" class="com.kye.table.HrApplicantCategory" update="false" insert="false" fetch="select">
+            <column name="hr_applicant_category_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="hrApplicant" class="com.kye.table.HrApplicant" update="false" insert="false" fetch="select">
+            <column name="hr_applicant_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

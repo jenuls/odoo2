@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.HrEmployee" table="hr_employee">
+        <comment>Employee</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrEmployeeByCoachId" class="com.kye.table.HrEmployee" fetch="select">
+            <column name="coach_id">
+                <comment>Coach</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartnerBank" class="com.kye.table.ResPartnerBank" fetch="select">
+            <column name="bank_account_id">
+                <comment>Bank Account Number</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrEmployeeByParentId" class="com.kye.table.HrEmployee" fetch="select">
+            <column name="parent_id">
+                <comment>Manager</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resourceResource" class="com.kye.table.ResourceResource" fetch="select">
+            <column name="resource_id" not-null="true">
+                <comment>Resource</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartnerByAddressHomeId" class="com.kye.table.ResPartner" fetch="select">
+            <column name="address_home_id">
+                <comment>Home Address</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrJob" class="com.kye.table.HrJob" fetch="select">
+            <column name="job_id">
+                <comment>Job Title</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrDepartment" class="com.kye.table.HrDepartment" fetch="select">
+            <column name="department_id">
+                <comment>Department</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCountry" class="com.kye.table.ResCountry" fetch="select">
+            <column name="country_id">
+                <comment>Nationality (Country)</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccount" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="account_id">
+                <comment>Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartnerByAddressId" class="com.kye.table.ResPartner" fetch="select">
+            <column name="address_id">
+                <comment>Working Address</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="ssnid" type="string">
+            <column name="ssnid">
+                <comment>SSN No</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="color" type="java.lang.Integer">
+            <column name="color">
+                <comment>Color Index</comment>
+            </column>
+        </property>
+        <property name="marital" type="string">
+            <column name="marital">
+                <comment>Marital Status</comment>
+            </column>
+        </property>
+        <property name="identificationId" type="string">
+            <column name="identification_id">
+                <comment>Identification No</comment>
+            </column>
+        </property>
+        <property name="workPhone" type="string">
+            <column name="work_phone">
+                <comment>Work Phone</comment>
+            </column>
+        </property>
+        <property name="mobilePhone" type="string">
+            <column name="mobile_phone">
+                <comment>Work Mobile</comment>
+            </column>
+        </property>
+        <property name="birthday" type="date">
+            <column name="birthday" length="13">
+                <comment>Date of Birth</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="sinid" type="string">
+            <column name="sinid">
+                <comment>SIN No</comment>
+            </column>
+        </property>
+        <property name="workEmail" type="string">
+            <column name="work_email">
+                <comment>Work Email</comment>
+            </column>
+        </property>
+        <property name="workLocation" type="string">
+            <column name="work_location">
+                <comment>Work Location</comment>
+            </column>
+        </property>
+        <property name="gender" type="string">
+            <column name="gender">
+                <comment>Gender</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="notes">
+                <comment>Notes</comment>
+            </column>
+        </property>
+        <property name="passportId" type="string">
+            <column name="passport_id">
+                <comment>Passport No</comment>
+            </column>
+        </property>
+        <property name="nameRelated" type="string">
+            <column name="name_related">
+                <comment>Resource Name</comment>
+            </column>
+        </property>
+        <property name="timesheetCost" type="java.lang.Double">
+            <column name="timesheet_cost" precision="17" scale="17">
+                <comment>Timesheet Cost</comment>
+            </column>
+        </property>
+        <property name="manager" type="java.lang.Boolean">
+            <column name="manager">
+                <comment>Is a Manager</comment>
+            </column>
+        </property>
+        <property name="children" type="java.lang.Integer">
+            <column name="children">
+                <comment>Number of Children</comment>
+            </column>
+        </property>
+        <property name="medicExam" type="date">
+            <column name="medic_exam" length="13">
+                <comment>Medical Examination Date</comment>
+            </column>
+        </property>
+        <property name="vehicle" type="string">
+            <column name="vehicle">
+                <comment>Company Vehicle</comment>
+            </column>
+        </property>
+        <property name="placeOfBirth" type="string">
+            <column name="place_of_birth">
+                <comment>Place of Birth</comment>
+            </column>
+        </property>
+        <property name="vehicleDistance" type="java.lang.Integer">
+            <column name="vehicle_distance">
+                <comment>Home-Work Dist.</comment>
+            </column>
+        </property>
+        <property name="pin" type="string">
+            <column name="pin">
+                <comment>PIN</comment>
+            </column>
+        </property>
+        <property name="barcode" type="string">
+            <column name="barcode" unique="true">
+                <comment>Badge ID</comment>
+            </column>
+        </property>
+        <set name="hrHolidaysesForEmployeeId" table="hr_holidays" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="employee_id">
+                    <comment>Employee</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrHolidays" />
+        </set>
+        <set name="gamificationBadgeUsers" table="gamification_badge_user" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="employee_id">
+                    <comment>Employee</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationBadgeUser" />
+        </set>
+        <set name="hrHolidaysesForManagerId" table="hr_holidays" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="manager_id">
+                    <comment>First Approval</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrHolidays" />
+        </set>
+        <set name="hrContracts" table="hr_contract" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="employee_id" not-null="true">
+                    <comment>Employee</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrContract" />
+        </set>
+        <set name="hrEmployeesForCoachId" table="hr_employee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="coach_id">
+                    <comment>Coach</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrEmployee" />
+        </set>
+        <set name="hrExpenseSheets" table="hr_expense_sheet" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="employee_id" not-null="true">
+                    <comment>Employee</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrExpenseSheet" />
+        </set>
+        <set name="employeeCategoryRels" table="employee_category_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="emp_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.EmployeeCategoryRel" />
+        </set>
+        <set name="hrExpenses" table="hr_expense" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="employee_id" not-null="true">
+                    <comment>Employee</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrExpense" />
+        </set>
+        <set name="hrJobs" table="hr_job" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="manager_id">
+                    <comment>Department Manager</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrJob" />
+        </set>
+        <set name="hrApplicants" table="hr_applicant" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="emp_id">
+                    <comment>Employee</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrApplicant" />
+        </set>
+        <set name="gamificationBadgeUserWizards" table="gamification_badge_user_wizard" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="employee_id" not-null="true">
+                    <comment>Employee</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationBadgeUserWizard" />
+        </set>
+        <set name="hrHolidaysesForManagerId2" table="hr_holidays" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="manager_id2">
+                    <comment>Second Approval</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrHolidays" />
+        </set>
+        <set name="hrDepartments" table="hr_department" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="manager_id">
+                    <comment>Manager</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrDepartment" />
+        </set>
+        <set name="summaryEmpRels" table="summary_emp_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="emp_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.SummaryEmpRel" />
+        </set>
+        <set name="hrEmployeesForParentId" table="hr_employee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent_id">
+                    <comment>Manager</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrEmployee" />
+        </set>
+        <set name="hrAttendances" table="hr_attendance" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="employee_id" not-null="true">
+                    <comment>Employee</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrAttendance" />
+        </set>
+    </class>
+</hibernate-mapping>

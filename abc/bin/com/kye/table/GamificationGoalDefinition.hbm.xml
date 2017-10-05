@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.GamificationGoalDefinition" table="gamification_goal_definition">
+        <comment>Gamification goal definition</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelFieldsByFieldId" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="field_id">
+                <comment>Field to Sum</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelFieldsByFieldDateId" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="field_date_id">
+                <comment>Date Field</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irActWindow" class="com.kye.table.IrActWindow" fetch="select">
+            <column name="action_id">
+                <comment>Action</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelFieldsByBatchDistinctiveField" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="batch_distinctive_field">
+                <comment>Distinctive field for batch user</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModel" class="com.kye.table.IrModel" fetch="select">
+            <column name="model_id">
+                <comment>Model</comment>
+            </column>
+        </many-to-one>
+        <property name="domain" type="string">
+            <column name="domain" not-null="true">
+                <comment>Filter Domain</comment>
+            </column>
+        </property>
+        <property name="resIdField" type="string">
+            <column name="res_id_field">
+                <comment>ID Field of user</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="suffix" type="string">
+            <column name="suffix">
+                <comment>Suffix</comment>
+            </column>
+        </property>
+        <property name="computeCode" type="string">
+            <column name="compute_code">
+                <comment>Python Code</comment>
+            </column>
+        </property>
+        <property name="computationMode" type="string">
+            <column name="computation_mode" not-null="true">
+                <comment>Computation Mode</comment>
+            </column>
+        </property>
+        <property name="displayMode" type="string">
+            <column name="display_mode" not-null="true">
+                <comment>Displayed as</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Goal Description</comment>
+            </column>
+        </property>
+        <property name="monetary" type="java.lang.Boolean">
+            <column name="monetary">
+                <comment>Monetary Value</comment>
+            </column>
+        </property>
+        <property name="batchUserExpression" type="string">
+            <column name="batch_user_expression">
+                <comment>Evaluated expression for batch mode</comment>
+            </column>
+        </property>
+        <property name="batchMode" type="java.lang.Boolean">
+            <column name="batch_mode">
+                <comment>Batch Mode</comment>
+            </column>
+        </property>
+        <property name="condition" type="string">
+            <column name="condition" not-null="true">
+                <comment>Goal Performance</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Goal Definition</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <set name="gamificationGoals" table="gamification_goal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="definition_id" not-null="true">
+                    <comment>Goal Definition</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationGoal" />
+        </set>
+        <set name="gamificationChallengeLines" table="gamification_challenge_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="definition_id" not-null="true">
+                    <comment>Goal Definition</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationChallengeLine" />
+        </set>
+        <set name="badgeUnlockedDefinitionRels" table="badge_unlocked_definition_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="gamification_goal_definition_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.BadgeUnlockedDefinitionRel" />
+        </set>
+    </class>
+</hibernate-mapping>

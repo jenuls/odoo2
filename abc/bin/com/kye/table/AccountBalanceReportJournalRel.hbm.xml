@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountBalanceReportJournalRel" table="account_balance_report_journal_rel">
+        <comment>RELATION BETWEEN account_balance_report AND account_journal</comment>
+        <composite-id name="id" class="com.kye.table.AccountBalanceReportJournalRelId">
+            <key-property name="accountId" type="int">
+                <column name="account_id" />
+            </key-property>
+            <key-property name="journalId" type="int">
+                <column name="journal_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="accountJournal" class="com.kye.table.AccountJournal" update="false" insert="false" fetch="select">
+            <column name="journal_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="accountBalanceReport" class="com.kye.table.AccountBalanceReport" update="false" insert="false" fetch="select">
+            <column name="account_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

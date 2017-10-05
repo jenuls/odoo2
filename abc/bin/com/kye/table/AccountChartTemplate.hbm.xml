@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountChartTemplate" table="account_chart_template">
+        <comment>Templates for Account Chart</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="accountAccountTemplateByPropertyStockAccountOutputCategId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="property_stock_account_output_categ_id">
+                <comment>Output Account for Stock Valuation</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByExpenseCurrencyExchangeAccountId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="expense_currency_exchange_account_id">
+                <comment>Loss Exchange Rate Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByPropertyAccountIncomeId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="property_account_income_id">
+                <comment>Income Account on Product Template</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByPropertyAccountExpenseId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="property_account_expense_id">
+                <comment>Expense Account on Product Template</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByTransferAccountId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="transfer_account_id" not-null="true">
+                <comment>Transfer Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByPropertyAccountExpenseCategId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="property_account_expense_categ_id">
+                <comment>Category of Expense Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id" not-null="true">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByPropertyAccountPayableId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="property_account_payable_id">
+                <comment>Payable Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountChartTemplate" class="com.kye.table.AccountChartTemplate" fetch="select">
+            <column name="parent_id">
+                <comment>Parent Chart Template</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByPropertyAccountReceivableId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="property_account_receivable_id">
+                <comment>Receivable Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByPropertyStockValuationAccountId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="property_stock_valuation_account_id">
+                <comment>Account Template for Stock Valuation</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByPropertyStockAccountInputCategId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="property_stock_account_input_categ_id">
+                <comment>Input Account for Stock Valuation</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByPropertyAccountIncomeCategId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="property_account_income_categ_id">
+                <comment>Category of Income Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByIncomeCurrencyExchangeAccountId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="income_currency_exchange_account_id">
+                <comment>Gain Exchange Rate Account</comment>
+            </column>
+        </many-to-one>
+        <property name="bankAccountCodePrefix" type="string">
+            <column name="bank_account_code_prefix">
+                <comment>Prefix of the bank accounts</comment>
+            </column>
+        </property>
+        <property name="cashAccountCodePrefix" type="string">
+            <column name="cash_account_code_prefix">
+                <comment>Prefix of the main cash accounts</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="visible" type="java.lang.Boolean">
+            <column name="visible">
+                <comment>Can be Visible?</comment>
+            </column>
+        </property>
+        <property name="completeTaxSet" type="java.lang.Boolean">
+            <column name="complete_tax_set">
+                <comment>Complete Set of Taxes</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="useAngloSaxon" type="java.lang.Boolean">
+            <column name="use_anglo_saxon">
+                <comment>Use Anglo-Saxon accounting</comment>
+            </column>
+        </property>
+        <property name="codeDigits" type="int">
+            <column name="code_digits" not-null="true">
+                <comment># of Digits</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Name</comment>
+            </column>
+        </property>
+        <set name="accountFiscalPositionTemplates" table="account_fiscal_position_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="chart_template_id" not-null="true">
+                    <comment>Chart Template</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFiscalPositionTemplate" />
+        </set>
+        <set name="accountConfigSettingses" table="account_config_settings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="chart_template_id">
+                    <comment>Template</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountConfigSettings" />
+        </set>
+        <set name="accountChartTemplates" table="account_chart_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent_id">
+                    <comment>Parent Chart Template</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountChartTemplate" />
+        </set>
+        <set name="wizardMultiChartsAccountses" table="wizard_multi_charts_accounts" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="chart_template_id" not-null="true">
+                    <comment>Chart Template</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.WizardMultiChartsAccounts" />
+        </set>
+        <set name="accountAccountTemplates" table="account_account_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="chart_template_id">
+                    <comment>Chart Template</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountTemplate" />
+        </set>
+        <set name="accountTaxTemplates" table="account_tax_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="chart_template_id" not-null="true">
+                    <comment>Chart Template</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountTaxTemplate" />
+        </set>
+        <set name="resCompanies" table="res_company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="chart_template_id">
+                    <comment>Chart template id</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ResCompany" />
+        </set>
+    </class>
+</hibernate-mapping>

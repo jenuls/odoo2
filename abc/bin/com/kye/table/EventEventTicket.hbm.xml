@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.EventEventTicket" table="event_event_ticket">
+        <comment>Event Ticket</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="eventEvent" class="com.kye.table.EventEvent" fetch="select">
+            <column name="event_id" not-null="true">
+                <comment>Event</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="productProduct" class="com.kye.table.ProductProduct" fetch="select">
+            <column name="product_id" not-null="true">
+                <comment>Product</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Name</comment>
+            </column>
+        </property>
+        <property name="seatsAvailability" type="string">
+            <column name="seats_availability" not-null="true">
+                <comment>Available Seat</comment>
+            </column>
+        </property>
+        <property name="seatsReserved" type="java.lang.Integer">
+            <column name="seats_reserved">
+                <comment>Reserved Seats</comment>
+            </column>
+        </property>
+        <property name="seatsAvailable" type="java.lang.Integer">
+            <column name="seats_available">
+                <comment>Available Seats</comment>
+            </column>
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="price" precision="131089" scale="0">
+                <comment>Price</comment>
+            </column>
+        </property>
+        <property name="seatsMax" type="java.lang.Integer">
+            <column name="seats_max">
+                <comment>Maximum Available Seats</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="deadline" type="date">
+            <column name="deadline" length="13">
+                <comment>Sales End</comment>
+            </column>
+        </property>
+        <property name="seatsUnconfirmed" type="java.lang.Integer">
+            <column name="seats_unconfirmed">
+                <comment>Unconfirmed Seat Reservations</comment>
+            </column>
+        </property>
+        <property name="seatsUsed" type="java.lang.Integer">
+            <column name="seats_used">
+                <comment>Seats used</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <set name="eventRegistrations" table="event_registration" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="event_ticket_id">
+                    <comment>Event Ticket</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.EventRegistration" />
+        </set>
+        <set name="saleOrderLines" table="sale_order_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="event_ticket_id">
+                    <comment>Event Ticket</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.SaleOrderLine" />
+        </set>
+        <set name="registrationEditorLines" table="registration_editor_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="event_ticket_id">
+                    <comment>Event Ticket</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.RegistrationEditorLine" />
+        </set>
+    </class>
+</hibernate-mapping>

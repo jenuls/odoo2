@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrActWindow" table="ir_act_window">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid" />
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid" />
+        </many-to-one>
+        <many-to-one name="irUiViewBySearchViewId" class="com.kye.table.IrUiView" fetch="select">
+            <column name="search_view_id">
+                <comment>Search View Ref.</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irUiViewByViewId" class="com.kye.table.IrUiView" fetch="select">
+            <column name="view_id">
+                <comment>View Ref.</comment>
+            </column>
+        </many-to-one>
+        <property name="help" type="string">
+            <column name="help" />
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29" />
+        </property>
+        <property name="usage" type="string">
+            <column name="usage" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="domain" type="string">
+            <column name="domain">
+                <comment>Domain Value</comment>
+            </column>
+        </property>
+        <property name="resModel" type="string">
+            <column name="res_model" not-null="true">
+                <comment>Destination Model</comment>
+            </column>
+        </property>
+        <property name="srcModel" type="string">
+            <column name="src_model">
+                <comment>Source Model</comment>
+            </column>
+        </property>
+        <property name="viewType" type="string">
+            <column name="view_type" not-null="true">
+                <comment>View Type</comment>
+            </column>
+        </property>
+        <property name="viewMode" type="string">
+            <column name="view_mode" not-null="true">
+                <comment>View mode</comment>
+            </column>
+        </property>
+        <property name="multi" type="java.lang.Boolean">
+            <column name="multi">
+                <comment>Restrict to lists</comment>
+            </column>
+        </property>
+        <property name="target" type="string">
+            <column name="target">
+                <comment>Target Window</comment>
+            </column>
+        </property>
+        <property name="autoSearch" type="java.lang.Boolean">
+            <column name="auto_search">
+                <comment>Auto search</comment>
+            </column>
+        </property>
+        <property name="resId" type="java.lang.Integer">
+            <column name="res_id">
+                <comment>Record ID</comment>
+            </column>
+        </property>
+        <property name="filter" type="java.lang.Boolean">
+            <column name="filter">
+                <comment>Filter</comment>
+            </column>
+        </property>
+        <property name="limit" type="java.lang.Integer">
+            <column name="limit">
+                <comment>Limit</comment>
+            </column>
+        </property>
+        <property name="context" type="string">
+            <column name="context" not-null="true">
+                <comment>Context Value</comment>
+            </column>
+        </property>
+        <set name="emailTemplatePreviews" table="email_template_preview" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ref_ir_act_window">
+                    <comment>Sidebar action</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.EmailTemplatePreview" />
+        </set>
+        <set name="mailTemplates" table="mail_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ref_ir_act_window">
+                    <comment>Sidebar action</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MailTemplate" />
+        </set>
+        <set name="irActWindowViews" table="ir_act_window_view" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="act_window_id">
+                    <comment>Action</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrActWindowView" />
+        </set>
+        <set name="irActWindowGroupRels" table="ir_act_window_group_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="act_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.IrActWindowGroupRel" />
+        </set>
+        <set name="gamificationGoalDefinitions" table="gamification_goal_definition" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="action_id">
+                    <comment>Action</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.GamificationGoalDefinition" />
+        </set>
+    </class>
+</hibernate-mapping>

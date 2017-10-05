@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.ImLivechatChannelImUser" table="im_livechat_channel_im_user">
+        <comment>RELATION BETWEEN im_livechat_channel AND res_users</comment>
+        <composite-id name="id" class="com.kye.table.ImLivechatChannelImUserId">
+            <key-property name="channelId" type="int">
+                <column name="channel_id" />
+            </key-property>
+            <key-property name="userId" type="int">
+                <column name="user_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="resUsers" class="com.kye.table.ResUsers" update="false" insert="false" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="imLivechatChannel" class="com.kye.table.ImLivechatChannel" update="false" insert="false" fetch="select">
+            <column name="channel_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

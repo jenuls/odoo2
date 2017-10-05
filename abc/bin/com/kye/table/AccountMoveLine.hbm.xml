@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountMoveLine" table="account_move_line">
+        <comment>Journal Item</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="accountBankStatement" class="com.kye.table.AccountBankStatement" fetch="select">
+            <column name="statement_id">
+                <comment>Statement</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Partner</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="productProduct" class="com.kye.table.ProductProduct" fetch="select">
+            <column name="product_id">
+                <comment>Product</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountInvoice" class="com.kye.table.AccountInvoice" fetch="select">
+            <column name="invoice_id">
+                <comment>Invoice id</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountType" class="com.kye.table.AccountAccountType" fetch="select">
+            <column name="user_type_id">
+                <comment>Type</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAnalyticAccount" class="com.kye.table.AccountAnalyticAccount" fetch="select">
+            <column name="analytic_account_id">
+                <comment>Analytic Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCurrencyByCurrencyId" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountPayment" class="com.kye.table.AccountPayment" fetch="select">
+            <column name="payment_id">
+                <comment>Originator Payment</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCurrencyByCompanyCurrencyId" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="company_currency_id">
+                <comment>Company Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountJournal" class="com.kye.table.AccountJournal" fetch="select">
+            <column name="journal_id">
+                <comment>Journal</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountTax" class="com.kye.table.AccountTax" fetch="select">
+            <column name="tax_line_id">
+                <comment>Originator tax</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountMove" class="com.kye.table.AccountMove" fetch="select">
+            <column name="move_id" not-null="true">
+                <comment>Journal Entry</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountFullReconcile" class="com.kye.table.AccountFullReconcile" fetch="select">
+            <column name="full_reconcile_id">
+                <comment>Matching Number</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="productUom" class="com.kye.table.ProductUom" fetch="select">
+            <column name="product_uom_id">
+                <comment>Unit of Measure</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccount" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="account_id" not-null="true">
+                <comment>Account</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="dateMaturity" type="date">
+            <column name="date_maturity" length="13" not-null="true">
+                <comment>Due date</comment>
+            </column>
+        </property>
+        <property name="blocked" type="java.lang.Boolean">
+            <column name="blocked">
+                <comment>No Follow-up</comment>
+            </column>
+        </property>
+        <property name="amountResidual" type="big_decimal">
+            <column name="amount_residual" precision="131089" scale="0">
+                <comment>Residual Amount</comment>
+            </column>
+        </property>
+        <property name="creditCashBasis" type="big_decimal">
+            <column name="credit_cash_basis" precision="131089" scale="0">
+                <comment>Credit cash basis</comment>
+            </column>
+        </property>
+        <property name="amountResidualCurrency" type="big_decimal">
+            <column name="amount_residual_currency" precision="131089" scale="0">
+                <comment>Residual Amount in Currency</comment>
+            </column>
+        </property>
+        <property name="debit" type="big_decimal">
+            <column name="debit" precision="131089" scale="0">
+                <comment>Debit</comment>
+            </column>
+        </property>
+        <property name="ref" type="string">
+            <column name="ref">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="debitCashBasis" type="big_decimal">
+            <column name="debit_cash_basis" precision="131089" scale="0">
+                <comment>Debit cash basis</comment>
+            </column>
+        </property>
+        <property name="reconciled" type="java.lang.Boolean">
+            <column name="reconciled">
+                <comment>Reconciled</comment>
+            </column>
+        </property>
+        <property name="taxExigible" type="java.lang.Boolean">
+            <column name="tax_exigible">
+                <comment>Appears in VAT report</comment>
+            </column>
+        </property>
+        <property name="balanceCashBasis" type="big_decimal">
+            <column name="balance_cash_basis" precision="131089" scale="0">
+                <comment>Balance cash basis</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="13">
+                <comment>Date</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Label</comment>
+            </column>
+        </property>
+        <property name="credit" type="big_decimal">
+            <column name="credit" precision="131089" scale="0">
+                <comment>Credit</comment>
+            </column>
+        </property>
+        <property name="amountCurrency" type="big_decimal">
+            <column name="amount_currency" precision="131089" scale="0">
+                <comment>Amount currency</comment>
+            </column>
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="balance" precision="131089" scale="0">
+                <comment>Balance</comment>
+            </column>
+        </property>
+        <property name="quantity" type="big_decimal">
+            <column name="quantity" precision="131089" scale="0">
+                <comment>Quantity</comment>
+            </column>
+        </property>
+        <set name="accountInvoiceAccountMoveLineRels" table="account_invoice_account_move_line_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_move_line_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoiceAccountMoveLineRel" />
+        </set>
+        <set name="accountAnalyticTagAccountMoveLineRels" table="account_analytic_tag_account_move_line_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_move_line_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAnalyticTagAccountMoveLineRel" />
+        </set>
+        <set name="accountMoveLineAccountTaxRels" table="account_move_line_account_tax_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_move_line_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveLineAccountTaxRel" />
+        </set>
+        <set name="accountAnalyticLines" table="account_analytic_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="move_id">
+                    <comment>Move Line</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAnalyticLine" />
+        </set>
+        <set name="accountPartialReconcilesForCreditMoveId" table="account_partial_reconcile" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="credit_move_id" not-null="true">
+                    <comment>Credit move id</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountPartialReconcile" />
+        </set>
+        <set name="accountPartialReconcilesForDebitMoveId" table="account_partial_reconcile" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="debit_move_id" not-null="true">
+                    <comment>Debit move id</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountPartialReconcile" />
+        </set>
+    </class>
+</hibernate-mapping>

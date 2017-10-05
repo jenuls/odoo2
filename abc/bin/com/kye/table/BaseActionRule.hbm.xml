@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.BaseActionRule" table="base_action_rule">
+        <comment>Action Rules</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="irFiltersByFilterPreId" class="com.kye.table.IrFilters" fetch="select">
+            <column name="filter_pre_id">
+                <comment>Before Update Filter</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resourceCalendar" class="com.kye.table.ResourceCalendar" fetch="select">
+            <column name="trg_date_calendar_id">
+                <comment>Use Calendar</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irFiltersByFilterId" class="com.kye.table.IrFilters" fetch="select">
+            <column name="filter_id">
+                <comment>Filter</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModel" class="com.kye.table.IrModel" fetch="select">
+            <column name="model_id" not-null="true">
+                <comment>Related Document Model</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByActUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="act_user_id">
+                <comment>Set Responsible</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelFieldsByTrgDateResourceFieldId" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="trg_date_resource_field_id">
+                <comment>Use employee work schedule</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelFieldsByTrgDateId" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="trg_date_id">
+                <comment>Trigger Date</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="trgDateRangeType" type="string">
+            <column name="trg_date_range_type">
+                <comment>Delay type</comment>
+            </column>
+        </property>
+        <property name="trgDateRange" type="java.lang.Integer">
+            <column name="trg_date_range">
+                <comment>Delay after trigger date</comment>
+            </column>
+        </property>
+        <property name="filterPreDomain" type="string">
+            <column name="filter_pre_domain">
+                <comment>Before Update Domain</comment>
+            </column>
+        </property>
+        <property name="onChangeFields" type="string">
+            <column name="on_change_fields">
+                <comment>On Change Fields Trigger</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="kind" type="string">
+            <column name="kind" not-null="true">
+                <comment>When to Run</comment>
+            </column>
+        </property>
+        <property name="filterDomain" type="string">
+            <column name="filter_domain">
+                <comment>Domain</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Rule Name</comment>
+            </column>
+        </property>
+        <property name="lastRun" type="timestamp">
+            <column name="last_run" length="29">
+                <comment>Last run</comment>
+            </column>
+        </property>
+        <set name="baseActionRuleResPartnerRels" table="base_action_rule_res_partner_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="base_action_rule_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.BaseActionRuleResPartnerRel" />
+        </set>
+        <set name="baseActionRuleIrActServerRels" table="base_action_rule_ir_act_server_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="base_action_rule_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.BaseActionRuleIrActServerRel" />
+        </set>
+    </class>
+</hibernate-mapping>

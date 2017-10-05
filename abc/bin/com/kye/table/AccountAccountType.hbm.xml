@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountAccountType" table="account_account_type">
+        <comment>Account Type</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Account Type</comment>
+            </column>
+        </property>
+        <property name="note" type="string">
+            <column name="note">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="includeInitialBalance" type="java.lang.Boolean">
+            <column name="include_initial_balance">
+                <comment>Bring Accounts Balance Forward</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true">
+                <comment>Type</comment>
+            </column>
+        </property>
+        <set name="accountMoveLines" table="account_move_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_type_id">
+                    <comment>Type</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveLine" />
+        </set>
+        <set name="accountAccountTemplates" table="account_account_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_type_id" not-null="true">
+                    <comment>Type</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountTemplate" />
+        </set>
+        <set name="accountAccountFinancialReportTypes" table="account_account_financial_report_type" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_type_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountFinancialReportType" />
+        </set>
+        <set name="accountAccounts" table="account_account" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_type_id" not-null="true">
+                    <comment>Type</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAccount" />
+        </set>
+        <set name="accountJournalTypeRels" table="account_journal_type_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="type_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountJournalTypeRel" />
+        </set>
+    </class>
+</hibernate-mapping>

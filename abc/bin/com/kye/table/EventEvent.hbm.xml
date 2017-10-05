@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.EventEvent" table="event_event">
+        <comment>Event</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="websiteMenu" class="com.kye.table.WebsiteMenu" fetch="select">
+            <column name="menu_id">
+                <comment>Event Menu</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>Responsible</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="eventType" class="com.kye.table.EventType" fetch="select">
+            <column name="event_type_id">
+                <comment>Category</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartnerByOrganizerId" class="com.kye.table.ResPartner" fetch="select">
+            <column name="organizer_id">
+                <comment>Organizer</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCountry" class="com.kye.table.ResCountry" fetch="select">
+            <column name="country_id">
+                <comment>Country</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartnerByAddressId" class="com.kye.table.ResPartner" fetch="select">
+            <column name="address_id">
+                <comment>Location</comment>
+            </column>
+        </many-to-one>
+        <property name="badgeInnerleft" type="string">
+            <column name="badge_innerleft">
+                <comment>Badge Inner Left</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="color" type="java.lang.Integer">
+            <column name="color">
+                <comment>Kanban Color Index</comment>
+            </column>
+        </property>
+        <property name="dateEnd" type="timestamp">
+            <column name="date_end" length="29" not-null="true">
+                <comment>End Date</comment>
+            </column>
+        </property>
+        <property name="dateBegin" type="timestamp">
+            <column name="date_begin" length="29" not-null="true">
+                <comment>Start Date</comment>
+            </column>
+        </property>
+        <property name="seatsReserved" type="java.lang.Integer">
+            <column name="seats_reserved">
+                <comment>Reserved Seats</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state" not-null="true">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="eventLogo" type="string">
+            <column name="event_logo">
+                <comment>Event Logo</comment>
+            </column>
+        </property>
+        <property name="badgeBack" type="string">
+            <column name="badge_back">
+                <comment>Badge Back</comment>
+            </column>
+        </property>
+        <property name="seatsMax" type="java.lang.Integer">
+            <column name="seats_max">
+                <comment>Maximum Attendees Number</comment>
+            </column>
+        </property>
+        <property name="dateTz" type="string">
+            <column name="date_tz" not-null="true">
+                <comment>Timezone</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="seatsAvailability" type="string">
+            <column name="seats_availability" not-null="true">
+                <comment>Maximum Attendees</comment>
+            </column>
+        </property>
+        <property name="badgeFront" type="string">
+            <column name="badge_front">
+                <comment>Badge Front</comment>
+            </column>
+        </property>
+        <property name="seatsUsed" type="java.lang.Integer">
+            <column name="seats_used">
+                <comment>Number of Participants</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Event Name</comment>
+            </column>
+        </property>
+        <property name="seatsAvailable" type="java.lang.Integer">
+            <column name="seats_available">
+                <comment>Available Seats</comment>
+            </column>
+        </property>
+        <property name="seatsMin" type="java.lang.Integer">
+            <column name="seats_min">
+                <comment>Minimum Attendees</comment>
+            </column>
+        </property>
+        <property name="badgeInnerright" type="string">
+            <column name="badge_innerright">
+                <comment>Badge Inner Right</comment>
+            </column>
+        </property>
+        <property name="seatsUnconfirmed" type="java.lang.Integer">
+            <column name="seats_unconfirmed">
+                <comment>Unconfirmed Seat Reservations</comment>
+            </column>
+        </property>
+        <property name="replyTo" type="string">
+            <column name="reply_to">
+                <comment>Reply-To Email</comment>
+            </column>
+        </property>
+        <property name="websiteMetaKeywords" type="string">
+            <column name="website_meta_keywords">
+                <comment>Website meta keywords</comment>
+            </column>
+        </property>
+        <property name="websiteMetaTitle" type="string">
+            <column name="website_meta_title">
+                <comment>Website meta title</comment>
+            </column>
+        </property>
+        <property name="showMenu" type="java.lang.Boolean">
+            <column name="show_menu">
+                <comment>Dedicated Menu</comment>
+            </column>
+        </property>
+        <property name="websiteMetaDescription" type="string">
+            <column name="website_meta_description">
+                <comment>Website meta description</comment>
+            </column>
+        </property>
+        <property name="twitterHashtag" type="string">
+            <column name="twitter_hashtag">
+                <comment>Twitter Hashtag</comment>
+            </column>
+        </property>
+        <property name="websitePublished" type="java.lang.Boolean">
+            <column name="website_published">
+                <comment>Visible in Website</comment>
+            </column>
+        </property>
+        <set name="saleOrderLines" table="sale_order_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="event_id">
+                    <comment>Event</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.SaleOrderLine" />
+        </set>
+        <set name="eventMails" table="event_mail" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="event_id" not-null="true">
+                    <comment>Event</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.EventMail" />
+        </set>
+        <set name="eventEventTickets" table="event_event_ticket" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="event_id" not-null="true">
+                    <comment>Event</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.EventEventTicket" />
+        </set>
+        <set name="eventRegistrations" table="event_registration" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="event_id" not-null="true">
+                    <comment>Event</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.EventRegistration" />
+        </set>
+        <set name="registrationEditorLines" table="registration_editor_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="event_id" not-null="true">
+                    <comment>Event</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.RegistrationEditorLine" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmLead2opportunityPartnerMassResUsersRel" table="crm_lead2opportunity_partner_mass_res_users_rel">
+        <comment>RELATION BETWEEN crm_lead2opportunity_partner_mass AND res_users</comment>
+        <composite-id name="id" class="com.kye.table.CrmLead2opportunityPartnerMassResUsersRelId">
+            <key-property name="crmLead2opportunityPartnerMassId" type="int">
+                <column name="crm_lead2opportunity_partner_mass_id" />
+            </key-property>
+            <key-property name="resUsersId" type="int">
+                <column name="res_users_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="resUsers" class="com.kye.table.ResUsers" update="false" insert="false" fetch="select">
+            <column name="res_users_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="crmLead2opportunityPartnerMass" class="com.kye.table.CrmLead2opportunityPartnerMass" update="false" insert="false" fetch="select">
+            <column name="crm_lead2opportunity_partner_mass_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

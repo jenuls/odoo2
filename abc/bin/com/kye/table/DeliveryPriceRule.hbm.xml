@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.DeliveryPriceRule" table="delivery_price_rule">
+        <comment>Delivery Price Rules</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="deliveryCarrier" class="com.kye.table.DeliveryCarrier" fetch="select">
+            <column name="carrier_id" not-null="true">
+                <comment>Carrier</comment>
+            </column>
+        </many-to-one>
+        <property name="listPrice" type="big_decimal">
+            <column name="list_price" precision="131089" scale="0" not-null="true">
+                <comment>Sale Price</comment>
+            </column>
+        </property>
+        <property name="sequence" type="int">
+            <column name="sequence" not-null="true">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="maxValue" type="double">
+            <column name="max_value" precision="17" scale="17" not-null="true">
+                <comment>Maximum Value</comment>
+            </column>
+        </property>
+        <property name="standardPrice" type="big_decimal">
+            <column name="standard_price" precision="131089" scale="0" not-null="true">
+                <comment>Cost Price</comment>
+            </column>
+        </property>
+        <property name="listBasePrice" type="big_decimal">
+            <column name="list_base_price" precision="131089" scale="0" not-null="true">
+                <comment>Sale Base Price</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="variable" type="string">
+            <column name="variable" not-null="true">
+                <comment>Variable</comment>
+            </column>
+        </property>
+        <property name="variableFactor" type="string">
+            <column name="variable_factor" not-null="true">
+                <comment>Variable Factor</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="operator" type="string">
+            <column name="operator" not-null="true">
+                <comment>Operator</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

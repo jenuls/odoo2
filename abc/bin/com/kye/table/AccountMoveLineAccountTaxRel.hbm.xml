@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountMoveLineAccountTaxRel" table="account_move_line_account_tax_rel">
+        <comment>RELATION BETWEEN account_move_line AND account_tax</comment>
+        <composite-id name="id" class="com.kye.table.AccountMoveLineAccountTaxRelId">
+            <key-property name="accountMoveLineId" type="int">
+                <column name="account_move_line_id" />
+            </key-property>
+            <key-property name="accountTaxId" type="int">
+                <column name="account_tax_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="accountMoveLine" class="com.kye.table.AccountMoveLine" update="false" insert="false" fetch="select">
+            <column name="account_move_line_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="accountTax" class="com.kye.table.AccountTax" update="false" insert="false" fetch="select">
+            <column name="account_tax_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

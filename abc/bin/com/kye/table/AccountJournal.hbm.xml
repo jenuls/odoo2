@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountJournal" table="account_journal">
+        <comment>Journal</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resPartnerBank" class="com.kye.table.ResPartnerBank" fetch="select">
+            <column name="bank_account_id">
+                <comment>Bank Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountByProfitAccountId" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="profit_account_id">
+                <comment>Profit Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountByDefaultDebitAccountId" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="default_debit_account_id">
+                <comment>Default Debit Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irSequenceBySequenceId" class="com.kye.table.IrSequence" fetch="select">
+            <column name="sequence_id" not-null="true">
+                <comment>Entry Sequence</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id" not-null="true">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountByLossAccountId" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="loss_account_id">
+                <comment>Loss Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irSequenceByRefundSequenceId" class="com.kye.table.IrSequence" fetch="select">
+            <column name="refund_sequence_id">
+                <comment>Refund Entry Sequence</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountByDefaultCreditAccountId" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="default_credit_account_id">
+                <comment>Default Credit Account</comment>
+            </column>
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="code" length="5" not-null="true">
+                <comment>Short Code</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="atLeastOneInbound" type="java.lang.Boolean">
+            <column name="at_least_one_inbound">
+                <comment>At least one inbound</comment>
+            </column>
+        </property>
+        <property name="bankStatementsSource" type="string">
+            <column name="bank_statements_source">
+                <comment>Bank Feeds</comment>
+            </column>
+        </property>
+        <property name="groupInvoiceLines" type="java.lang.Boolean">
+            <column name="group_invoice_lines">
+                <comment>Group Invoice Lines</comment>
+            </column>
+        </property>
+        <property name="displayOnFooter" type="java.lang.Boolean">
+            <column name="display_on_footer">
+                <comment>Show in Invoices Footer</comment>
+            </column>
+        </property>
+        <property name="showOnDashboard" type="java.lang.Boolean">
+            <column name="show_on_dashboard">
+                <comment>Show journal on dashboard</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="updatePosted" type="java.lang.Boolean">
+            <column name="update_posted">
+                <comment>Allow Cancelling Entries</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Journal Name</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true">
+                <comment>Type</comment>
+            </column>
+        </property>
+        <property name="atLeastOneOutbound" type="java.lang.Boolean">
+            <column name="at_least_one_outbound">
+                <comment>At least one outbound</comment>
+            </column>
+        </property>
+        <property name="refundSequence" type="java.lang.Boolean">
+            <column name="refund_sequence">
+                <comment>Dedicated Refund Sequence</comment>
+            </column>
+        </property>
+        <property name="amountAuthorizedDiff" type="java.lang.Double">
+            <column name="amount_authorized_diff" precision="17" scale="17">
+                <comment>Amount Authorized Difference</comment>
+            </column>
+        </property>
+        <property name="journalUser" type="java.lang.Boolean">
+            <column name="journal_user">
+                <comment>Active in Point of Sale</comment>
+            </column>
+        </property>
+        <set name="accountCommonReportAccountJournalRels" table="account_common_report_account_journal_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountCommonReportAccountJournalRel" />
+        </set>
+        <set name="hrExpenseSheetsForJournalId" table="hr_expense_sheet" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id">
+                    <comment>Expense Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrExpenseSheet" />
+        </set>
+        <set name="accountReportGeneralLedgerJournalRels" table="account_report_general_ledger_journal_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountReportGeneralLedgerJournalRel" />
+        </set>
+        <set name="accountJournalAccountingReportRels" table="account_journal_accounting_report_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountJournalAccountingReportRel" />
+        </set>
+        <set name="accountAssetCategories" table="account_asset_category" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true">
+                    <comment>Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAssetCategory" />
+        </set>
+        <set name="accountBankStatements" table="account_bank_statement" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true">
+                    <comment>Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountBankStatement" />
+        </set>
+        <set name="accountJournalAccountReportPartnerLedgerRels" table="account_journal_account_report_partner_ledger_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountJournalAccountReportPartnerLedgerRel" />
+        </set>
+        <set name="accountJournalInboundPaymentMethodRels" table="account_journal_inbound_payment_method_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountJournalInboundPaymentMethodRel" />
+        </set>
+        <set name="accountMoveLineReconcileWriteoffs" table="account_move_line_reconcile_writeoff" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true">
+                    <comment>Write-Off Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveLineReconcileWriteoff" />
+        </set>
+        <set name="accountJournalOutboundPaymentMethodRels" table="account_journal_outbound_payment_method_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountJournalOutboundPaymentMethodRel" />
+        </set>
+        <set name="accountMoves" table="account_move" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true">
+                    <comment>Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMove" />
+        </set>
+        <set name="accountBankStatementImportJournalCreations" table="account_bank_statement_import_journal_creation" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true">
+                    <comment>Journal id</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountBankStatementImportJournalCreation" />
+        </set>
+        <set name="accountMoveReversals" table="account_move_reversal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id">
+                    <comment>Use Specific Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveReversal" />
+        </set>
+        <set name="taxAdjustmentsWizards" table="tax_adjustments_wizard" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true">
+                    <comment>Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.TaxAdjustmentsWizard" />
+        </set>
+        <set name="accountAccountTypeRels" table="account_account_type_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountTypeRel" />
+        </set>
+        <set name="accountMoveLines" table="account_move_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id">
+                    <comment>Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveLine" />
+        </set>
+        <set name="posConfigsForJournalId" table="pos_config" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id">
+                    <comment>Sale Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PosConfig" />
+        </set>
+        <set name="posConfigsForInvoiceJournalId" table="pos_config" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_journal_id">
+                    <comment>Invoice Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PosConfig" />
+        </set>
+        <set name="resCompaniesForTaxCashBasisJournalId" table="res_company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tax_cash_basis_journal_id">
+                    <comment>Tax Cash Basis Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ResCompany" />
+        </set>
+        <set name="accountReconcileModelsForJournalId" table="account_reconcile_model" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id">
+                    <comment>Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountReconcileModel" />
+        </set>
+        <set name="accountInvoices" table="account_invoice" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true">
+                    <comment>Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoice" />
+        </set>
+        <set name="accountPaymentsForDestinationJournalId" table="account_payment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="destination_journal_id">
+                    <comment>Transfer To</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountPayment" />
+        </set>
+        <set name="accountPaymentsForJournalId" table="account_payment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true">
+                    <comment>Payment Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountPayment" />
+        </set>
+        <set name="hrExpenseSheetsForBankJournalId" table="hr_expense_sheet" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bank_journal_id">
+                    <comment>Bank Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrExpenseSheet" />
+        </set>
+        <set name="resCompaniesForCurrencyExchangeJournalId" table="res_company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="currency_exchange_journal_id">
+                    <comment>Exchange Gain or Loss Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ResCompany" />
+        </set>
+        <set name="accountRegisterPaymentses" table="account_register_payments" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true">
+                    <comment>Payment Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountRegisterPayments" />
+        </set>
+        <set name="accountReconcileModelsForSecondJournalId" table="account_reconcile_model" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="second_journal_id">
+                    <comment>Second Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountReconcileModel" />
+        </set>
+        <set name="accountAgedTrialBalanceAccountJournalRels" table="account_aged_trial_balance_account_journal_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAgedTrialBalanceAccountJournalRel" />
+        </set>
+        <set name="accountBankStatementLines" table="account_bank_statement_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id">
+                    <comment>Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountBankStatementLine" />
+        </set>
+        <set name="posOrders" table="pos_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sale_journal">
+                    <comment>Sale Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PosOrder" />
+        </set>
+        <set name="paymentAcquirers" table="payment_acquirer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id">
+                    <comment>Payment Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PaymentAcquirer" />
+        </set>
+        <set name="posMakePayments" table="pos_make_payment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true">
+                    <comment>Payment Mode</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PosMakePayment" />
+        </set>
+        <set name="accountCommonJournalReportAccountJournalRels" table="account_common_journal_report_account_journal_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountCommonJournalReportAccountJournalRel" />
+        </set>
+        <set name="hrExpenseRegisterPaymentWizards" table="hr_expense_register_payment_wizard" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true">
+                    <comment>Payment Method</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrExpenseRegisterPaymentWizard" />
+        </set>
+        <set name="accountJournalAccountPrintJournalRels" table="account_journal_account_print_journal_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountJournalAccountPrintJournalRel" />
+        </set>
+        <set name="accountCommonAccountReportAccountJournalRels" table="account_common_account_report_account_journal_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountCommonAccountReportAccountJournalRel" />
+        </set>
+        <set name="posConfigJournalRels" table="pos_config_journal_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.PosConfigJournalRel" />
+        </set>
+        <set name="accountJournalTypeRels" table="account_journal_type_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountJournalTypeRel" />
+        </set>
+        <set name="accountCommonPartnerReportAccountJournalRels" table="account_common_partner_report_account_journal_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountCommonPartnerReportAccountJournalRel" />
+        </set>
+        <set name="accountBalanceReportJournalRels" table="account_balance_report_journal_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="journal_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountBalanceReportJournalRel" />
+        </set>
+        <set name="posSessions" table="pos_session" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cash_journal_id">
+                    <comment>Cash Journal</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PosSession" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmStage" table="crm_stage">
+        <comment>Stage of case</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="crmTeam" class="com.kye.table.CrmTeam" fetch="select">
+            <column name="team_id">
+                <comment>Team</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="requirements" type="string">
+            <column name="requirements">
+                <comment>Requirements</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Stage Name</comment>
+            </column>
+        </property>
+        <property name="probability" type="double">
+            <column name="probability" precision="17" scale="17" not-null="true">
+                <comment>Probability (%)</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="onChange" type="java.lang.Boolean">
+            <column name="on_change">
+                <comment>Change Probability Automatically</comment>
+            </column>
+        </property>
+        <property name="fold" type="java.lang.Boolean">
+            <column name="fold">
+                <comment>Folded in Pipeline</comment>
+            </column>
+        </property>
+        <property name="legendPriority" type="string">
+            <column name="legend_priority">
+                <comment>Priority Management Explanation</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <set name="crmLeads" table="crm_lead" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="stage_id">
+                    <comment>Stage</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmLead" />
+        </set>
+    </class>
+</hibernate-mapping>

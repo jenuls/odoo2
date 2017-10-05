@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmActivityRel" table="crm_activity_rel">
+        <comment>RELATION BETWEEN crm_activity AND crm_activity</comment>
+        <composite-id name="id" class="com.kye.table.CrmActivityRelId">
+            <key-property name="recommendedId" type="int">
+                <column name="recommended_id" />
+            </key-property>
+            <key-property name="activityId" type="int">
+                <column name="activity_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="crmActivityByRecommendedId" class="com.kye.table.CrmActivity" update="false" insert="false" fetch="select">
+            <column name="recommended_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="crmActivityByActivityId" class="com.kye.table.CrmActivity" update="false" insert="false" fetch="select">
+            <column name="activity_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

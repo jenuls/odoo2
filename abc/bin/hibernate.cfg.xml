@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+  <property name="hibernate.connection.url">jdbc:postgresql://srv5.geniusnet.com:5432/odoo-test-20170207</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+  <property name="hibernate.default_schema">public</property>
+  <property name="hibernate.connection.username">odoo</property>
+  <property name="hibernate.connection.password">odoo05141520</property>
+  <property name="hibernate.show_sql">false</property>
+  <property name="hibernate.format_sql">true</property>
+  <mapping class="com.kye.table2.SaleOrder"/>
+  <mapping class="com.kye.table2.SaleOrderLine"/>
+ </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountBankStatementLine" table="account_bank_statement_line">
+        <comment>Bank Statement Line</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resPartnerBank" class="com.kye.table.ResPartnerBank" fetch="select">
+            <column name="bank_account_id">
+                <comment>Bank Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountBankStatement" class="com.kye.table.AccountBankStatement" fetch="select">
+            <column name="statement_id" not-null="true">
+                <comment>Statement</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountJournal" class="com.kye.table.AccountJournal" fetch="select">
+            <column name="journal_id">
+                <comment>Journal</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id">
+                <comment>Partner</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="posOrder" class="com.kye.table.PosOrder" fetch="select">
+            <column name="pos_statement_id">
+                <comment>POS statement</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccount" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="account_id">
+                <comment>Counterpart Account</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="partnerName" type="string">
+            <column name="partner_name">
+                <comment>Partner name</comment>
+            </column>
+        </property>
+        <property name="note" type="string">
+            <column name="note">
+                <comment>Notes</comment>
+            </column>
+        </property>
+        <property name="ref" type="string">
+            <column name="ref">
+                <comment>Reference</comment>
+            </column>
+        </property>
+        <property name="moveName" type="string">
+            <column name="move_name">
+                <comment>Journal Entry Name</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="13" not-null="true">
+                <comment>Date</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Label</comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="131089" scale="0">
+                <comment>Amount</comment>
+            </column>
+        </property>
+        <property name="amountCurrency" type="big_decimal">
+            <column name="amount_currency" precision="131089" scale="0">
+                <comment>Amount currency</comment>
+            </column>
+        </property>
+        <property name="uniqueImportId" type="string">
+            <column name="unique_import_id" unique="true">
+                <comment>Import ID</comment>
+            </column>
+        </property>
+        <set name="accountMoves" table="account_move" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="statement_line_id">
+                    <comment>Bank statement line reconciled with this entry</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMove" />
+        </set>
+    </class>
+</hibernate-mapping>

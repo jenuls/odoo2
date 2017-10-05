@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmOpportunityReport" table="crm_opportunity_report">
+        <composite-id name="id" class="com.kye.table.CrmOpportunityReportId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="dateDeadline" type="date">
+                <column name="date_deadline" length="13" />
+            </key-property>
+            <key-property name="openingDate" type="timestamp">
+                <column name="opening_date" length="29" />
+            </key-property>
+            <key-property name="dateClosed" type="timestamp">
+                <column name="date_closed" length="29" />
+            </key-property>
+            <key-property name="dateLastStageUpdate" type="timestamp">
+                <column name="date_last_stage_update" length="29" />
+            </key-property>
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="probability" type="java.lang.Double">
+                <column name="probability" precision="17" scale="17" />
+            </key-property>
+            <key-property name="stageId" type="java.lang.Integer">
+                <column name="stage_id" />
+            </key-property>
+            <key-property name="stageName" type="string">
+                <column name="stage_name" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="type" />
+            </key-property>
+            <key-property name="companyId" type="java.lang.Integer">
+                <column name="company_id" />
+            </key-property>
+            <key-property name="priority" type="string">
+                <column name="priority" />
+            </key-property>
+            <key-property name="teamId" type="java.lang.Integer">
+                <column name="team_id" />
+            </key-property>
+            <key-property name="nbrActivities" type="java.lang.Long">
+                <column name="nbr_activities" />
+            </key-property>
+            <key-property name="active" type="java.lang.Boolean">
+                <column name="active" />
+            </key-property>
+            <key-property name="campaignId" type="java.lang.Integer">
+                <column name="campaign_id" />
+            </key-property>
+            <key-property name="sourceId" type="java.lang.Integer">
+                <column name="source_id" />
+            </key-property>
+            <key-property name="mediumId" type="java.lang.Integer">
+                <column name="medium_id" />
+            </key-property>
+            <key-property name="partnerId" type="java.lang.Integer">
+                <column name="partner_id" />
+            </key-property>
+            <key-property name="city" type="string">
+                <column name="city" />
+            </key-property>
+            <key-property name="countryId" type="java.lang.Integer">
+                <column name="country_id" />
+            </key-property>
+            <key-property name="totalRevenue" type="java.lang.Double">
+                <column name="total_revenue" precision="17" scale="17" />
+            </key-property>
+            <key-property name="expectedRevenue" type="java.lang.Double">
+                <column name="expected_revenue" precision="17" scale="17" />
+            </key-property>
+            <key-property name="createDate" type="timestamp">
+                <column name="create_date" length="29" />
+            </key-property>
+            <key-property name="delayClose" type="java.lang.Double">
+                <column name="delay_close" precision="17" scale="17" />
+            </key-property>
+            <key-property name="delayExpected" type="java.lang.Double">
+                <column name="delay_expected" precision="17" scale="17" />
+            </key-property>
+            <key-property name="delayOpen" type="java.lang.Double">
+                <column name="delay_open" precision="17" scale="17" />
+            </key-property>
+            <key-property name="lostReason" type="java.lang.Integer">
+                <column name="lost_reason" />
+            </key-property>
+            <key-property name="dateConversion" type="timestamp">
+                <column name="date_conversion" length="29" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

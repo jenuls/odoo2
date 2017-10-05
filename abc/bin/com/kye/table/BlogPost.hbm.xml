@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.BlogPost" table="blog_post">
+        <comment>Blog Post</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Contributor</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="blogBlog" class="com.kye.table.BlogBlog" fetch="select">
+            <column name="blog_id" not-null="true">
+                <comment>Blog</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartner" class="com.kye.table.ResPartner" fetch="select">
+            <column name="author_id">
+                <comment>Author</comment>
+            </column>
+        </many-to-one>
+        <property name="teaserManual" type="string">
+            <column name="teaser_manual">
+                <comment>Teaser Content</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="postDate" type="timestamp">
+            <column name="post_date" length="29">
+                <comment>Published date</comment>
+            </column>
+        </property>
+        <property name="subtitle" type="string">
+            <column name="subtitle">
+                <comment>Sub Title</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="content" type="string">
+            <column name="content">
+                <comment>Content</comment>
+            </column>
+        </property>
+        <property name="websiteMetaTitle" type="string">
+            <column name="website_meta_title">
+                <comment>Website meta title</comment>
+            </column>
+        </property>
+        <property name="websitePublished" type="java.lang.Boolean">
+            <column name="website_published">
+                <comment>Visible in Website</comment>
+            </column>
+        </property>
+        <property name="visits" type="java.lang.Integer">
+            <column name="visits">
+                <comment>No of Views</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Modified on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Title</comment>
+            </column>
+        </property>
+        <property name="coverProperties" type="string">
+            <column name="cover_properties">
+                <comment>Cover Properties</comment>
+            </column>
+        </property>
+        <property name="websiteMetaDescription" type="string">
+            <column name="website_meta_description">
+                <comment>Website meta description</comment>
+            </column>
+        </property>
+        <property name="publishedDate" type="timestamp">
+            <column name="published_date" length="29">
+                <comment>Published Date</comment>
+            </column>
+        </property>
+        <property name="websiteMetaKeywords" type="string">
+            <column name="website_meta_keywords">
+                <comment>Website meta keywords</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

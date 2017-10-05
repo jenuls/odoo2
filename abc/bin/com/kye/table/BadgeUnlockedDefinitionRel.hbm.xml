@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.BadgeUnlockedDefinitionRel" table="badge_unlocked_definition_rel">
+        <comment>RELATION BETWEEN gamification_badge AND gamification_goal_definition</comment>
+        <composite-id name="id" class="com.kye.table.BadgeUnlockedDefinitionRelId">
+            <key-property name="gamificationBadgeId" type="int">
+                <column name="gamification_badge_id" />
+            </key-property>
+            <key-property name="gamificationGoalDefinitionId" type="int">
+                <column name="gamification_goal_definition_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="gamificationBadge" class="com.kye.table.GamificationBadge" update="false" insert="false" fetch="select">
+            <column name="gamification_badge_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="gamificationGoalDefinition" class="com.kye.table.GamificationGoalDefinition" update="false" insert="false" fetch="select">
+            <column name="gamification_goal_definition_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

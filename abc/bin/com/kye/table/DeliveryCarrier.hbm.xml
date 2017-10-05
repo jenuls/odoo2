@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.DeliveryCarrier" table="delivery_carrier">
+        <comment>Carrier</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="productProduct" class="com.kye.table.ProductProduct" fetch="select">
+            <column name="product_id" not-null="true">
+                <comment>Delivery Product</comment>
+            </column>
+        </many-to-one>
+        <property name="prodEnvironment" type="java.lang.Boolean">
+            <column name="prod_environment">
+                <comment>Environment</comment>
+            </column>
+        </property>
+        <property name="freeIfMoreThan" type="java.lang.Boolean">
+            <column name="free_if_more_than">
+                <comment>Free if Order total is more than</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="zipTo" type="string">
+            <column name="zip_to">
+                <comment>Zip To</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="fixedPrice" type="java.lang.Double">
+            <column name="fixed_price" precision="17" scale="17">
+                <comment>Fixed Price</comment>
+            </column>
+        </property>
+        <property name="integrationLevel" type="string">
+            <column name="integration_level">
+                <comment>Integration Level</comment>
+            </column>
+        </property>
+        <property name="deliveryType" type="string">
+            <column name="delivery_type" not-null="true">
+                <comment>Provider</comment>
+            </column>
+        </property>
+        <property name="zipFrom" type="string">
+            <column name="zip_from">
+                <comment>Zip From</comment>
+            </column>
+        </property>
+        <property name="margin" type="java.lang.Integer">
+            <column name="margin">
+                <comment>Margin</comment>
+            </column>
+        </property>
+        <property name="amount" type="java.lang.Double">
+            <column name="amount" precision="17" scale="17">
+                <comment>Amount</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="websitePublished" type="java.lang.Boolean">
+            <column name="website_published">
+                <comment>Visible in Website</comment>
+            </column>
+        </property>
+        <set name="stockPickings" table="stock_picking" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="carrier_id">
+                    <comment>Carrier</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.StockPicking" />
+        </set>
+        <set name="saleOrders" table="sale_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="carrier_id">
+                    <comment>Delivery Method</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.SaleOrder" />
+        </set>
+        <set name="deliveryPriceRules" table="delivery_price_rule" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="carrier_id" not-null="true">
+                    <comment>Carrier</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.DeliveryPriceRule" />
+        </set>
+        <set name="deliveryCarrierCountryRels" table="delivery_carrier_country_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="carrier_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.DeliveryCarrierCountryRel" />
+        </set>
+        <set name="deliveryCarrierStateRels" table="delivery_carrier_state_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="carrier_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.DeliveryCarrierStateRel" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrActServer" table="ir_act_server">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="mailTemplate" class="com.kye.table.MailTemplate" fetch="select">
+            <column name="template_id">
+                <comment>Email Template</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelByCrudModelId" class="com.kye.table.IrModel" fetch="select">
+            <column name="crud_model_id">
+                <comment>Create/Write Target Model</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelFieldsByModelObjectField" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="model_object_field">
+                <comment>Field</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelByWkfModelId" class="com.kye.table.IrModel" fetch="select">
+            <column name="wkf_model_id">
+                <comment>Target Model</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid" />
+        </many-to-one>
+        <many-to-one name="irModelFieldsBySubModelObjectField" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="sub_model_object_field">
+                <comment>Sub-field</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irValues" class="com.kye.table.IrValues" fetch="select">
+            <column name="menu_ir_values_id">
+                <comment>More Menu entry</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid" />
+        </many-to-one>
+        <many-to-one name="irModelFieldsByWkfFieldId" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="wkf_field_id">
+                <comment>Relation Field</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelFieldsByLinkFieldId" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="link_field_id">
+                <comment>Link using field</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="wkfTransition" class="com.kye.table.WkfTransition" fetch="select">
+            <column name="wkf_transition_id">
+                <comment>Signal to Trigger</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelByModelId" class="com.kye.table.IrModel" fetch="select">
+            <column name="model_id" not-null="true">
+                <comment>Base Model</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelBySubObject" class="com.kye.table.IrModel" fetch="select">
+            <column name="sub_object">
+                <comment>Sub-model</comment>
+            </column>
+        </many-to-one>
+        <property name="help" type="string">
+            <column name="help" />
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29" />
+        </property>
+        <property name="usage" type="string">
+            <column name="usage" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="code" type="string">
+            <column name="code">
+                <comment>Python Code</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="refObject" type="string">
+            <column name="ref_object">
+                <comment>Reference record</comment>
+            </column>
+        </property>
+        <property name="crudModelName" type="string">
+            <column name="crud_model_name">
+                <comment>Create/Write Target Model Name</comment>
+            </column>
+        </property>
+        <property name="useRelationalModel" type="string">
+            <column name="use_relational_model" not-null="true">
+                <comment>Relational Target Model</comment>
+            </column>
+        </property>
+        <property name="useCreate" type="string">
+            <column name="use_create" not-null="true">
+                <comment>Creation Policy</comment>
+            </column>
+        </property>
+        <property name="idObject" type="string">
+            <column name="id_object">
+                <comment>Record</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state" not-null="true">
+                <comment>Action To Do</comment>
+            </column>
+        </property>
+        <property name="idValue" type="string">
+            <column name="id_value">
+                <comment>Record ID</comment>
+            </column>
+        </property>
+        <property name="actionId" type="java.lang.Integer">
+            <column name="action_id">
+                <comment>Client Action</comment>
+            </column>
+        </property>
+        <property name="wkfModelName" type="string">
+            <column name="wkf_model_name">
+                <comment>Target Model Name</comment>
+            </column>
+        </property>
+        <property name="linkNewRecord" type="java.lang.Boolean">
+            <column name="link_new_record">
+                <comment>Attach the new record</comment>
+            </column>
+        </property>
+        <property name="useWrite" type="string">
+            <column name="use_write" not-null="true">
+                <comment>Update Policy</comment>
+            </column>
+        </property>
+        <property name="condition" type="string">
+            <column name="condition">
+                <comment>Condition</comment>
+            </column>
+        </property>
+        <property name="copyvalue" type="string">
+            <column name="copyvalue">
+                <comment>Placeholder Expression</comment>
+            </column>
+        </property>
+        <property name="writeExpression" type="string">
+            <column name="write_expression">
+                <comment>Expression</comment>
+            </column>
+        </property>
+        <property name="websitePublished" type="java.lang.Boolean">
+            <column name="website_published">
+                <comment>Available on the Website</comment>
+            </column>
+        </property>
+        <property name="websitePath" type="string">
+            <column name="website_path">
+                <comment>Website Path</comment>
+            </column>
+        </property>
+        <set name="wkfActivities" table="wkf_activity" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="action_id">
+                    <comment>Server Action</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.WkfActivity" />
+        </set>
+        <set name="relServerActionsesForServerId" table="rel_server_actions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="server_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.RelServerActions" />
+        </set>
+        <set name="fetchmailServers" table="fetchmail_server" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="action_id">
+                    <comment>Server Action</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.FetchmailServer" />
+        </set>
+        <set name="irServerObjectLineses" table="ir_server_object_lines" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="server_id">
+                    <comment>Related Server Action</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrServerObjectLines" />
+        </set>
+        <set name="relServerActionsesForActionId" table="rel_server_actions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="action_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.RelServerActions" />
+        </set>
+        <set name="baseActionRuleIrActServerRels" table="base_action_rule_ir_act_server_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ir_act_server_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.BaseActionRuleIrActServerRel" />
+        </set>
+    </class>
+</hibernate-mapping>

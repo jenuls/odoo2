@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrAttachment" table="ir_attachment">
+        <comment>ir.attachment</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Owner</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Date Created</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="resModel" type="string">
+            <column name="res_model">
+                <comment>Resource Model</comment>
+            </column>
+        </property>
+        <property name="resName" type="string">
+            <column name="res_name">
+                <comment>Resource Name</comment>
+            </column>
+        </property>
+        <property name="dbDatas" type="binary">
+            <column name="db_datas">
+                <comment>Database Data</comment>
+            </column>
+        </property>
+        <property name="fileSize" type="java.lang.Integer">
+            <column name="file_size">
+                <comment>File Size</comment>
+            </column>
+        </property>
+        <property name="resId" type="java.lang.Integer">
+            <column name="res_id">
+                <comment>Resource ID</comment>
+            </column>
+        </property>
+        <property name="indexContent" type="string">
+            <column name="index_content">
+                <comment>Indexed Content</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true">
+                <comment>Type</comment>
+            </column>
+        </property>
+        <property name="public_" type="java.lang.Boolean">
+            <column name="public">
+                <comment>Is public document</comment>
+            </column>
+        </property>
+        <property name="storeFname" type="string">
+            <column name="store_fname">
+                <comment>Stored Filename</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="resField" type="string">
+            <column name="res_field">
+                <comment>Resource Field</comment>
+            </column>
+        </property>
+        <property name="mimetype" type="string">
+            <column name="mimetype">
+                <comment>Mime Type</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Attachment Name</comment>
+            </column>
+        </property>
+        <property name="url" type="string">
+            <column name="url" length="1024">
+                <comment>Url</comment>
+            </column>
+        </property>
+        <property name="checksum" type="string">
+            <column name="checksum" length="40">
+                <comment>Checksum/SHA1</comment>
+            </column>
+        </property>
+        <property name="datasFname" type="string">
+            <column name="datas_fname">
+                <comment>File Name</comment>
+            </column>
+        </property>
+        <property name="priority" type="string">
+            <column name="priority">
+                <comment>Priority</comment>
+            </column>
+        </property>
+        <property name="productDownloadable" type="java.lang.Boolean">
+            <column name="product_downloadable">
+                <comment>Downloadable from product portal</comment>
+            </column>
+        </property>
+        <set name="emailTemplateAttachmentRels" table="email_template_attachment_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="attachment_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.EmailTemplateAttachmentRel" />
+        </set>
+        <set name="surveyMailComposeMessageIrAttachmentsRels" table="survey_mail_compose_message_ir_attachments_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="attachment_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.SurveyMailComposeMessageIrAttachmentsRel" />
+        </set>
+        <set name="massMailingIrAttachmentsRels" table="mass_mailing_ir_attachments_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="attachment_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.MassMailingIrAttachmentsRel" />
+        </set>
+        <set name="projectTasks" table="project_task" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="displayed_image_id">
+                    <comment>Displayed Image</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ProjectTask" />
+        </set>
+        <set name="messageAttachmentRels" table="message_attachment_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="attachment_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.MessageAttachmentRel" />
+        </set>
+        <set name="mailComposeMessageIrAttachmentsRels" table="mail_compose_message_ir_attachments_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="attachment_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.MailComposeMessageIrAttachmentsRel" />
+        </set>
+    </class>
+</hibernate-mapping>

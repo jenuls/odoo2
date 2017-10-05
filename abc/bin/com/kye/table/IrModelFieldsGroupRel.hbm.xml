@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrModelFieldsGroupRel" table="ir_model_fields_group_rel">
+        <comment>RELATION BETWEEN ir_model_fields AND res_groups</comment>
+        <composite-id name="id" class="com.kye.table.IrModelFieldsGroupRelId">
+            <key-property name="fieldId" type="int">
+                <column name="field_id" />
+            </key-property>
+            <key-property name="groupId" type="int">
+                <column name="group_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="resGroups" class="com.kye.table.ResGroups" update="false" insert="false" fetch="select">
+            <column name="group_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="irModelFields" class="com.kye.table.IrModelFields" update="false" insert="false" fetch="select">
+            <column name="field_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrUiView" table="ir_ui_view">
+        <comment>ir.ui.view</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="irUiView" class="com.kye.table.IrUiView" fetch="select">
+            <column name="inherit_id">
+                <comment>Inherited View</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelData" class="com.kye.table.IrModelData" fetch="select">
+            <column name="model_data_id">
+                <comment>Model Data</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="website" class="com.kye.table.Website" fetch="select">
+            <column name="website_id">
+                <comment>Website</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Create date</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Modification Date</comment>
+            </column>
+        </property>
+        <property name="fieldParent" type="string">
+            <column name="field_parent">
+                <comment>Child Field</comment>
+            </column>
+        </property>
+        <property name="priority" type="int">
+            <column name="priority" not-null="true">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type">
+                <comment>View Type</comment>
+            </column>
+        </property>
+        <property name="archDb" type="string">
+            <column name="arch_db">
+                <comment>Arch Blob</comment>
+            </column>
+        </property>
+        <property name="key" type="string">
+            <column name="key">
+                <comment>Key</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="archFs" type="string">
+            <column name="arch_fs">
+                <comment>Arch Filename</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>View Name</comment>
+            </column>
+        </property>
+        <property name="mode" type="string">
+            <column name="mode" not-null="true">
+                <comment>View inheritance mode</comment>
+            </column>
+        </property>
+        <property name="model" type="string">
+            <column name="model">
+                <comment>Model</comment>
+            </column>
+        </property>
+        <property name="customizeShow" type="java.lang.Boolean">
+            <column name="customize_show">
+                <comment>Show As Optional Inherit</comment>
+            </column>
+        </property>
+        <property name="websiteMetaTitle" type="string">
+            <column name="website_meta_title">
+                <comment>Website meta title</comment>
+            </column>
+        </property>
+        <property name="websiteMetaDescription" type="string">
+            <column name="website_meta_description">
+                <comment>Website meta description</comment>
+            </column>
+        </property>
+        <property name="websiteMetaKeywords" type="string">
+            <column name="website_meta_keywords">
+                <comment>Website meta keywords</comment>
+            </column>
+        </property>
+        <property name="page" type="java.lang.Boolean">
+            <column name="page">
+                <comment>Whether this view is a web page template (complete)</comment>
+            </column>
+        </property>
+        <set name="paymentAcquirersForRegistrationViewTemplateId" table="payment_acquirer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="registration_view_template_id">
+                    <comment>S2S Form Template</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PaymentAcquirer" />
+        </set>
+        <set name="irActWindowsForViewId" table="ir_act_window" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="view_id">
+                    <comment>View Ref.</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrActWindow" />
+        </set>
+        <set name="irActWindowViews" table="ir_act_window_view" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="view_id">
+                    <comment>View</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrActWindowView" />
+        </set>
+        <set name="webPlanners" table="web_planner" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="view_id" not-null="true">
+                    <comment>Template</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.WebPlanner" />
+        </set>
+        <set name="paymentAcquirersForViewTemplateId" table="payment_acquirer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="view_template_id" not-null="true">
+                    <comment>Form Button Template</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PaymentAcquirer" />
+        </set>
+        <set name="irActWindowsForSearchViewId" table="ir_act_window" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="search_view_id">
+                    <comment>Search View Ref.</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrActWindow" />
+        </set>
+        <set name="irUiViews" table="ir_ui_view" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="inherit_id">
+                    <comment>Inherited View</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrUiView" />
+        </set>
+        <set name="irUiViewGroupRels" table="ir_ui_view_group_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="view_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.IrUiViewGroupRel" />
+        </set>
+        <set name="irUiViewCustoms" table="ir_ui_view_custom" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ref_id" not-null="true">
+                    <comment>Original View</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.IrUiViewCustom" />
+        </set>
+    </class>
+</hibernate-mapping>

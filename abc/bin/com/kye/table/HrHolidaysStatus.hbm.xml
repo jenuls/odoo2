@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.HrHolidaysStatus" table="hr_holidays_status">
+        <comment>Leave Type</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="calendarEventType" class="com.kye.table.CalendarEventType" fetch="select">
+            <column name="categ_id">
+                <comment>Meeting Type</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Leave Type</comment>
+            </column>
+        </property>
+        <property name="doubleValidation" type="java.lang.Boolean">
+            <column name="double_validation">
+                <comment>Apply Double Validation</comment>
+            </column>
+        </property>
+        <property name="colorName" type="string">
+            <column name="color_name" not-null="true">
+                <comment>Color in Report</comment>
+            </column>
+        </property>
+        <property name="limit" type="java.lang.Boolean">
+            <column name="limit">
+                <comment>Allow to Override Limit</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <set name="hrHolidayses" table="hr_holidays" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="holiday_status_id" not-null="true">
+                    <comment>Leave Type</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.HrHolidays" />
+        </set>
+    </class>
+</hibernate-mapping>

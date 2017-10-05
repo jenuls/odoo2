@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountReconcileModel" table="account_reconcile_model">
+        <comment>Preset to create journal entries during a invoices and payments matching</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="accountJournalBySecondJournalId" class="com.kye.table.AccountJournal" fetch="select">
+            <column name="second_journal_id">
+                <comment>Second Journal</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAnalyticAccountByAnalyticAccountId" class="com.kye.table.AccountAnalyticAccount" fetch="select">
+            <column name="analytic_account_id">
+                <comment>Analytic Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountJournalByJournalId" class="com.kye.table.AccountJournal" fetch="select">
+            <column name="journal_id">
+                <comment>Journal</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id" not-null="true">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountTaxBySecondTaxId" class="com.kye.table.AccountTax" fetch="select">
+            <column name="second_tax_id">
+                <comment>Second Tax</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAnalyticAccountBySecondAnalyticAccountId" class="com.kye.table.AccountAnalyticAccount" fetch="select">
+            <column name="second_analytic_account_id">
+                <comment>Second Analytic Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountBySecondAccountId" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="second_account_id">
+                <comment>Second Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountTaxByTaxId" class="com.kye.table.AccountTax" fetch="select">
+            <column name="tax_id">
+                <comment>Tax</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountByAccountId" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="account_id">
+                <comment>Account</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="sequence" type="int">
+            <column name="sequence" not-null="true">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="secondAmountType" type="string">
+            <column name="second_amount_type" not-null="true">
+                <comment>Second Amount type</comment>
+            </column>
+        </property>
+        <property name="hasSecondLine" type="java.lang.Boolean">
+            <column name="has_second_line">
+                <comment>Add a second line</comment>
+            </column>
+        </property>
+        <property name="label" type="string">
+            <column name="label">
+                <comment>Journal Item Label</comment>
+            </column>
+        </property>
+        <property name="secondLabel" type="string">
+            <column name="second_label">
+                <comment>Second Journal Item Label</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="amountType" type="string">
+            <column name="amount_type" not-null="true">
+                <comment>Amount type</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Button Label</comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="131089" scale="0" not-null="true">
+                <comment>Amount</comment>
+            </column>
+        </property>
+        <property name="secondAmount" type="big_decimal">
+            <column name="second_amount" precision="131089" scale="0" not-null="true">
+                <comment>Second Amount</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

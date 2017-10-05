@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.CrmActivity" table="crm_activity">
+        <comment>CRM Activity</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="crmTeam" class="com.kye.table.CrmTeam" fetch="select">
+            <column name="team_id">
+                <comment>Sales Team</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="mailMessageSubtype" class="com.kye.table.MailMessageSubtype" fetch="select">
+            <column name="subtype_id" not-null="true">
+                <comment>Message Subtype</comment>
+            </column>
+        </many-to-one>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="days" type="java.lang.Integer">
+            <column name="days">
+                <comment>Number of days</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <set name="crmActivityRelsForRecommendedId" table="crm_activity_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="recommended_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.CrmActivityRel" />
+        </set>
+        <set name="crmActivityLogsForNextActivityId" table="crm_activity_log" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="next_activity_id">
+                    <comment>Activity</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmActivityLog" />
+        </set>
+        <set name="crmActivityLogsForLastActivityId" table="crm_activity_log" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="last_activity_id">
+                    <comment>Previous Activity</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmActivityLog" />
+        </set>
+        <set name="crmActivityRelsForActivityId" table="crm_activity_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="activity_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.CrmActivityRel" />
+        </set>
+        <set name="crmActivityLogsForRecommendedActivityId" table="crm_activity_log" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="recommended_activity_id">
+                    <comment>Recommended Activities</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmActivityLog" />
+        </set>
+        <set name="crmLeads" table="crm_lead" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="next_activity_id">
+                    <comment>Next Activity</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.CrmLead" />
+        </set>
+    </class>
+</hibernate-mapping>

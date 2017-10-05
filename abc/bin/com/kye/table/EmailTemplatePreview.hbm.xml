@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.EmailTemplatePreview" table="email_template_preview">
+        <comment>Email Template Preview</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="irActWindow" class="com.kye.table.IrActWindow" fetch="select">
+            <column name="ref_ir_act_window">
+                <comment>Sidebar action</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelFieldsByModelObjectField" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="model_object_field">
+                <comment>Field</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irValues" class="com.kye.table.IrValues" fetch="select">
+            <column name="ref_ir_value">
+                <comment>Sidebar Button</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelFieldsBySubModelObjectField" class="com.kye.table.IrModelFields" fetch="select">
+            <column name="sub_model_object_field">
+                <comment>Sub-field</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irActReportXml" class="com.kye.table.IrActReportXml" fetch="select">
+            <column name="report_template">
+                <comment>Optional report to print and attach</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelByModelId" class="com.kye.table.IrModel" fetch="select">
+            <column name="model_id">
+                <comment>Applies to</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irModelBySubObject" class="com.kye.table.IrModel" fetch="select">
+            <column name="sub_object">
+                <comment>Sub-model</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="irMailServer" class="com.kye.table.IrMailServer" fetch="select">
+            <column name="mail_server_id">
+                <comment>Outgoing Mail Server</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="autoDelete" type="java.lang.Boolean">
+            <column name="auto_delete">
+                <comment>Auto Delete</comment>
+            </column>
+        </property>
+        <property name="partnerTo" type="string">
+            <column name="partner_to">
+                <comment>To (Partners)</comment>
+            </column>
+        </property>
+        <property name="subject" type="string">
+            <column name="subject">
+                <comment>Subject</comment>
+            </column>
+        </property>
+        <property name="userSignature" type="java.lang.Boolean">
+            <column name="user_signature">
+                <comment>Add Signature</comment>
+            </column>
+        </property>
+        <property name="nullValue" type="string">
+            <column name="null_value">
+                <comment>Default Value</comment>
+            </column>
+        </property>
+        <property name="emailCc" type="string">
+            <column name="email_cc">
+                <comment>Cc</comment>
+            </column>
+        </property>
+        <property name="resId" type="string">
+            <column name="res_id">
+                <comment>Sample Document</comment>
+            </column>
+        </property>
+        <property name="bodyHtml" type="string">
+            <column name="body_html">
+                <comment>Body</comment>
+            </column>
+        </property>
+        <property name="emailTo" type="string">
+            <column name="email_to">
+                <comment>To (Emails)</comment>
+            </column>
+        </property>
+        <property name="scheduledDate" type="string">
+            <column name="scheduled_date">
+                <comment>Scheduled Date</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="copyvalue" type="string">
+            <column name="copyvalue">
+                <comment>Placeholder Expression</comment>
+            </column>
+        </property>
+        <property name="lang" type="string">
+            <column name="lang">
+                <comment>Language</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name">
+                <comment>Name</comment>
+            </column>
+        </property>
+        <property name="reportName" type="string">
+            <column name="report_name">
+                <comment>Report Filename</comment>
+            </column>
+        </property>
+        <property name="useDefaultTo" type="java.lang.Boolean">
+            <column name="use_default_to">
+                <comment>Default recipients</comment>
+            </column>
+        </property>
+        <property name="replyTo" type="string">
+            <column name="reply_to">
+                <comment>Reply-To</comment>
+            </column>
+        </property>
+        <property name="model" type="string">
+            <column name="model">
+                <comment>Related Document Model</comment>
+            </column>
+        </property>
+        <property name="emailFrom" type="string">
+            <column name="email_from">
+                <comment>From</comment>
+            </column>
+        </property>
+        <set name="emailTemplatePreviewResPartnerRels" table="email_template_preview_res_partner_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="email_template_preview_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.EmailTemplatePreviewResPartnerRel" />
+        </set>
+    </class>
+</hibernate-mapping>

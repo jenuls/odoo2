@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountInvoice" table="account_invoice">
+        <comment>Invoice</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByUserId" class="com.kye.table.ResUsers" fetch="select">
+            <column name="user_id">
+                <comment>Salesperson</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="crmTeam" class="com.kye.table.CrmTeam" fetch="select">
+            <column name="team_id">
+                <comment>Sales Team</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountInvoice" class="com.kye.table.AccountInvoice" fetch="select">
+            <column name="refund_invoice_id">
+                <comment>Invoice for which this invoice is the refund</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountPaymentTerm" class="com.kye.table.AccountPaymentTerm" fetch="select">
+            <column name="payment_term_id">
+                <comment>Payment Terms</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartnerByPartnerShippingId" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_shipping_id">
+                <comment>Delivery Address</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id" not-null="true">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartnerByPartnerId" class="com.kye.table.ResPartner" fetch="select">
+            <column name="partner_id" not-null="true">
+                <comment>Partner</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmCampaign" class="com.kye.table.UtmCampaign" fetch="select">
+            <column name="campaign_id">
+                <comment>Campaign</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmSource" class="com.kye.table.UtmSource" fetch="select">
+            <column name="source_id">
+                <comment>Source</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCurrency" class="com.kye.table.ResCurrency" fetch="select">
+            <column name="currency_id" not-null="true">
+                <comment>Currency</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartnerByCommercialPartnerId" class="com.kye.table.ResPartner" fetch="select">
+            <column name="commercial_partner_id">
+                <comment>Commercial Entity</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountJournal" class="com.kye.table.AccountJournal" fetch="select">
+            <column name="journal_id" not-null="true">
+                <comment>Journal</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="purchaseOrder" class="com.kye.table.PurchaseOrder" fetch="select">
+            <column name="purchase_id">
+                <comment>Add Purchase Order</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resPartnerBank" class="com.kye.table.ResPartnerBank" fetch="select">
+            <column name="partner_bank_id">
+                <comment>Bank Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="utmMedium" class="com.kye.table.UtmMedium" fetch="select">
+            <column name="medium_id">
+                <comment>Medium</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="stockIncoterms" class="com.kye.table.StockIncoterms" fetch="select">
+            <column name="incoterms_id">
+                <comment>Incoterms</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountMove" class="com.kye.table.AccountMove" fetch="select">
+            <column name="move_id">
+                <comment>Journal Entry</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccount" class="com.kye.table.AccountAccount" fetch="select">
+            <column name="account_id" not-null="true">
+                <comment>Account</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountFiscalPosition" class="com.kye.table.AccountFiscalPosition" fetch="select">
+            <column name="fiscal_position_id">
+                <comment>Fiscal Position</comment>
+            </column>
+        </many-to-one>
+        <property name="comment" type="string">
+            <column name="comment">
+                <comment>Additional Information</comment>
+            </column>
+        </property>
+        <property name="dateDue" type="date">
+            <column name="date_due" length="13">
+                <comment>Due Date</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="number" type="string">
+            <column name="number">
+                <comment>Number</comment>
+            </column>
+        </property>
+        <property name="amountTotalCompanySigned" type="big_decimal">
+            <column name="amount_total_company_signed" precision="131089" scale="0">
+                <comment>Total in Company Currency</comment>
+            </column>
+        </property>
+        <property name="residual" type="big_decimal">
+            <column name="residual" precision="131089" scale="0">
+                <comment>Amount Due</comment>
+            </column>
+        </property>
+        <property name="amountUntaxed" type="big_decimal">
+            <column name="amount_untaxed" precision="131089" scale="0">
+                <comment>Untaxed Amount</comment>
+            </column>
+        </property>
+        <property name="reference" type="string">
+            <column name="reference">
+                <comment>Vendor Reference</comment>
+            </column>
+        </property>
+        <property name="residualCompanySigned" type="big_decimal">
+            <column name="residual_company_signed" precision="131089" scale="0">
+                <comment>Amount Due in Company Currency</comment>
+            </column>
+        </property>
+        <property name="amountTotalSigned" type="big_decimal">
+            <column name="amount_total_signed" precision="131089" scale="0">
+                <comment>Total in Invoice Currency</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="amountTax" type="big_decimal">
+            <column name="amount_tax" precision="131089" scale="0">
+                <comment>Tax</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type">
+                <comment>Type</comment>
+            </column>
+        </property>
+        <property name="sent" type="java.lang.Boolean">
+            <column name="sent">
+                <comment>Sent</comment>
+            </column>
+        </property>
+        <property name="reconciled" type="java.lang.Boolean">
+            <column name="reconciled">
+                <comment>Paid/Reconciled</comment>
+            </column>
+        </property>
+        <property name="origin" type="string">
+            <column name="origin">
+                <comment>Source Document</comment>
+            </column>
+        </property>
+        <property name="moveName" type="string">
+            <column name="move_name">
+                <comment>Journal Entry Name</comment>
+            </column>
+        </property>
+        <property name="referenceType" type="string">
+            <column name="reference_type" not-null="true">
+                <comment>Payment Reference</comment>
+            </column>
+        </property>
+        <property name="dateInvoice" type="date">
+            <column name="date_invoice" length="13">
+                <comment>Invoice Date</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="residualSigned" type="big_decimal">
+            <column name="residual_signed" precision="131089" scale="0">
+                <comment>Amount Due in Invoice Currency</comment>
+            </column>
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="13">
+                <comment>Accounting Date</comment>
+            </column>
+        </property>
+        <property name="amountTotal" type="big_decimal">
+            <column name="amount_total" precision="131089" scale="0">
+                <comment>Total</comment>
+            </column>
+        </property>
+        <property name="amountUntaxedSigned" type="big_decimal">
+            <column name="amount_untaxed_signed" precision="131089" scale="0">
+                <comment>Untaxed Amount in Company Currency</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name">
+                <comment>Reference/Description</comment>
+            </column>
+        </property>
+        <set name="mrpRepairs" table="mrp_repair" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_id">
+                    <comment>Invoice</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MrpRepair" />
+        </set>
+        <set name="accountInvoices" table="account_invoice" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="refund_invoice_id">
+                    <comment>Invoice for which this invoice is the refund</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoice" />
+        </set>
+        <set name="accountAssetAssets" table="account_asset_asset" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_id">
+                    <comment>Invoice</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountAssetAsset" />
+        </set>
+        <set name="accountInvoiceLines" table="account_invoice_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_id">
+                    <comment>Invoice Reference</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoiceLine" />
+        </set>
+        <set name="accountInvoiceAccountMoveLineRels" table="account_invoice_account_move_line_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_invoice_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoiceAccountMoveLineRel" />
+        </set>
+        <set name="accountInvoiceTaxes" table="account_invoice_tax" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_id">
+                    <comment>Invoice</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoiceTax" />
+        </set>
+        <set name="accountInvoicePaymentRels" table="account_invoice_payment_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountInvoicePaymentRel" />
+        </set>
+        <set name="posOrders" table="pos_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_id">
+                    <comment>Invoice</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.PosOrder" />
+        </set>
+        <set name="accountMoveLines" table="account_move_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_id">
+                    <comment>Invoice id</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountMoveLine" />
+        </set>
+    </class>
+</hibernate-mapping>

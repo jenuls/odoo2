@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.ImLivechatChannelCountryRel" table="im_livechat_channel_country_rel">
+        <comment>RELATION BETWEEN im_livechat_channel_rule AND res_country</comment>
+        <composite-id name="id" class="com.kye.table.ImLivechatChannelCountryRelId">
+            <key-property name="channelId" type="int">
+                <column name="channel_id" />
+            </key-property>
+            <key-property name="countryId" type="int">
+                <column name="country_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="resCountry" class="com.kye.table.ResCountry" update="false" insert="false" fetch="select">
+            <column name="country_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="imLivechatChannelRule" class="com.kye.table.ImLivechatChannelRule" update="false" insert="false" fetch="select">
+            <column name="channel_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

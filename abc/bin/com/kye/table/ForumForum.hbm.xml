@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.ForumForum" table="forum_forum">
+        <comment>Forum</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="karmaCloseAll" type="java.lang.Integer">
+            <column name="karma_close_all">
+                <comment>Close all posts</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="karmaCommentUnlinkAll" type="java.lang.Integer">
+            <column name="karma_comment_unlink_all">
+                <comment>Unlink all comments</comment>
+            </column>
+        </property>
+        <property name="karmaEditAll" type="java.lang.Integer">
+            <column name="karma_edit_all">
+                <comment>Edit all posts</comment>
+            </column>
+        </property>
+        <property name="karmaEditOwn" type="java.lang.Integer">
+            <column name="karma_edit_own">
+                <comment>Edit own posts</comment>
+            </column>
+        </property>
+        <property name="welcomeMessage" type="string">
+            <column name="welcome_message">
+                <comment>Welcome Message</comment>
+            </column>
+        </property>
+        <property name="relevancyPostVote" type="java.lang.Double">
+            <column name="relevancy_post_vote" precision="17" scale="17">
+                <comment>First Relevance Parameter</comment>
+            </column>
+        </property>
+        <property name="karmaCommentAll" type="java.lang.Integer">
+            <column name="karma_comment_all">
+                <comment>Comment all posts</comment>
+            </column>
+        </property>
+        <property name="relevancyTimeDecay" type="java.lang.Double">
+            <column name="relevancy_time_decay" precision="17" scale="17">
+                <comment>Second Relevance Parameter</comment>
+            </column>
+        </property>
+        <property name="karmaDofollow" type="java.lang.Integer">
+            <column name="karma_dofollow">
+                <comment>Nofollow links</comment>
+            </column>
+        </property>
+        <property name="karmaDownvote" type="java.lang.Integer">
+            <column name="karma_downvote">
+                <comment>Downvote</comment>
+            </column>
+        </property>
+        <property name="karmaGenAnswerFlagged" type="java.lang.Integer">
+            <column name="karma_gen_answer_flagged">
+                <comment>Answer flagged</comment>
+            </column>
+        </property>
+        <property name="allowLink" type="java.lang.Boolean">
+            <column name="allow_link">
+                <comment>Links</comment>
+            </column>
+        </property>
+        <property name="defaultOrder" type="string">
+            <column name="default_order" not-null="true">
+                <comment>Default Order</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="karmaGenQuestionUpvote" type="java.lang.Integer">
+            <column name="karma_gen_question_upvote">
+                <comment>Question upvoted</comment>
+            </column>
+        </property>
+        <property name="karmaCommentConvertAll" type="java.lang.Integer">
+            <column name="karma_comment_convert_all">
+                <comment>Convert all answers to comments and vice versa</comment>
+            </column>
+        </property>
+        <property name="websiteMetaTitle" type="string">
+            <column name="website_meta_title">
+                <comment>Website meta title</comment>
+            </column>
+        </property>
+        <property name="karmaGenAnswerDownvote" type="java.lang.Integer">
+            <column name="karma_gen_answer_downvote">
+                <comment>Answer downvoted</comment>
+            </column>
+        </property>
+        <property name="karmaUserBio" type="java.lang.Integer">
+            <column name="karma_user_bio">
+                <comment>Display detailed user biography</comment>
+            </column>
+        </property>
+        <property name="karmaUnlinkAll" type="java.lang.Integer">
+            <column name="karma_unlink_all">
+                <comment>Delete all posts</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="karmaGenAnswerAccepted" type="java.lang.Integer">
+            <column name="karma_gen_answer_accepted">
+                <comment>Answer accepted</comment>
+            </column>
+        </property>
+        <property name="karmaTagCreate" type="java.lang.Integer">
+            <column name="karma_tag_create">
+                <comment>Create new tags</comment>
+            </column>
+        </property>
+        <property name="faq" type="string">
+            <column name="faq">
+                <comment>Guidelines</comment>
+            </column>
+        </property>
+        <property name="karmaGenAnswerAccept" type="java.lang.Integer">
+            <column name="karma_gen_answer_accept">
+                <comment>Accepting an answer</comment>
+            </column>
+        </property>
+        <property name="karmaGenQuestionDownvote" type="java.lang.Integer">
+            <column name="karma_gen_question_downvote">
+                <comment>Question downvoted</comment>
+            </column>
+        </property>
+        <property name="allowQuestion" type="java.lang.Boolean">
+            <column name="allow_question">
+                <comment>Questions</comment>
+            </column>
+        </property>
+        <property name="websiteMetaDescription" type="string">
+            <column name="website_meta_description">
+                <comment>Website meta description</comment>
+            </column>
+        </property>
+        <property name="karmaAnswerAcceptAll" type="java.lang.Integer">
+            <column name="karma_answer_accept_all">
+                <comment>Accept an answer to all questions</comment>
+            </column>
+        </property>
+        <property name="karmaModerate" type="java.lang.Integer">
+            <column name="karma_moderate">
+                <comment>Moderate posts</comment>
+            </column>
+        </property>
+        <property name="websiteMetaKeywords" type="string">
+            <column name="website_meta_keywords">
+                <comment>Website meta keywords</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="karmaUnlinkOwn" type="java.lang.Integer">
+            <column name="karma_unlink_own">
+                <comment>Delete own posts</comment>
+            </column>
+        </property>
+        <property name="karmaCloseOwn" type="java.lang.Integer">
+            <column name="karma_close_own">
+                <comment>Close own posts</comment>
+            </column>
+        </property>
+        <property name="karmaCommentOwn" type="java.lang.Integer">
+            <column name="karma_comment_own">
+                <comment>Comment own posts</comment>
+            </column>
+        </property>
+        <property name="karmaAnswer" type="java.lang.Integer">
+            <column name="karma_answer">
+                <comment>Answer questions</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Forum Name</comment>
+            </column>
+        </property>
+        <property name="karmaUpvote" type="java.lang.Integer">
+            <column name="karma_upvote">
+                <comment>Upvote</comment>
+            </column>
+        </property>
+        <property name="karmaAsk" type="java.lang.Integer">
+            <column name="karma_ask">
+                <comment>Ask questions</comment>
+            </column>
+        </property>
+        <property name="karmaEditor" type="java.lang.Integer">
+            <column name="karma_editor">
+                <comment>Editor Features: image and links</comment>
+            </column>
+        </property>
+        <property name="allowDiscussion" type="java.lang.Boolean">
+            <column name="allow_discussion">
+                <comment>Discussions</comment>
+            </column>
+        </property>
+        <property name="karmaPost" type="java.lang.Integer">
+            <column name="karma_post">
+                <comment>Ask questions without validation</comment>
+            </column>
+        </property>
+        <property name="karmaGenAnswerUpvote" type="java.lang.Integer">
+            <column name="karma_gen_answer_upvote">
+                <comment>Answer upvoted</comment>
+            </column>
+        </property>
+        <property name="karmaCommentConvertOwn" type="java.lang.Integer">
+            <column name="karma_comment_convert_own">
+                <comment>Convert own answers to comments and vice versa</comment>
+            </column>
+        </property>
+        <property name="karmaEditRetag" type="java.lang.Integer">
+            <column name="karma_edit_retag">
+                <comment>Change question tags</comment>
+            </column>
+        </property>
+        <property name="allowShare" type="java.lang.Boolean">
+            <column name="allow_share">
+                <comment>Sharing Options</comment>
+            </column>
+        </property>
+        <property name="karmaCommentUnlinkOwn" type="java.lang.Integer">
+            <column name="karma_comment_unlink_own">
+                <comment>Unlink own comments</comment>
+            </column>
+        </property>
+        <property name="karmaAnswerAcceptOwn" type="java.lang.Integer">
+            <column name="karma_answer_accept_own">
+                <comment>Accept an answer on own questions</comment>
+            </column>
+        </property>
+        <property name="karmaGenQuestionNew" type="java.lang.Integer">
+            <column name="karma_gen_question_new">
+                <comment>Asking a question</comment>
+            </column>
+        </property>
+        <property name="allowBump" type="java.lang.Boolean">
+            <column name="allow_bump">
+                <comment>Allow Bump</comment>
+            </column>
+        </property>
+        <property name="defaultPostType" type="string">
+            <column name="default_post_type" not-null="true">
+                <comment>Default Post</comment>
+            </column>
+        </property>
+        <property name="karmaFlag" type="java.lang.Integer">
+            <column name="karma_flag">
+                <comment>Flag a post as offensive</comment>
+            </column>
+        </property>
+        <set name="forumPosts" table="forum_post" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="forum_id" not-null="true">
+                    <comment>Forum</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ForumPost" />
+        </set>
+        <set name="forumTags" table="forum_tag" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="forum_id" not-null="true">
+                    <comment>Forum</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ForumTag" />
+        </set>
+        <set name="forumPostVotes" table="forum_post_vote" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="forum_id">
+                    <comment>Forum</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ForumPostVote" />
+        </set>
+    </class>
+</hibernate-mapping>

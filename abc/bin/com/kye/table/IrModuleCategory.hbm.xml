@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.IrModuleCategory" table="ir_module_category">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid" />
+        </many-to-one>
+        <many-to-one name="irModuleCategory" class="com.kye.table.IrModuleCategory" fetch="select">
+            <column name="parent_id" />
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid" />
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29" />
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Description</comment>
+            </column>
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="visible" type="java.lang.Boolean">
+            <column name="visible">
+                <comment>Visible</comment>
+            </column>
+        </property>
+        <set name="irModuleModules" table="ir_module_module" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="category_id" />
+            </key>
+            <one-to-many class="com.kye.table.IrModuleModule" />
+        </set>
+        <set name="resGroupses" table="res_groups" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="category_id">
+                    <comment>Application</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ResGroups" />
+        </set>
+        <set name="irModuleCategories" table="ir_module_category" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent_id" />
+            </key>
+            <one-to-many class="com.kye.table.IrModuleCategory" />
+        </set>
+    </class>
+</hibernate-mapping>

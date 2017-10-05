@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.ImLivechatChannel" table="im_livechat_channel">
+        <comment>Livechat Channel</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="inputPlaceholder" type="string">
+            <column name="input_placeholder">
+                <comment>Chat Input Placeholder</comment>
+            </column>
+        </property>
+        <property name="defaultMessage" type="string">
+            <column name="default_message">
+                <comment>Welcome Message</comment>
+            </column>
+        </property>
+        <property name="buttonText" type="string">
+            <column name="button_text">
+                <comment>Text of the Button</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Name</comment>
+            </column>
+        </property>
+        <property name="websitePublished" type="java.lang.Boolean">
+            <column name="website_published">
+                <comment>Visible in Website</comment>
+            </column>
+        </property>
+        <property name="websiteDescription" type="string">
+            <column name="website_description">
+                <comment>Website description</comment>
+            </column>
+        </property>
+        <set name="imLivechatChannelImUsers" table="im_livechat_channel_im_user" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="channel_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.ImLivechatChannelImUser" />
+        </set>
+        <set name="mailChannels" table="mail_channel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="livechat_channel_id">
+                    <comment>Channel</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.MailChannel" />
+        </set>
+        <set name="imLivechatChannelRules" table="im_livechat_channel_rule" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="channel_id">
+                    <comment>Channel</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.ImLivechatChannelRule" />
+        </set>
+        <set name="websites" table="website" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="channel_id">
+                    <comment>Website Live Chat Channel</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.Website" />
+        </set>
+    </class>
+</hibernate-mapping>

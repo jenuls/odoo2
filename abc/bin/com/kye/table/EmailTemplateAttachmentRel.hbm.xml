@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.EmailTemplateAttachmentRel" table="email_template_attachment_rel">
+        <comment>RELATION BETWEEN mail_template AND ir_attachment</comment>
+        <composite-id name="id" class="com.kye.table.EmailTemplateAttachmentRelId">
+            <key-property name="emailTemplateId" type="int">
+                <column name="email_template_id" />
+            </key-property>
+            <key-property name="attachmentId" type="int">
+                <column name="attachment_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="irAttachment" class="com.kye.table.IrAttachment" update="false" insert="false" fetch="select">
+            <column name="attachment_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="mailTemplate" class="com.kye.table.MailTemplate" update="false" insert="false" fetch="select">
+            <column name="email_template_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.HrContract" table="hr_contract">
+        <comment>Contract</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrEmployee" class="com.kye.table.HrEmployee" fetch="select">
+            <column name="employee_id" not-null="true">
+                <comment>Employee</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrContractType" class="com.kye.table.HrContractType" fetch="select">
+            <column name="type_id" not-null="true">
+                <comment>Contract Type</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resourceCalendar" class="com.kye.table.ResourceCalendar" fetch="select">
+            <column name="working_hours">
+                <comment>Working Schedule</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrJob" class="com.kye.table.HrJob" fetch="select">
+            <column name="job_id">
+                <comment>Job Title</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrDepartment" class="com.kye.table.HrDepartment" fetch="select">
+            <column name="department_id">
+                <comment>Department</comment>
+            </column>
+        </many-to-one>
+        <property name="trialDateEnd" type="date">
+            <column name="trial_date_end" length="13">
+                <comment>Trial End Date</comment>
+            </column>
+        </property>
+        <property name="dateEnd" type="date">
+            <column name="date_end" length="13">
+                <comment>End Date</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="visaExpire" type="date">
+            <column name="visa_expire" length="13">
+                <comment>Visa Expire Date</comment>
+            </column>
+        </property>
+        <property name="dateStart" type="date">
+            <column name="date_start" length="13" not-null="true">
+                <comment>Start Date</comment>
+            </column>
+        </property>
+        <property name="messageLastPost" type="timestamp">
+            <column name="message_last_post" length="29">
+                <comment>Last Message Date</comment>
+            </column>
+        </property>
+        <property name="visaNo" type="string">
+            <column name="visa_no">
+                <comment>Visa No</comment>
+            </column>
+        </property>
+        <property name="state" type="string">
+            <column name="state">
+                <comment>Status</comment>
+            </column>
+        </property>
+        <property name="wage" type="big_decimal">
+            <column name="wage" precision="131089" scale="0" not-null="true">
+                <comment>Wage</comment>
+            </column>
+        </property>
+        <property name="advantages" type="string">
+            <column name="advantages">
+                <comment>Advantages</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="trialDateStart" type="date">
+            <column name="trial_date_start" length="13">
+                <comment>Trial Start Date</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Contract Reference</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="notes">
+                <comment>Notes</comment>
+            </column>
+        </property>
+        <property name="permitNo" type="string">
+            <column name="permit_no">
+                <comment>Work Permit No</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

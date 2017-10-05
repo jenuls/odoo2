@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountTaxTemplate" table="account_tax_template">
+        <comment>Templates for Taxes</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="accountAccountTemplateByRefundAccountId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="refund_account_id">
+                <comment>Tax Account on Refunds</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id" not-null="true">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountChartTemplate" class="com.kye.table.AccountChartTemplate" fetch="select">
+            <column name="chart_template_id" not-null="true">
+                <comment>Chart Template</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountTaxGroup" class="com.kye.table.AccountTaxGroup" fetch="select">
+            <column name="tax_group_id">
+                <comment>Tax Group</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountAccountTemplateByAccountId" class="com.kye.table.AccountAccountTemplate" fetch="select">
+            <column name="account_id">
+                <comment>Tax Account</comment>
+            </column>
+        </many-to-one>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="sequence" type="int">
+            <column name="sequence" not-null="true">
+                <comment>Sequence</comment>
+            </column>
+        </property>
+        <property name="includeBaseAmount" type="java.lang.Boolean">
+            <column name="include_base_amount">
+                <comment>Affect Subsequent Taxes</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="description">
+                <comment>Display on Invoices</comment>
+            </column>
+        </property>
+        <property name="analytic" type="java.lang.Boolean">
+            <column name="analytic">
+                <comment>Analytic Cost</comment>
+            </column>
+        </property>
+        <property name="taxAdjustment" type="java.lang.Boolean">
+            <column name="tax_adjustment">
+                <comment>Tax adjustment</comment>
+            </column>
+        </property>
+        <property name="typeTaxUse" type="string">
+            <column name="type_tax_use" not-null="true">
+                <comment>Tax Scope</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active">
+                <comment>Active</comment>
+            </column>
+        </property>
+        <property name="amountType" type="string">
+            <column name="amount_type" not-null="true">
+                <comment>Tax Computation</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true">
+                <comment>Tax Name</comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="131089" scale="0" not-null="true">
+                <comment>Amount</comment>
+            </column>
+        </property>
+        <property name="priceInclude" type="java.lang.Boolean">
+            <column name="price_include">
+                <comment>Included in Price</comment>
+            </column>
+        </property>
+        <set name="accountConfigSettingsesForPurchaseTaxId" table="account_config_settings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="purchase_tax_id">
+                    <comment>Default purchase tax</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountConfigSettings" />
+        </set>
+        <set name="accountTaxTemplateFiliationRelsForChildTax" table="account_tax_template_filiation_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="child_tax" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountTaxTemplateFiliationRel" />
+        </set>
+        <set name="accountReconcileModelTemplatesForSecondTaxId" table="account_reconcile_model_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="second_tax_id">
+                    <comment>Second Tax</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountReconcileModelTemplate" />
+        </set>
+        <set name="accountReconcileModelTemplatesForTaxId" table="account_reconcile_model_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tax_id">
+                    <comment>Tax</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountReconcileModelTemplate" />
+        </set>
+        <set name="accountFiscalPositionTaxTemplatesForTaxDestId" table="account_fiscal_position_tax_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tax_dest_id">
+                    <comment>Replacement Tax</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFiscalPositionTaxTemplate" />
+        </set>
+        <set name="wizardMultiChartsAccountsesForSaleTaxId" table="wizard_multi_charts_accounts" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sale_tax_id">
+                    <comment>Default Sales Tax</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.WizardMultiChartsAccounts" />
+        </set>
+        <set name="accountAccountTagAccountTaxTemplateRels" table="account_account_tag_account_tax_template_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="account_tax_template_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountTagAccountTaxTemplateRel" />
+        </set>
+        <set name="accountAccountTemplateTaxRels" table="account_account_template_tax_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tax_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountAccountTemplateTaxRel" />
+        </set>
+        <set name="accountTaxTemplateFiliationRelsForParentTax" table="account_tax_template_filiation_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent_tax" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountTaxTemplateFiliationRel" />
+        </set>
+        <set name="wizardMultiChartsAccountsesForPurchaseTaxId" table="wizard_multi_charts_accounts" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="purchase_tax_id">
+                    <comment>Default Purchase Tax</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.WizardMultiChartsAccounts" />
+        </set>
+        <set name="accountFiscalPositionTaxTemplatesForTaxSrcId" table="account_fiscal_position_tax_template" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tax_src_id" not-null="true">
+                    <comment>Tax Source</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountFiscalPositionTaxTemplate" />
+        </set>
+        <set name="accountConfigSettingsesForSaleTaxId" table="account_config_settings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sale_tax_id">
+                    <comment>Default sale tax</comment>
+                </column>
+            </key>
+            <one-to-many class="com.kye.table.AccountConfigSettings" />
+        </set>
+    </class>
+</hibernate-mapping>

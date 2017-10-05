@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountTaxFiliationRel" table="account_tax_filiation_rel">
+        <comment>RELATION BETWEEN account_tax AND account_tax</comment>
+        <composite-id name="id" class="com.kye.table.AccountTaxFiliationRelId">
+            <key-property name="parentTax" type="int">
+                <column name="parent_tax" />
+            </key-property>
+            <key-property name="childTax" type="int">
+                <column name="child_tax" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="accountTaxByChildTax" class="com.kye.table.AccountTax" update="false" insert="false" fetch="select">
+            <column name="child_tax" not-null="true" />
+        </many-to-one>
+        <many-to-one name="accountTaxByParentTax" class="com.kye.table.AccountTax" update="false" insert="false" fetch="select">
+            <column name="parent_tax" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

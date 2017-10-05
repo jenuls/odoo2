@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountingReport" table="accounting_report">
+        <comment>Accounting Report</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="resUsersByWriteUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="accountFinancialReport" class="com.kye.table.AccountFinancialReport" fetch="select">
+            <column name="account_report_id" not-null="true">
+                <comment>Account Reports</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resUsersByCreateUid" class="com.kye.table.ResUsers" fetch="select">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="resCompany" class="com.kye.table.ResCompany" fetch="select">
+            <column name="company_id">
+                <comment>Company</comment>
+            </column>
+        </many-to-one>
+        <property name="enableFilter" type="java.lang.Boolean">
+            <column name="enable_filter">
+                <comment>Enable Comparison</comment>
+            </column>
+        </property>
+        <property name="filterCmp" type="string">
+            <column name="filter_cmp" not-null="true">
+                <comment>Filter by</comment>
+            </column>
+        </property>
+        <property name="dateFrom" type="date">
+            <column name="date_from" length="13">
+                <comment>Start Date</comment>
+            </column>
+        </property>
+        <property name="dateTo" type="date">
+            <column name="date_to" length="13">
+                <comment>End Date</comment>
+            </column>
+        </property>
+        <property name="dateToCmp" type="date">
+            <column name="date_to_cmp" length="13">
+                <comment>End Date</comment>
+            </column>
+        </property>
+        <property name="labelFilter" type="string">
+            <column name="label_filter">
+                <comment>Column Label</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <property name="dateFromCmp" type="date">
+            <column name="date_from_cmp" length="13">
+                <comment>Start Date</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="debitCredit" type="java.lang.Boolean">
+            <column name="debit_credit">
+                <comment>Display Debit/Credit Columns</comment>
+            </column>
+        </property>
+        <property name="targetMove" type="string">
+            <column name="target_move" not-null="true">
+                <comment>Target Moves</comment>
+            </column>
+        </property>
+        <set name="accountJournalAccountingReportRels" table="account_journal_accounting_report_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="accounting_report_id" not-null="true" />
+            </key>
+            <one-to-many class="com.kye.table.AccountJournalAccountingReportRel" />
+        </set>
+    </class>
+</hibernate-mapping>

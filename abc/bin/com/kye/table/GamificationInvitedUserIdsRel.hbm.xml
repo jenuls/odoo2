@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.GamificationInvitedUserIdsRel" table="gamification_invited_user_ids_rel">
+        <comment>RELATION BETWEEN gamification_challenge AND res_users</comment>
+        <composite-id name="id" class="com.kye.table.GamificationInvitedUserIdsRelId">
+            <key-property name="gamificationChallengeId" type="int">
+                <column name="gamification_challenge_id" />
+            </key-property>
+            <key-property name="resUsersId" type="int">
+                <column name="res_users_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="gamificationChallenge" class="com.kye.table.GamificationChallenge" update="false" insert="false" fetch="select">
+            <column name="gamification_challenge_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="resUsers" class="com.kye.table.ResUsers" update="false" insert="false" fetch="select">
+            <column name="res_users_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

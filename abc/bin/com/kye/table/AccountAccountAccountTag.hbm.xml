@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017/1/17 ?W?? 09:28:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.kye.table.AccountAccountAccountTag" table="account_account_account_tag">
+        <comment>RELATION BETWEEN account_account AND account_account_tag</comment>
+        <composite-id name="id" class="com.kye.table.AccountAccountAccountTagId">
+            <key-property name="accountAccountId" type="int">
+                <column name="account_account_id" />
+            </key-property>
+            <key-property name="accountAccountTagId" type="int">
+                <column name="account_account_tag_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="accountAccountTag" class="com.kye.table.AccountAccountTag" update="false" insert="false" fetch="select">
+            <column name="account_account_tag_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="accountAccount" class="com.kye.table.AccountAccount" update="false" insert="false" fetch="select">
+            <column name="account_account_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
